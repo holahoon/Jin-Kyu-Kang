@@ -1,10 +1,13 @@
 import React from 'react';
 
+import Navigations from '../components/navigations/Navigations';
+
 function Header() {
   return (
-    <div>
-      <h1>Header</h1>
-    </div>
+    <header>
+      {/* <Icon /> */}
+      <Navigations />
+    </header>
   );
 }
 

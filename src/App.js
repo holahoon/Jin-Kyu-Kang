@@ -8,12 +8,15 @@ import Works from './containers/Works';
 import About from './containers/About';
 import Resume from './containers/Resume';
 
+import './styles/main.scss';
+
 function App() {
   return (
     <>
       <Layout>
-        <Header />
         <Router>
+          <Header />
+
           <Switch>
             <Route path='/' exact>
               <Home />

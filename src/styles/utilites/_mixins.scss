@@ -1,0 +1,96 @@
+/* --- Mixins --- */
+
+/* ---------------
+  Media queries
+--------------- */
+$mobile-sm: 360px;
+$mobile-md: 414px;
+$mobile-lg: 500px;
+$tablet-sm: 768px;
+$tablet-lg: 1024px;
+$desktop-sm: 1100px;
+$max-width: 1440px;
+
+@mixin break-point($point, $viewport: 0) {
+  /* -- Min-width -- */
+  @if $point == mobile-sm-up {
+    @media (min-width: $mobile-sm) {
+      @content;
+    }
+  } @else if $point == mobile-md-up {
+    @media (min-width: $mobile-md) {
+      @content;
+    }
+  } @else if $point == mobile-lg-up {
+    @media (min-width: $mobile-lg) {
+      @content;
+    }
+  } @else if $point == tablet-sm-up {
+    @media (min-width: $tablet-sm) {
+      @content;
+    }
+  } @else if $point == tablet-lg-up {
+    @media (min-width: $tablet-lg) {
+      @content;
+    }
+  } @else if $point == desktop-sm-up {
+    @media (min-width: $desktop-sm) {
+      @content;
+    }
+  } @else if $point == max-up {
+    @media (min-width: $max-width) {
+      @content;
+    }
+  }
+  /* -- Max width -- */
+  @else if $point == mobile-md-down {
+    @media (max-width: $mobile-md - 1) {
+      @content;
+    }
+  } @else if $point == mobile-lg-down {
+    @media (max-width: $mobile-lg - 1) {
+      @content;
+    }
+  } @else if $point == tablet-sm-down {
+    @media (max-width: $tablet-sm - 1) {
+      @content;
+    }
+  } @else if $point == tablet-lg-down {
+    @media (max-width: $tablet-lg - 1) {
+      @content;
+    }
+  } @else if $point == desktop-sm-down {
+    @media (max-width: $desktop-sm - 1) {
+      @content;
+    }
+  } @else if $point == max-down {
+    @media (max-width: $max-width - 1) {
+      @content;
+    }
+  }
+}
+
+/* ---------------
+  Global
+--------------- */
+
+/* -- Global flex box -- */
+@mixin flex($direction: column, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+/* -- Calculate font size from px to rem -- */
+@function calculateRem($size) {
+  @return $size / 16px * 1rem;
+}
+@mixin fontSize($size) {
+  font-size: calculateRem($size);
+}
+
+/* -- Max width -- */
+@mixin max-width {
+  max-width: $max-width;
+}
