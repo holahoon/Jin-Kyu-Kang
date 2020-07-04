@@ -73,6 +73,10 @@ $max-width: 1440px;
 /* ---------------
   Global
 --------------- */
+/* -- function to calculate px to rem -- */
+@function calculateRem($size) {
+  @return ($size / 16px) * 1rem;
+}
 
 /* -- Global flex box -- */
 @mixin flex($direction: column, $justify: center, $align: center) {
@@ -82,15 +86,59 @@ $max-width: 1440px;
   align-items: $align;
 }
 
-/* -- Calculate font size from px to rem -- */
-@function calculateRem($size) {
-  @return $size / 16px * 1rem;
-}
+/* -- Font size calculation -- */
 @mixin fontSize($size) {
   font-size: calculateRem($size);
+}
+
+/* -- Margin calculation -- */
+@mixin margin($size, $direction: null) {
+  @if ($direction) {
+    margin-#{$direction}: calculateRem($size);
+  } @else {
+    margin: calculateRem($size);
+  }
+}
+
+/* -- Padding calculation -- */
+@mixin padding($size, $direction: null, $secondary-size: null) {
+  @if ($direction == vh) {
+    padding: calculateRem($size) calculateRem($secondary-size);
+  } @else if ($direction) {
+    padding-#{$direction}: calculateRem($size);
+  } @else {
+    padding: calculateRem($size)
+      calculateRem($size)
+      calculateRem($size)
+      calculateRem($size);
+  }
 }
 
 /* -- Max width -- */
 @mixin max-width {
   max-width: $max-width;
+}
+
+/* -- Colors -- */
+// @mixin text-black {
+//   color: $black;
+// }
+// @mixin text-white {
+//   color: $white;
+// }
+// @mixin text-gray {
+//   color: $text-gray;
+// }
+// @mixin bg-light {
+//   background-color: $bg-color;
+// }
+// $text-dark-gray: #3d3d3d;
+// $brand-red: #ff3d03;
+
+@mixin font-perpetua($weight: null) {
+  @if ($weight) {
+    font-family: $perpetua-#{$weight};
+  } @else {
+    font-family: $perpetua;
+  }
 }

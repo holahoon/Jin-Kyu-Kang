@@ -1,14 +1,15 @@
 import React from 'react';
 
+import Logo from './Logo';
 import Navigation from './navigation/Navigation';
 
 function Navigations() {
   const navTitles = ['works', 'about', 'resume'];
 
   return (
-    <nav className='navigation'>
-      <div>LOGO</div>
-      <ul>
+    <nav className='nav'>
+      <Logo className={'nav__logo'} />
+      <ul className='nav__menu'>
         {navTitles.map((title) => (
           <Navigation key={title} navTitle={title} />
         ))}
