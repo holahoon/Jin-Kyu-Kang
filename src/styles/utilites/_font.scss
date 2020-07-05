@@ -6,29 +6,29 @@
 @font-face {
   font-family: 'perpetua';
   src: url('../../assets/fonts/perpetua/PER_____.TTF') format('ttf');
-  font-weight: 400;
+  font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'perpetua-bold';
   src: url('../../assets/fonts/perpetua/PERB____.TTF') format('ttf');
-  font-weight: 600;
+  font-weight: bold;
   font-style: normal;
 }
 @font-face {
   font-family: 'perpetua-italic';
   src: url('../../assets/fonts/perpetua/PERI____.TTF') format('ttf');
-  font-weight: 400;
+  font-weight: normal;
   font-style: italic;
 }
 @font-face {
   font-family: 'perpetua-bold-italic';
   src: url('../../assets/fonts/perpetua/PERBI___.TTF') format('ttf');
-  font-weight: 600;
+  font-weight: bold;
   font-style: italic;
 }
 
-$perpetua: 'perpetua', sans-serif;
-$perpetua-bold: 'perpetua-bold', sans-serif;
-$perpetua-italic: 'perpetua-italic', sans-serif;
-$perpetua-bold-italic: 'perpetua-bold-italic', sans-serif;
+$perpetua: 'perpetua';
+$perpetua-bold: 'perpetua-bold';
+$perpetua-italic: 'perpetua-italic';
+$perpetua-bold-italic: 'perpetua-bold-italic';

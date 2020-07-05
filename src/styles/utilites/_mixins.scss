@@ -77,6 +77,9 @@ $max-width: 1440px;
 @function calculateRem($size) {
   @return ($size / 16px) * 1rem;
 }
+@function calculateLineHeight($size) {
+  @return ($size / 16px);
+}
 
 /* -- Global flex box -- */
 @mixin flex($direction: column, $justify: center, $align: center) {
@@ -91,9 +94,15 @@ $max-width: 1440px;
   font-size: calculateRem($size);
 }
 
+@mixin lineHeight($size) {
+  line-height: calculateLineHeight($size);
+}
+
 /* -- Margin calculation -- */
-@mixin margin($size, $direction: null) {
-  @if ($direction) {
+@mixin margin($size, $direction: null, $secondary-size: null) {
+  @if ($direction == vh) {
+    margin: calculateRem($size) calculateRem($secondary-size);
+  } @else if ($direction) {
     margin-#{$direction}: calculateRem($size);
   } @else {
     margin: calculateRem($size);
@@ -107,10 +116,7 @@ $max-width: 1440px;
   } @else if ($direction) {
     padding-#{$direction}: calculateRem($size);
   } @else {
-    padding: calculateRem($size)
-      calculateRem($size)
-      calculateRem($size)
-      calculateRem($size);
+    padding: calculateRem($size);
   }
 }
 
@@ -119,25 +125,9 @@ $max-width: 1440px;
   max-width: $max-width;
 }
 
-/* -- Colors -- */
-// @mixin text-black {
-//   color: $black;
-// }
-// @mixin text-white {
-//   color: $white;
-// }
-// @mixin text-gray {
-//   color: $text-gray;
-// }
-// @mixin bg-light {
-//   background-color: $bg-color;
-// }
-// $text-dark-gray: #3d3d3d;
-// $brand-red: #ff3d03;
-
 @mixin font-perpetua($weight: null) {
   @if ($weight) {
-    font-family: $perpetua-#{$weight};
+    font-family: 'perpetua-#{$weight}';
   } @else {
     font-family: $perpetua;
   }

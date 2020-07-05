@@ -7,6 +7,7 @@ import Home from './containers/Home';
 import Works from './containers/Works';
 import About from './containers/About';
 import Resume from './containers/Resume';
+import SideText from './layouts/SideText/SideText';
 
 import './styles/main.scss';
 
@@ -16,6 +17,7 @@ function App() {
       <Layout>
         <Router>
           <Header />
+          <SideText />
 
           <Switch>
             <Route path='/' exact>

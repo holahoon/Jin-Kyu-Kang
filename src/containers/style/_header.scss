@@ -1,0 +1,42 @@
+.header {
+  /* -- Navigation -- */
+  .nav {
+    @include flex(row, space-between);
+    @include padding(50px, vh, 50px);
+
+    // - nav__logo
+    &__logo {
+      a {
+        display: block;
+        width: 300px;
+        height: 83px;
+        background-color: sandybrown;
+      }
+    }
+
+    // - nav__menu
+    &__menu {
+      @include flex(row);
+
+      &__item {
+        @include fontSize(16px);
+        @include font-perpetua(bold);
+
+        a {
+          color: $black;
+        }
+
+        &-about {
+          @include margin(30px, left);
+          @include margin(30px, right);
+        }
+      }
+    }
+
+    // - nav-active
+    &-active {
+      text-decoration-line: line-through;
+      text-decoration-color: $brand-red;
+    }
+  }
+}

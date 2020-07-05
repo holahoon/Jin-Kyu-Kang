@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Logo from './Logo';
+import Logo from './Logo/Logo';
 import Navigation from './navigation/Navigation';
 
 function Navigations() {
@@ -8,7 +8,7 @@ function Navigations() {
 
   return (
     <nav className='nav'>
-      <Logo className={'nav__logo'} />
+      <Logo className='nav__logo' />
       <ul className='nav__menu'>
         {navTitles.map((title) => (
           <Navigation key={title} navTitle={title} />
