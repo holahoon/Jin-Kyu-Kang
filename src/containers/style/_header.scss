@@ -2,7 +2,9 @@
   /* -- Navigation -- */
   .nav {
     @include flex(row, space-between);
-    @include padding(50px, vh, 50px);
+    // @include padding(50px, vh, 50px);
+    // padding: calcRem(50px) calcRem(50px) 0 calcRem(50px);
+    padding-top: calcRem(50px);
 
     // - nav__logo
     &__logo {

@@ -74,7 +74,7 @@ $max-width: 1440px;
   Global
 --------------- */
 /* -- function to calculate px to rem -- */
-@function calculateRem($size) {
+@function calcRem($size) {
   @return ($size / 16px) * 1rem;
 }
 @function calculateLineHeight($size) {
@@ -91,7 +91,7 @@ $max-width: 1440px;
 
 /* -- Font size calculation -- */
 @mixin fontSize($size) {
-  font-size: calculateRem($size);
+  font-size: calcRem($size);
 }
 
 @mixin lineHeight($size) {
@@ -101,22 +101,22 @@ $max-width: 1440px;
 /* -- Margin calculation -- */
 @mixin margin($size, $direction: null, $secondary-size: null) {
   @if ($direction == vh) {
-    margin: calculateRem($size) calculateRem($secondary-size);
+    margin: calcRem($size) calcRem($secondary-size);
   } @else if ($direction) {
-    margin-#{$direction}: calculateRem($size);
+    margin-#{$direction}: calcRem($size);
   } @else {
-    margin: calculateRem($size);
+    margin: calcRem($size);
   }
 }
 
 /* -- Padding calculation -- */
 @mixin padding($size, $direction: null, $secondary-size: null) {
   @if ($direction == vh) {
-    padding: calculateRem($size) calculateRem($secondary-size);
+    padding: calcRem($size) calcRem($secondary-size);
   } @else if ($direction) {
-    padding-#{$direction}: calculateRem($size);
+    padding-#{$direction}: calcRem($size);
   } @else {
-    padding: calculateRem($size);
+    padding: calcRem($size);
   }
 }
 

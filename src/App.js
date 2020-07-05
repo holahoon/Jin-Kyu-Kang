@@ -7,9 +7,10 @@ import Home from './containers/Home';
 import Works from './containers/Works';
 import About from './containers/About';
 import Resume from './containers/Resume';
-import SideText from './layouts/SideText/SideText';
+import SideText from './UI/SideText/SideText';
 
 import './styles/main.scss';
+import Footer from './containers/Footer';
 
 function App() {
   return (
@@ -33,6 +34,8 @@ function App() {
               <Resume />
             </Route>
           </Switch>
+
+          <Footer />
         </Router>
       </Layout>
     </>

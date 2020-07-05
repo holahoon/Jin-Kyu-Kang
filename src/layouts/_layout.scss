@@ -1,6 +1,7 @@
 .layout-container {
   @include max-width;
   margin: 0 auto;
+  padding: 0 calcRem(50px);
   position: relative;
   // @include padding(0px, vh, 20px);
   height: 100vh;
@@ -13,10 +14,12 @@
     @include lineHeight(21px);
     position: absolute;
     top: 50%;
-    // left: -3%;
+    left: calcRem(20px);
     transform: translateY(-50%);
     color: $black;
-    transform: rotate(-90deg);
+    transform: rotate(270deg);
+    transform-origin: left top;
+
     &__icon {
       img {
         display: block;
