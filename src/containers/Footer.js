@@ -1,17 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 function Footer() {
-  // const [height, setHeight] = useState(0);
-
-  // useEffect(() => {
-  //   // console.log(window.innerHeight);
-  //   setHeight(window.innerHeight);
-  // }, []);
-
-  // const footerTopPosition = {
-  //   // top: height,
-  //   marginTop: height,
-  // };
   return (
     <footer className='footer'>
       <section>

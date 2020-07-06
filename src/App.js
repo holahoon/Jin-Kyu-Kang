@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Layout from './layouts/Layout';
 import Header from './containers/Header';
-import Home from './containers/Home';
+import ComingSoon from './containers/ComingSoon';
 import Works from './containers/Works';
 import About from './containers/About';
 import Resume from './containers/Resume';
@@ -22,9 +22,9 @@ function App() {
 
           <Switch>
             <Route path='/' exact>
-              <Home />
+              <ComingSoon />
             </Route>
-            <Route path='/works'>
+            {/* <Route path='/works'>
               <Works />
             </Route>
             <Route path='/about'>
@@ -32,7 +32,7 @@ function App() {
             </Route>
             <Route path='/resume'>
               <Resume />
-            </Route>
+            </Route> */}
           </Switch>
 
           <Footer />
