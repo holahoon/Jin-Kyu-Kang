@@ -10,9 +10,9 @@
     &__logo {
       a {
         display: block;
-        width: 300px;
-        height: 83px;
-        background-color: sandybrown;
+        // width: 300px;
+        // height: 83px;
+        // background-color: sandybrown;
       }
     }
 
@@ -23,9 +23,15 @@
       &__item {
         @include fontSize(16px);
         @include font-perpetua(bold);
+        -webkit-text-stroke: 0.25px black;
 
         a {
           color: $black;
+          transition: text-decoration 0.1s ease;
+          &:hover {
+            text-decoration-line: line-through;
+            text-decoration-color: $brand-red;
+          }
         }
 
         &-about {

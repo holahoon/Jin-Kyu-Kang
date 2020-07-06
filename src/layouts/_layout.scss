@@ -13,7 +13,7 @@
     @include font-perpetua();
     @include lineHeight(21px);
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: calcRem(20px);
     transform: translateY(-50%);
     color: $black;
@@ -24,15 +24,13 @@
       img {
         display: block;
         width: 100%;
+        transform: rotate(90deg);
       }
     }
 
-    &__slash {
-      @include margin(8px, left);
-    }
-
     &__erugo {
-      @include margin(2px, left);
+      @include margin(10px, left);
+      margin-bottom: calcRem(2px);
     }
   }
 }

@@ -8,8 +8,7 @@ function SideText() {
       <span className='side-text__icon'>
         <img src={miniIcon} alt='Jin Kyu' />
       </span>
-      <span className='side-text__slash'>/</span>
-      <span className='side-text__erugo'>erugo.gada</span>
+      <span className='side-text__erugo'>/ erugo.gada</span>
     </div>
   );
 }
