@@ -3,6 +3,6 @@
     text-align: center;
     color: $black;
     font-size: calcRem(64px);
-    @include font-perpetua(bold);
+    @include font-cormorant(700);
   }
 }

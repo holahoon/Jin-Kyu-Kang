@@ -3,14 +3,14 @@
   margin: 0 auto;
   padding: 0 calcRem(50px);
   position: relative;
-  // @include padding(0px, vh, 20px);
-  height: 100vh;
+  height: 100%;
+  width: 100%;
+  @include flex(column, stretch, stretch);
 
   /* -- Side text -- */
   .side-text {
     @include flex(row);
     @include fontSize(18px);
-    @include font-perpetua();
     @include lineHeight(21px);
     position: absolute;
     top: 55%;
@@ -31,6 +31,7 @@
     &__erugo {
       @include margin(10px, left);
       margin-bottom: calcRem(2px);
+      @include font-cormorant(600);
     }
   }
 }

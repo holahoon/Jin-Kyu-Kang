@@ -125,10 +125,8 @@ $max-width: 1440px;
   max-width: $max-width;
 }
 
-@mixin font-perpetua($weight: null) {
-  @if ($weight) {
-    font-family: 'perpetua-#{$weight}';
-  } @else {
-    font-family: $perpetua;
-  }
+@mixin font-cormorant($weight: 400, $style: normal) {
+  font-family: $cormorant-garamond;
+  font-weight: $weight;
+  font-style: $style;
 }
