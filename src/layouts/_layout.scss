@@ -11,7 +11,7 @@
   .side-text {
     @include flex(row);
     @include fontSize(18px);
-    @include lineHeight(21px);
+    @include lineHeight(18px, 21px);
     position: absolute;
     top: 55%;
     left: calcRem(20px);

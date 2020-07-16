@@ -1,38 +1,42 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const sidebar = {
-  open: (height = 250) => ({
-    clipPath: `circle(${height * 2}px at 70% 100%)`,
-    transition: {
-      type: 'spring',
-      stiffness: 200,
-      restDelta: 2,
-    },
-  }),
+import closeButton from '../../assets/images/close-button.svg';
+
+const contactOpenVariants = {
+  open: {
+    // transform: 'translate(50%, 100%)',
+    opacity: 0,
+    visibility: 'hidden',
+  },
   closed: {
-    clipPath: 'circle(30px at 100% 100%)',
-    transition: {
-      delay: 0.5,
-      type: 'spring',
-      stiffness: 100,
-      damping: 40,
-    },
+    // transform: 'translate(50%, 0%)',
+    opacity: 1,
+    visibility: 'visible',
   },
 };
 
-function Contact({ toggle, isOpen }) {
+function Contact({ toggleContactMenu, variants, isOpen }) {
   return (
-    <motion.div
-      initial={false}
-      animate={isOpen ? 'open' : 'closed'}
-      // custom={'300px'}
-      className='footer__contact'>
-      <motion.div variants={sidebar} className='footer__contact-background' />
-      <div className='footer__contact__contact-button'>
-        <button onClick={toggle}>Contact</button>
+    <>
+      <motion.div variants={variants} className='footer__contact-background' />
+
+      <div className='footer__contact-button'>
+        <div
+          className='footer__contact-button--close'
+          onClick={toggleContactMenu}>
+          <img src={closeButton} alt='x' />
+        </div>
+
+        <motion.div
+          variants={contactOpenVariants}
+          // className={`footer__contact-button${isOpen ? '--hide' : '--open'}`}
+          className={`footer__contact-button--open`}
+          onClick={toggleContactMenu}>
+          contact
+        </motion.div>
       </div>
-    </motion.div>
+    </>
   );
 }
 

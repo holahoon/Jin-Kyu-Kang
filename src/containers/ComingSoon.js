@@ -4,7 +4,6 @@ function ComingSoon() {
   const [height, setHeight] = useState(0);
 
   useEffect(() => {
-    console.log(window.innerHeight);
     setHeight(window.innerHeight);
   }, []);
 

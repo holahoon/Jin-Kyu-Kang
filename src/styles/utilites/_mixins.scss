@@ -77,8 +77,8 @@ $max-width: 1440px;
 @function calcRem($size) {
   @return ($size / 16px) * 1rem;
 }
-@function calculateLineHeight($size) {
-  @return ($size / 16px);
+@function calculateLineHeight($fontSize, $lineHeight) {
+  @return ($lineHeight / $fontSize);
 }
 
 /* -- Global flex box -- */
@@ -94,8 +94,8 @@ $max-width: 1440px;
   font-size: calcRem($size);
 }
 
-@mixin lineHeight($size) {
-  line-height: calculateLineHeight($size);
+@mixin lineHeight($fontSize, $lineHeight) {
+  line-height: calculateLineHeight($fontSize, $lineHeight);
 }
 
 /* -- Margin calculation -- */
