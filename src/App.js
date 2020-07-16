@@ -7,7 +7,7 @@ import ComingSoon from './containers/ComingSoon';
 import Works from './containers/Works';
 import About from './containers/About';
 import Resume from './containers/Resume';
-import SideText from './UI/SideText/SideText';
+import SideText from './components/UI/SideText/SideText';
 
 import './styles/main.scss';
 import Footer from './containers/Footer';
