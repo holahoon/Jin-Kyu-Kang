@@ -35,7 +35,7 @@
       &--close {
         display: inline-block;
         position: absolute;
-        bottom: 30rem;
+        bottom: 32rem;
         right: 20%;
         img {
           display: block;
@@ -66,8 +66,8 @@
     @include flex(column, flex-start, flex-start);
     position: absolute;
     bottom: calcRem(60px);
-    right: 25%;
-    width: calcRem(450px);
+    right: 22%;
+    width: calcRem(600px);
     z-index: 1;
 
     &__name {

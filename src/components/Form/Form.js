@@ -1,31 +1,66 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 import arrow1 from '../../assets/images/send-arrow-1.svg';
 import arrow2 from '../../assets/images/send-arrow-2.svg';
 
+const inputVariants = {
+  open: {
+    visibility: 'visible',
+    opacity: 1,
+  },
+  closed: {
+    visibility: 'hidden',
+    opacity: 0,
+  },
+};
+const submitHover1 = {
+  hover: {
+    transform: 'translateX(7px)',
+    transition: {
+      duration: 0.1,
+    },
+  },
+};
+const submitHover2 = {
+  hover: {
+    transform: 'translateX(7px)',
+    transition: {
+      delay: 0.1,
+    },
+  },
+};
+
 function Form() {
   return (
-    <form className='footer__form'>
-      <label className='footer__form__name'>
+    <motion.form className='footer__form'>
+      <motion.label variants={inputVariants} className='footer__form__name'>
         Name:
         <input type='text' placeholder='' name='name' autoComplete='off' />
-      </label>
-      <label className='footer__form__email'>
+      </motion.label>
+      <motion.label variants={inputVariants} className='footer__form__email'>
         Email:
         <input type='email' placeholder='' name='email' autoComplete='off' />
-      </label>
-      <label className='footer__form__message'>
+      </motion.label>
+      <motion.label variants={inputVariants} className='footer__form__message'>
         Message: ​
-        <textarea id='txtArea' rows='3' cols='30' autoComplete='off' />
-      </label>
+        <textarea
+          id='textArea'
+          name='message'
+          rows='3'
+          cols='30'
+          autoComplete='off'
+        />
+      </motion.label>
+
       <div className='footer__form__send'>
-        <button>
+        <motion.button whileHover='hover'>
           Send
-          <img src={arrow1} alt='send arrow 1' />
-          <img src={arrow2} alt='send arrow 2' />
-        </button>
+          <motion.img variants={submitHover1} src={arrow1} alt='send arrow 1' />
+          <motion.img variants={submitHover2} src={arrow2} alt='send arrow 2' />
+        </motion.button>
       </div>
-    </form>
+    </motion.form>
   );
 }
 

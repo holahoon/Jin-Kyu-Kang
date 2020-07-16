@@ -5,15 +5,35 @@ import closeButton from '../../assets/images/close-button.svg';
 
 const contactOpenVariants = {
   open: {
-    // transform: 'translate(50%, 100%)',
     opacity: 0,
     visibility: 'hidden',
   },
   closed: {
-    // transform: 'translate(50%, 0%)',
     opacity: 1,
     visibility: 'visible',
+    transition: {
+      delay: 0.4,
+    },
   },
+};
+const contactCloseVariants = {
+  open: {
+    opacity: 1,
+    visibility: 'visible',
+    transition: {
+      delay: 0.2,
+    },
+  },
+  closed: {
+    opacity: 0,
+    visibility: 'hidden',
+    transition: {
+      delay: 0.1,
+    },
+  },
+};
+const closeButtonHover = {
+  transform: 'rotate(90deg)',
 };
 
 function Contact({ toggleContactMenu, variants, isOpen }) {
@@ -22,11 +42,13 @@ function Contact({ toggleContactMenu, variants, isOpen }) {
       <motion.div variants={variants} className='footer__contact-background' />
 
       <div className='footer__contact-button'>
-        <div
+        <motion.div
+          variants={contactCloseVariants}
+          whileHover={closeButtonHover}
           className='footer__contact-button--close'
           onClick={toggleContactMenu}>
           <img src={closeButton} alt='x' />
-        </div>
+        </motion.div>
 
         <motion.div
           variants={contactOpenVariants}
