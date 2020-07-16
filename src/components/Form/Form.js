@@ -8,10 +8,16 @@ const inputVariants = {
   open: {
     visibility: 'visible',
     opacity: 1,
+    transition: {
+      delay: 0.3,
+    },
   },
   closed: {
     visibility: 'hidden',
     opacity: 0,
+    transition: {
+      delay: 0.3,
+    },
   },
 };
 const submitHover1 = {
@@ -54,7 +60,7 @@ function Form() {
       </motion.label>
 
       <div className='footer__form__send'>
-        <motion.button whileHover='hover'>
+        <motion.button whileHover='hover' variants={inputVariants}>
           Send
           <motion.img variants={submitHover1} src={arrow1} alt='send arrow 1' />
           <motion.img variants={submitHover2} src={arrow2} alt='send arrow 2' />
