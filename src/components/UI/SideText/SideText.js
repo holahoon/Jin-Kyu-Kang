@@ -1,6 +1,6 @@
 import React from 'react';
 
-import miniIcon from '../../assets/images/mini-icon.svg';
+import miniIcon from '../../../assets/images/mini-icon.svg';
 
 function SideText() {
   return (
