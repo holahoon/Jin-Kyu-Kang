@@ -1,35 +1,16 @@
-/* --- Main --- */
-* {
-  box-sizing: border-box;
-}
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
-
-ul,
-ol {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  outline: none;
-}
-
 /* ------------
   Utilities
 ------------ */
 @import './utilites/mixins';
 @import './utilites/color';
 @import './utilites/font';
+@import './utilites/global';
+@import './utilites/ui';
 
 /* ------------
   Containers & Components
 ------------ */
 @import '../layouts/layout';
 @import '../containers/style/header';
+@import '../containers/style/comingSoon';
 @import '../containers/style/footer';
