@@ -49,21 +49,25 @@
         top: calcRem(-60px);
         right: 20%;
         transform: translate(50%, 0);
-        width: 200px;
-        height: 60px;
-        border-top-left-radius: 100%;
-        border-top-right-radius: 100%;
+        width: 300px;
+        // width: 200px;
+        // height: 60px;
+        // border-top-left-radius: 100%;
+        // border-top-right-radius: 100%;
         @include flex(row, center, flex-start);
         color: white;
         font-size: calcRem(16px);
-        padding-top: calcRem(30px);
+        // padding-top: calcRem(30px);
+        padding-top: calcRem(60px);
+        background-image: url(../../assets/images/contact.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
       }
     }
   }
 
   // - footer__form
   &__form {
-    @include flex(column, flex-start, flex-start);
     position: absolute;
     bottom: calcRem(60px);
     right: 22%;

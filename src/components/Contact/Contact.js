@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 import closeButton from '../../assets/images/close-button.svg';
+import contactImage from '../../assets/images/contact.svg';
 
 const contactOpenVariants = {
   open: {
@@ -42,6 +43,7 @@ function Contact({ toggleContactMenu, variants, isOpen }) {
       <motion.div variants={variants} className='footer__contact-background' />
 
       <div className='footer__contact-button'>
+        {/* <img src={contactImage} alt='contact button' /> */}
         <motion.div
           variants={contactCloseVariants}
           whileHover={closeButtonHover}
@@ -52,7 +54,6 @@ function Contact({ toggleContactMenu, variants, isOpen }) {
 
         <motion.div
           variants={contactOpenVariants}
-          // className={`footer__contact-button${isOpen ? '--hide' : '--open'}`}
           className={`footer__contact-button--open`}
           onClick={toggleContactMenu}>
           contact

@@ -13,7 +13,7 @@ function ComingSoon() {
 
   return (
     <div style={textTopPosition} className='coming-soon'>
-      <h1>coming soon</h1>
+      <h2>coming soon</h2>
     </div>
   );
 }

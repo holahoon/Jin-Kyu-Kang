@@ -4,6 +4,17 @@ import { motion } from 'framer-motion';
 import arrow1 from '../../assets/images/send-arrow-1.svg';
 import arrow2 from '../../assets/images/send-arrow-2.svg';
 
+const formVariants = {
+  open: {
+    display: 'block',
+  },
+  closed: {
+    display: 'none',
+    transition: {
+      delay: 0.2,
+    },
+  },
+};
 const inputVariants = {
   open: {
     visibility: 'visible',
@@ -39,7 +50,7 @@ const submitHover2 = {
 
 function Form() {
   return (
-    <motion.form className='footer__form'>
+    <motion.form variants={formVariants} className='footer__form'>
       <motion.label variants={inputVariants} className='footer__form__name'>
         Name:
         <input type='text' placeholder='' name='name' autoComplete='off' />
