@@ -16,7 +16,7 @@ const circleVariants = {
     },
   }),
   closed: {
-    clipPath: 'ellipse(100px 60px at 80% 100%)',
+    clipPath: 'ellipse(50px 40px at 80% 100%)',
     transition: {
       delay: 0.15,
       type: 'spring',
@@ -50,7 +50,7 @@ function Footer() {
             className='footer__contact'>
             <Form />
             <Contact
-              variants={circleVariants}
+              circleVariants={circleVariants}
               isOpen={isOpen}
               toggleContactMenu={toggleContactMenu}
             />
