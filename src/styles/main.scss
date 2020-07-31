@@ -8,9 +8,14 @@
 @import './utilites/ui';
 
 /* ------------
+  Animations
+------------ */
+@import './animations/blob.scss';
+
+/* ------------
   Containers & Components
 ------------ */
 @import '../layouts/layout';
 @import '../containers/style/header';
-@import '../containers/style/comingSoon';
+@import '../containers/style/home';
 @import '../containers/style/footer';

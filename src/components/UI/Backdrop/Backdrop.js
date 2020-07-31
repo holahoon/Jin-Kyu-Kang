@@ -1,8 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-// import backdropImage from '../../assets/images/backdrop-wall.svg';
-
 const backdropVariant = {
   hidden: {
     opacity: 0,
@@ -22,13 +20,14 @@ const backdropVariant = {
   },
 };
 
-function Backdrop({ isOpen }) {
+function Backdrop({ isOpen, toggleContactMenu }) {
   return (
     <motion.div
       variants={backdropVariant}
       initial={false}
       animate={isOpen ? 'show' : 'hidden'}
-      className='backdrop'></motion.div>
+      className='backdrop'
+      onClick={toggleContactMenu}></motion.div>
   );
 }
 

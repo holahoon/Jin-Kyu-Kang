@@ -24,8 +24,8 @@
       right: 0;
       bottom: 0;
       width: 100%;
-      height: 800px;
-      background-color: rgba(0, 0, 0, 0.98);
+      // height: 800px;
+      // background-color: rgba(0, 0, 0, 0.98);
     }
 
     &-button {
@@ -35,8 +35,9 @@
       &--close {
         display: inline-block;
         position: absolute;
-        bottom: 30rem;
+        bottom: 32rem;
         right: 20%;
+        padding: calcRem(5px);
         img {
           display: block;
           width: 100%;
@@ -44,30 +45,49 @@
       }
       // --- footer__contact-button--open
       &--open {
-        display: block;
+        // display: block;
         position: absolute;
-        top: calcRem(-60px);
+        bottom: 0;
         right: 20%;
         transform: translate(50%, 0);
-        width: 200px;
-        height: 60px;
-        border-top-left-radius: 100%;
-        border-top-right-radius: 100%;
+        // width: 100px;
+        // height: 100px;
+        // border-top-left-radius: 100%;
+        // border-top-right-radius: 100%;
         @include flex(row, center, flex-start);
         color: white;
         font-size: calcRem(16px);
-        padding-top: calcRem(30px);
+        padding-top: calcRem(20px);
+        padding-bottom: calcRem(10px);
+        // background-image: url(../../assets/images/contact.svg);
+        // background-repeat: no-repeat;
+        // background-size: cover;
+      }
+    }
+  }
+
+  .blob {
+    // max-height: 90vh;
+    // width: 500px;
+    // width: 200px;
+    position: absolute;
+    bottom: 0;
+    cursor: default;
+    g {
+      transform: translate(50%, 62%);
+      path {
+        animation: blob 14s linear infinite;
+        fill: rgba(0, 0, 0, 0.99);
       }
     }
   }
 
   // - footer__form
   &__form {
-    @include flex(column, flex-start, flex-start);
     position: absolute;
     bottom: calcRem(60px);
-    right: 25%;
-    width: calcRem(450px);
+    right: 22%;
+    width: calcRem(600px);
     z-index: 1;
 
     &__name {

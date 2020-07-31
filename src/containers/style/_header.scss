@@ -9,6 +9,7 @@
 
     // - nav__logo
     &__logo {
+      z-index: 1;
       a {
         display: block;
       }
@@ -21,6 +22,7 @@
       &__item {
         @include fontSize(16px);
         @include font-cormorant(700);
+        z-index: 1;
 
         a {
           color: $black;

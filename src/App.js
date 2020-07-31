@@ -3,10 +3,10 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Layout from './layouts/Layout';
 import Header from './containers/Header';
-import ComingSoon from './containers/ComingSoon';
-import Works from './containers/Works';
-import About from './containers/About';
-import Resume from './containers/Resume';
+import Home from './containers/Home';
+// import Works from './containers/Works';
+// import About from './containers/About';
+// import Resume from './containers/Resume';
 import SideText from './components/UI/SideText/SideText';
 
 import './styles/main.scss';
@@ -22,7 +22,8 @@ function App() {
 
           <Switch>
             <Route path='/' exact>
-              <ComingSoon />
+              {/* <ComingSoon /> */}
+              <Home />
             </Route>
             {/* <Route path='/works'>
               <Works />
