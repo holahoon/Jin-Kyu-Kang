@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
-import closeButton from '../../assets/images/close-button.svg';
-import contactImage from '../../assets/images/contact.svg';
+// import closeButton from "../../assets/images/close-button.svg";
+// import contactImage from "../../assets/images/contact.svg";
 
 const contactOpenVariants = {
   open: {
@@ -12,7 +12,7 @@ const contactOpenVariants = {
   },
   closed: {
     opacity: 1,
-    visibility: 'visible',
+    visibility: "visible",
     transition: {
       delay: 0.4,
     },
@@ -22,7 +22,7 @@ const contactCloseVariants = {
   open: {
     zIndex: 1,
     opacity: 1,
-    visibility: 'visible',
+    visibility: "visible",
     transition: {
       delay: 0.2,
     },
@@ -30,21 +30,41 @@ const contactCloseVariants = {
   closed: {
     zIndex: 0,
     opacity: 0,
-    visibility: 'hidden',
+    visibility: "hidden",
     transition: {
       delay: 0.1,
     },
   },
 };
+const contactSpanVariants = {
+  open: {
+    visibility: "hidden",
+    zIndex: 0,
+    opacity: 0,
+    transition: {
+    }
+  },
+  closed: {
+    visibility: "visible",
+    zIndex: 1,
+    opacity: 1,
+    transition: {
+      delay: 0.7,
+      duration: 0.2,
+      ease: 'easeOut'      
+    }
+  }
+}
 const closeButtonHover = {
-  rotate: '90deg',
-  scale: 1.1,
+  rotate: "90deg",
+  scale: 1.5,
 };
 const varr = {
   initial: {
-    scale: 1,
-    y: 80,
-    // cursor: 'default',
+    scale: 1.5,
+    y: 160,
+    // scale: 1,
+    // y: 80,
     transition: {
       duration: 0.5,
       delay: 0.3,
@@ -61,10 +81,10 @@ const varr = {
 };
 const varrg = {
   initial: {
-    cursor: 'pointer',
+    cursor: "pointer",
   },
   animate: {
-    cursor: 'default',
+    cursor: "default",
   },
 };
 
@@ -73,37 +93,52 @@ function Contact({ toggleContactMenu, circleVariants, isOpen }) {
     <>
       <motion.div
         // variants={circleVariants}
-        className='footer__contact-background'
+        className="footer__contact-background"
       />
 
-      <div className='footer__contact-button'>
+      <div className="footer__contact-button">
         <motion.div
           variants={contactCloseVariants}
           whileHover={closeButtonHover}
-          className='footer__contact-button--close'
-          onClick={toggleContactMenu}>
-          <img src={closeButton} alt='x' />
+          className="footer__contact-button--close"
+          onClick={toggleContactMenu}
+        >
+          {/* <img src={closeButton} alt='x' /> */}
+          <svg
+            width="30"
+            height="30"
+            viewBox="0 0 30 30"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M29.8494 7.22189L22.7783 0.150818L15.0001 7.92899L7.22195 0.150818L0.150879 7.22189L7.92905 15.0001L0.150879 22.7782L7.22195 29.8493L15.0001 22.0711L22.7783 29.8493L29.8494 22.7782L22.0712 15.0001L29.8494 7.22189Z"
+              fill="white"
+            />
+          </svg>
         </motion.div>
 
         <motion.div
           variants={contactOpenVariants}
           className={`footer__contact-button--open`}
-          // onClick={toggleContactMenu}
-        >
-          contact
+        // onClick={toggleContactMenu}
+        >          
+          <motion.span variants={contactSpanVariants} onClick={!isOpen ? toggleContactMenu : null}>contact</motion.span>
           <motion.svg
             // onClick={!isOpen ? toggleContactMenu : null}
             variants={varr}
-            initial='initial'
-            animate={isOpen ? 'animate' : 'initial'}
-            className='blob'
+            initial="initial"
+            animate={isOpen ? "animate" : "initial"}
+            className="blob"
             style={{ originX: 0.7, originY: 0.5 }}
             // width='200px'
             // viewBox='-100 -180 200 150'
-            xmlns='http://www.w3.org/2000/svg'>
+            xmlns="http://www.w3.org/2000/svg"
+          >
             <motion.g
               variants={varrg}
-              onClick={!isOpen ? toggleContactMenu : null}>
+              onClick={!isOpen ? toggleContactMenu : null}
+            >
               <path />
             </motion.g>
           </motion.svg>

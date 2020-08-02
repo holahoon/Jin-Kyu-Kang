@@ -17,8 +17,8 @@ const trans1 = {
   animate: {
     y: 6,
     transition: {
-      duration: 1.2,
-      ease: 'easeIn',
+      duration: 3,
+      ease: 'easeOut',
       yoyo: Infinity,
     },
   },
@@ -30,9 +30,9 @@ const trans2 = {
   animate: {
     y: 6,
     transition: {
-      duration: 1,
+      duration: 3.5,
       delay: 0.5,
-      ease: 'easeIn',
+      ease: 'easeOut',
       yoyo: Infinity,
     },
   },
@@ -42,10 +42,10 @@ const trans3 = {
     y: 0,
   },
   animate: {
-    y: 4,
+    y: 2,
     transition: {
-      duration: 0.8,
-      delay: 0.7,
+      duration: 3,
+      delay: 0.2,
       ease: 'easeInOut',
       yoyo: Infinity,
     },
@@ -54,12 +54,13 @@ const trans3 = {
 const trans4 = {
   initial: {
     y: 0,
+    x: 0
   },
   animate: {
-    y: 4,
+    y: -6,
+    x: 4,
     transition: {
-      duration: 0.8,
-      delay: 0.7,
+      duration: 4,      
       ease: 'easeInOut',
       yoyo: Infinity,
     },
@@ -72,8 +73,8 @@ const trans5 = {
   animate: {
     y: 4,
     transition: {
-      duration: 0.8,
-      delay: 0.7,
+      duration: 2.5,
+      delay: 0.3,
       ease: 'easeInOut',
       yoyo: Infinity,
     },
@@ -86,8 +87,8 @@ const trans6 = {
   animate: {
     y: 4,
     transition: {
-      duration: 0.8,
-      delay: 0.7,
+      duration: 2.7,
+      delay: 0.5,
       ease: 'easeInOut',
       yoyo: Infinity,
     },
@@ -100,8 +101,7 @@ const trans7 = {
   animate: {
     y: 4,
     transition: {
-      duration: 0.8,
-      delay: 0.7,
+      duration: 2.5,      
       ease: 'easeInOut',
       yoyo: Infinity,
     },
@@ -110,12 +110,14 @@ const trans7 = {
 const trans8 = {
   initial: {
     y: 0,
+    x: 0
   },
   animate: {
-    y: 4,
+    y: 8,
+    x: 2,
     transition: {
-      duration: 0.8,
-      delay: 0.7,
+      duration: 4,
+      delay: 2,
       ease: 'easeInOut',
       yoyo: Infinity,
     },
@@ -181,7 +183,7 @@ function Home() {
   }, []);
 
   const textTopPosition = {
-    marginTop: height * 0.47,
+    marginTop: height * 0.48,
   };
 
   return (
@@ -193,6 +195,7 @@ function Home() {
           className={`home__blurry-image-${i + 1}`}
           src={img.img.name}
           alt={`home-page-${img.img.name}`}
+          draggable="false"
         />
       ))}
       {/* <motion.img

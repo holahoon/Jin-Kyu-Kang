@@ -1,7 +1,7 @@
 .layout-container {
   @include max-width;
   margin: 0 auto;
-  padding: 0 calcRem(50px);
+  padding: 0 calcRem(45px) 0 calcRem(45px);
   position: relative;
   height: 100%;
   width: 100%;
@@ -14,14 +14,14 @@
     @include lineHeight(18px, 21px);
     position: absolute;
     top: 55%;
-    left: calcRem(20px);
+    left: calcRem(15px);
     transform: translateY(-50%);
     color: $black;
     transform: rotate(270deg);
     transform-origin: left top;
 
     &__icon {
-      img {
+      svg {
         display: block;
         width: 100%;
         transform: rotate(90deg);
@@ -30,7 +30,7 @@
 
     &__erugo {
       @include margin(10px, left);
-      margin-bottom: calcRem(2px);
+      margin-bottom: calcRem(3px);
       @include font-cormorant(600);
     }
   }
