@@ -10,7 +10,6 @@
     }
     &-1 {
       left: 36%;
-      // left: 36vw;
       bottom: 7%;
     }
     &-2 {
@@ -23,7 +22,6 @@
     }
     &-4 {
       left: 43%;
-      // left: 43vw;
       bottom: 5%;
     }
     &-5 {
@@ -40,8 +38,7 @@
     }
     &-8 {
       left: 36%;
-      // left: 36vw;
-      bottom: 18%;
+      bottom: 22%;
     }
   }
 
@@ -50,7 +47,8 @@
       text-align: center;
       color: $black;
       font-size: calcRem(64px);
-      @include font-cormorant(700);
+      @include font-cormorant(600);
+      letter-spacing: calcRem(1px);
     }
   }
 }

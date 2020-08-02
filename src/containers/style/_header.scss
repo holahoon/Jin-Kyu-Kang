@@ -1,11 +1,8 @@
 .header {
   /* -- Navigation -- */
   .nav {
-    // @include max-width;
     @include flex(row, space-between);
     padding-top: calcRem(50px);
-    // margin: 0 auto;
-    // padding: calcRem(50px) calcRem(50px) 0 calcRem(50px);
 
     // - nav__logo
     &__logo {
@@ -21,7 +18,7 @@
 
       &__item {
         @include fontSize(16px);
-        @include font-cormorant(700);
+        @include font-cormorant(600);
         z-index: 1;
 
         a {

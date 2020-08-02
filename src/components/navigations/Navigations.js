@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
-import Logo from './Logo/Logo';
-import Navigation from './navigation/Navigation';
+import Logo from "./Logo/Logo";
+import Navigation from "./navigation/Navigation";
 
 function Navigations() {
-  const navTitles = ['works', 'about', 'resume'];
+  const navTitles = ["works", "about", "resume"];
 
   return (
     <nav className='nav'>
