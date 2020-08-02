@@ -87,6 +87,7 @@
       @include flex(row, flex-start, center);
       margin-bottom: calcRem(60px);      
       svg {
+        display: block;
         width: calcRem(150px);
       }
     }
@@ -95,6 +96,7 @@
       @include flex(row, flex-start, center);
       margin-bottom: calcRem(60px);
       svg {
+        display: block;
         width: calcRem(150px);
       }
     }
@@ -103,12 +105,9 @@
       @include flex(row, flex-start, flex-start);
       margin-bottom: calcRem(60px);
       svg {
+        display: block;
         width: calcRem(240px);
       }
-    }
-
-    svg {
-      display: block;
     }
 
     &__send {
@@ -132,7 +131,8 @@
       font-size: inherit;
       color: $white;
       caret-color: $white;
-      // @include font-cormorant(600);
+      font-size: 28px; 
+      font-family: monospace;      
     }
 
     textarea {
@@ -144,10 +144,10 @@
       border: none;
       background-color: transparent;
       outline: 0;
-      font-size: 30px;
       color: $white;
       caret-color: $white;
-      // @include font-cormorant(600);
+      font-size: 28px;      
+      font-family: monospace;      
     }
 
     button {
