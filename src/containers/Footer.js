@@ -21,7 +21,6 @@ function Footer() {
           <motion.div
             initial={false}
             animate={isOpen ? "open" : "closed"}
-            custom={height}
             className='footer__contact'
           >
             <Form />
