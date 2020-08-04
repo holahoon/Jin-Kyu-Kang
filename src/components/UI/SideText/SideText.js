@@ -3,7 +3,11 @@ import React from "react";
 function SideText() {
   return (
     <div className='side-text'>
-      <a href='https://www.instagram.com/erugo.gada/' target='_blank'>
+      <a
+        href='https://www.instagram.com/erugo.gada/'
+        target='_blank'
+        rel='noopener noreferrer'
+      >
         <span className='side-text__icon'>
           <svg
             width='24'
