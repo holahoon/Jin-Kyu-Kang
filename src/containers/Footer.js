@@ -1,33 +1,12 @@
-import React, { useRef, useState, useCallback } from 'react';
-import { motion, useCycle } from 'framer-motion';
+import React, { useRef, useState, useCallback } from "react";
+import { motion } from "framer-motion";
 
-import Contact from '../components/Contact/Contact';
-import { useDimensions } from '../utilities/useDimensions';
-import Backdrop from '../components/UI/Backdrop/Backdrop';
-import Form from '../components/Form/Form';
-import contactImage from '../assets/images/contact.svg';
-
-// const circleVariants = {
-//   open: (height = 350) => ({
-//     clipPath: `ellipse(${height * 1.9}px ${height * 1.8}px at 68% 90%)`,
-//     transition: {
-//       type: 'spring',
-//       stiffness: 100,
-//     },
-//   }),
-//   closed: {
-//     clipPath: 'ellipse(50px 40px at 80% 100%)',
-//     transition: {
-//       delay: 0.15,
-//       type: 'spring',
-//       stiffness: 100,
-//       damping: 15,
-//     },
-//   },
-// };
+import Contact from "../components/Contact/Contact";
+import { useDimensions } from "../utilities/useDimensions";
+import Backdrop from "../components/UI/Backdrop/Backdrop";
+import Form from "../components/Form/Form";
 
 function Footer() {
-  // const [isOpen, toggleContactOpen] = useCycle(false, true);
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
@@ -44,16 +23,13 @@ function Footer() {
         <section>
           <motion.div
             initial={false}
-            animate={isOpen ? 'open' : 'closed'}
+            animate={isOpen ? "open" : "closed"}
             custom={height}
             ref={containerRef}
-            className='footer__contact'>
+            className='footer__contact'
+          >
             <Form />
-            <Contact
-              // circleVariants={circleVariants}
-              isOpen={isOpen}
-              toggleContactMenu={toggleContactMenu}
-            />
+            <Contact isOpen={isOpen} toggleContactMenu={toggleContactMenu} />
           </motion.div>
 
           <div className='footer__language'>

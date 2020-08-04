@@ -1,16 +1,17 @@
-import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import Layout from './layouts/Layout';
-import Header from './containers/Header';
-import Home from './containers/Home';
+import Layout from "./layouts/Layout";
+import Header from "./containers/Header";
+import Home from "./containers/Home";
 // import Works from './containers/Works';
 // import About from './containers/About';
 // import Resume from './containers/Resume';
-import SideText from './components/UI/SideText/SideText';
+import SideText from "./components/UI/SideText/SideText";
+import GuardedRoute from "./utils/GaurdRoute";
 
-import './styles/main.scss';
-import Footer from './containers/Footer';
+import "./styles/main.scss";
+import Footer from "./containers/Footer";
 
 function App() {
   return (
@@ -22,7 +23,6 @@ function App() {
 
           <Switch>
             <Route path='/' exact>
-              {/* <ComingSoon /> */}
               <Home />
             </Route>
             {/* <Route path='/works'>

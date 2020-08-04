@@ -41,8 +41,7 @@ const contactSpanVariants = {
     visibility: "hidden",
     zIndex: 0,
     opacity: 0,
-    transition: {
-    }
+    transition: {},
   },
   closed: {
     visibility: "visible",
@@ -51,10 +50,10 @@ const contactSpanVariants = {
     transition: {
       delay: 0.7,
       duration: 0.2,
-      ease: 'easeOut'      
-    }
-  }
-}
+      ease: "easeOut",
+    },
+  },
+};
 const closeButtonHover = {
   rotate: "90deg",
   scale: 1.5,
@@ -63,8 +62,6 @@ const varr = {
   initial: {
     scale: 1.5,
     y: 160,
-    // scale: 1,
-    // y: 80,
     transition: {
       duration: 0.5,
       delay: 0.3,
@@ -73,9 +70,10 @@ const varr = {
   animate: {
     scale: 8.5,
     y: 0,
-    // cursor: 'default',
     transition: {
       duration: 0.5,
+      type: "spring",
+      stiffness: 60,
     },
   },
 };
@@ -88,32 +86,31 @@ const varrg = {
   },
 };
 
-function Contact({ toggleContactMenu, circleVariants, isOpen }) {
+function Contact({ toggleContactMenu, isOpen }) {
   return (
     <>
       <motion.div
         // variants={circleVariants}
-        className="footer__contact-background"
+        className='footer__contact-background'
       />
 
-      <div className="footer__contact-button">
+      <div className='footer__contact-button'>
         <motion.div
           variants={contactCloseVariants}
           whileHover={closeButtonHover}
-          className="footer__contact-button--close"
+          className='footer__contact-button--close'
           onClick={toggleContactMenu}
         >
-          {/* <img src={closeButton} alt='x' /> */}
           <svg
-            width="30"
-            height="30"
-            viewBox="0 0 30 30"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+            width='30'
+            height='30'
+            viewBox='0 0 30 30'
+            fill='none'
+            xmlns='http://www.w3.org/2000/svg'
           >
             <path
-              d="M29.8494 7.22189L22.7783 0.150818L15.0001 7.92899L7.22195 0.150818L0.150879 7.22189L7.92905 15.0001L0.150879 22.7782L7.22195 29.8493L15.0001 22.0711L22.7783 29.8493L29.8494 22.7782L22.0712 15.0001L29.8494 7.22189Z"
-              fill="white"
+              d='M29.8494 7.22189L22.7783 0.150818L15.0001 7.92899L7.22195 0.150818L0.150879 7.22189L7.92905 15.0001L0.150879 22.7782L7.22195 29.8493L15.0001 22.0711L22.7783 29.8493L29.8494 22.7782L22.0712 15.0001L29.8494 7.22189Z'
+              fill='white'
             />
           </svg>
         </motion.div>
@@ -121,19 +118,20 @@ function Contact({ toggleContactMenu, circleVariants, isOpen }) {
         <motion.div
           variants={contactOpenVariants}
           className={`footer__contact-button--open`}
-        // onClick={toggleContactMenu}
-        >          
-          <motion.span variants={contactSpanVariants} onClick={!isOpen ? toggleContactMenu : null}>contact</motion.span>
+        >
+          <motion.span
+            variants={contactSpanVariants}
+            onClick={!isOpen ? toggleContactMenu : null}
+          >
+            contact
+          </motion.span>
           <motion.svg
-            // onClick={!isOpen ? toggleContactMenu : null}
             variants={varr}
-            initial="initial"
+            initial='initial'
             animate={isOpen ? "animate" : "initial"}
-            className="blob"
+            className='blob'
             style={{ originX: 0.7, originY: 0.5 }}
-            // width='200px'
-            // viewBox='-100 -180 200 150'
-            xmlns="http://www.w3.org/2000/svg"
+            xmlns='http://www.w3.org/2000/svg'
           >
             <motion.g
               variants={varrg}
