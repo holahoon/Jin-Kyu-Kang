@@ -8,7 +8,6 @@ import Home from "./containers/Home";
 // import About from './containers/About';
 // import Resume from './containers/Resume';
 import SideText from "./components/UI/SideText/SideText";
-import GuardedRoute from "./utils/GaurdRoute";
 
 import "./styles/main.scss";
 import Footer from "./containers/Footer";
