@@ -1,9 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-// import closeButton from "../../assets/images/close-button.svg";
-// import contactImage from "../../assets/images/contact.svg";
-
 const contactOpenVariants = {
   open: {
     transition: {
@@ -41,14 +38,13 @@ const contactSpanVariants = {
     visibility: "hidden",
     zIndex: 0,
     opacity: 0,
-    transition: {},
   },
   closed: {
     visibility: "visible",
     zIndex: 1,
     opacity: 1,
     transition: {
-      delay: 0.7,
+      delay: 1,
       duration: 0.2,
       ease: "easeOut",
     },
@@ -58,13 +54,14 @@ const closeButtonHover = {
   rotate: "90deg",
   scale: 1.5,
 };
-const varr = {
+const contactSvgVariants = {
   initial: {
     scale: 1.5,
-    y: 160,
+    y: 140,
     transition: {
-      duration: 0.5,
       delay: 0.3,
+      type: "spring",
+      stiffness: 50,
     },
   },
   animate: {
@@ -77,7 +74,7 @@ const varr = {
     },
   },
 };
-const varrg = {
+const gVariants = {
   initial: {
     cursor: "pointer",
   },
@@ -89,10 +86,7 @@ const varrg = {
 function Contact({ toggleContactMenu, isOpen }) {
   return (
     <>
-      <motion.div
-        // variants={circleVariants}
-        className='footer__contact-background'
-      />
+      <motion.div className='footer__contact-background' />
 
       <div className='footer__contact-button'>
         <motion.div
@@ -126,7 +120,7 @@ function Contact({ toggleContactMenu, isOpen }) {
             contact
           </motion.span>
           <motion.svg
-            variants={varr}
+            variants={contactSvgVariants}
             initial='initial'
             animate={isOpen ? "animate" : "initial"}
             className='blob'
@@ -134,7 +128,7 @@ function Contact({ toggleContactMenu, isOpen }) {
             xmlns='http://www.w3.org/2000/svg'
           >
             <motion.g
-              variants={varrg}
+              variants={gVariants}
               onClick={!isOpen ? toggleContactMenu : null}
             >
               <path />

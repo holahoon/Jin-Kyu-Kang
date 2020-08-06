@@ -1,7 +1,7 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React from "react";
+import { NavLink } from "react-router-dom";
 
-function Navigation({ navTitle }) {
+function NavigationItem({ navTitle }) {
   return (
     <li className={`nav__menu__item nav__menu__item-${navTitle}`}>
       <NavLink to={`/`} activeClassName='nav-active'>
@@ -11,4 +11,4 @@ function Navigation({ navTitle }) {
   );
 }
 
-export default Navigation;
+export default NavigationItem;

@@ -128,49 +128,49 @@ const imageArray = [
   {
     img: {
       name: blob1,
-      trans: trans1,
+      transition: trans1,
     },
   },
   {
     img: {
       name: blob2,
-      trans: trans2,
+      transition: trans2,
     },
   },
   {
     img: {
       name: blob3,
-      trans: trans3,
+      transition: trans3,
     },
   },
   {
     img: {
       name: intersect1,
-      trans: trans4,
+      transition: trans4,
     },
   },
   {
     img: {
       name: intersect2,
-      trans: trans5,
+      transition: trans5,
     },
   },
   {
     img: {
       name: intersect3,
-      trans: trans6,
+      transition: trans6,
     },
   },
   {
     img: {
       name: intersect4,
-      trans: trans7,
+      transition: trans7,
     },
   },
   {
     img: {
       name: square,
-      trans: trans8,
+      transition: trans8,
     },
   },
 ];
@@ -178,13 +178,13 @@ const imageArray = [
 function HomeBackground() {
   return (
     <>
-      {imageArray.map((img, i) => (
+      {imageArray.map((each, i) => (
         <motion.img
           key={i}
-          variants={img.img.trans}
+          variants={each.img.transition}
           className={`home__blurry-image-${i + 1}`}
-          src={img.img.name}
-          alt={`home-page-${img.img.name}`}
+          src={each.img.name}
+          alt={`home-page-${each.img.name}`}
           draggable='false'
         />
       ))}

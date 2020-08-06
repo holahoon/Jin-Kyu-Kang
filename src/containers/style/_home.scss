@@ -10,7 +10,7 @@
     }
     &-1 {
       left: 36%;
-      bottom: 7%;
+      bottom: 8%;
     }
     &-2 {
       right: 0;
@@ -22,7 +22,7 @@
     }
     &-4 {
       left: 43%;
-      bottom: 5%;
+      bottom: 7%;
     }
     &-5 {
       right: 7%;
@@ -38,11 +38,15 @@
     }
     &-8 {
       left: 36%;
-      bottom: 22%;
+      bottom: 25%;
     }
   }
 
   .coming-soon {
+    position: absolute;
+    left: 50%;
+    bottom: 24%;
+    transform: translate(-50%, -50%);
     h1 {
       text-align: center;
       color: $black;

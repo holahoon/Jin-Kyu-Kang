@@ -94,30 +94,9 @@ $max-width: 1440px;
   font-size: calcRem($size);
 }
 
+/* -- Font size calculation -- */
 @mixin lineHeight($fontSize, $lineHeight) {
   line-height: calculateLineHeight($fontSize, $lineHeight);
-}
-
-/* -- Margin calculation -- */
-@mixin margin($size, $direction: null, $secondary-size: null) {
-  @if ($direction == vh) {
-    margin: calcRem($size) calcRem($secondary-size);
-  } @else if ($direction) {
-    margin-#{$direction}: calcRem($size);
-  } @else {
-    margin: calcRem($size);
-  }
-}
-
-/* -- Padding calculation -- */
-@mixin padding($size, $direction: null, $secondary-size: null) {
-  @if ($direction == vh) {
-    padding: calcRem($size) calcRem($secondary-size);
-  } @else if ($direction) {
-    padding-#{$direction}: calcRem($size);
-  } @else {
-    padding: calcRem($size);
-  }
 }
 
 /* -- Max width -- */

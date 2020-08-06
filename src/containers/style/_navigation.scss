@@ -1,0 +1,43 @@
+.nav {
+  @include flex(row, space-between);
+  padding-top: calcRem(50px);
+
+  // - nav__logo
+  &__logo {
+    z-index: 1;
+    a {
+      display: block;
+    }
+  }
+
+  // - nav__menu
+  &__menu {
+    @include flex(row);
+
+    &__item {
+      @include fontSize(16px);
+      @include font-cormorant(600);
+      z-index: 1;
+
+      a {
+        color: $black;
+        transition: text-decoration 0.1s ease;
+        &:hover {
+          text-decoration-line: line-through;
+          text-decoration-color: $brand-red;
+        }
+      }
+
+      &-about {
+        margin: 0 calcRem(30px);
+      }
+    }
+  }
+
+  // - nav-active
+  // ** TODO: uncomment after coming soon launch **
+  // &-active {
+  //   text-decoration-line: line-through;
+  //   text-decoration-color: $brand-red;
+  // }
+}
