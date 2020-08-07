@@ -17,21 +17,19 @@ function Footer() {
       <Backdrop isOpen={isOpen} toggleContactMenu={toggleContactMenu} />
 
       <footer className='footer'>
-        <section>
-          <motion.div
-            initial={false}
-            animate={isOpen ? "open" : "closed"}
-            className='footer__contact'
-          >
-            <Form />
-            <Contact isOpen={isOpen} toggleContactMenu={toggleContactMenu} />
-          </motion.div>
+        <motion.div
+          initial={false}
+          animate={isOpen ? "open" : "closed"}
+          className='footer__contact'
+        >
+          <Form />
+          <Contact isOpen={isOpen} toggleContactMenu={toggleContactMenu} />
+        </motion.div>
 
-          <div className='footer__language'>
-            <span className='footer__language-eng'>eng</span>
-            <span className='footer__language-kr'>kr</span>
-          </div>
-        </section>
+        <div className='footer__language'>
+          <span className='footer__language-eng'>eng</span>
+          <span className='footer__language-kr'>kr</span>
+        </div>
       </footer>
     </>
   );

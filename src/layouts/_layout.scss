@@ -31,7 +31,7 @@
     }
 
     &__erugo {
-      @include margin(10px, left);
+      margin-left: calcRem(10px);
       margin-bottom: calcRem(3px);
       @include font-cormorant(600);
       @include fontSize(18px);

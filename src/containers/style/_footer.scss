@@ -1,14 +1,7 @@
 .footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 0 calcRem(45px) calcRem(20px);
-
-  section {
-    @include flex(row, flex-end);
-    position: relative;
-  }
+  @include flex(row, flex-end);
+  position: relative;
+  padding-bottom: calcRem(20px);
 
   // - footer__contact
   &__contact {
@@ -54,9 +47,9 @@
           @include font-cormorant(600);
           color: $white;
           position: absolute;
-          bottom: 0;
+          bottom: calcRem(15px);
           left: 0;
-          transform: translate(-80%, 20%);
+          transform: translate(-80%, 0);
         }
       }
     }
@@ -83,22 +76,42 @@
     width: calcRem(600px);
     z-index: 1;
 
-    &__name,
-    &__email {
-      @include flex(row, flex-start, center);
+    &__name {
+      @include flex(column, flex-start, flex-start);
+      position: relative;
       margin-bottom: calcRem(60px);
-      svg {
-        display: block;
-        width: calcRem(150px);
+      &__inner {
+        @include flex(row, flex-start, center);
+        svg {
+          display: block;
+          width: calcRem(150px);
+        }
+      }
+    }
+
+    &__email {
+      @include flex(column, flex-start, flex-start);
+      margin-bottom: calcRem(60px);
+      position: relative;
+      &__inner {
+        @include flex(row, flex-start, center);
+        svg {
+          display: block;
+          width: calcRem(150px);
+        }
       }
     }
 
     &__message {
-      @include flex(row, flex-start, flex-start);
+      @include flex(column, flex-start, flex-start);
       margin-bottom: calcRem(60px);
-      svg {
-        display: block;
-        width: calcRem(240px);
+      position: relative;
+      &__inner {
+        @include flex(row, flex-start, flex-start);
+        svg {
+          display: block;
+          width: calcRem(240px);
+        }
       }
     }
 
@@ -113,12 +126,24 @@
       svg {
         &:first-child {
           margin-right: calcRem(20px);
-          // transform: rotateX(70deg);
         }
         &:last-child {
           position: absolute;
           right: calcRem(5px);
         }
+      }
+    }
+
+    &__error-message {
+      display: none;
+      &--active {
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: calcRem(-10px);
+        color: $text-dark-white;
+        font-size: calcRem(16px);
+        font-family: monospace;
       }
     }
 

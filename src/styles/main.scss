@@ -1,21 +1,21 @@
 /* ------------
   Utilities
 ------------ */
-@import './utilites/mixins';
-@import './utilites/color';
-@import './utilites/font';
-@import './utilites/global';
-@import './utilites/ui';
+@import "./utilites/mixins";
+@import "./utilites/color";
+@import "./utilites/font";
+@import "./utilites/global";
+@import "./utilites/ui";
 
 /* ------------
   Animations
 ------------ */
-@import './animations/blob.scss';
+@import "./animations/blob.scss";
 
 /* ------------
   Containers & Components
 ------------ */
-@import '../layouts/layout';
-@import '../containers/style/header';
-@import '../containers/style/home';
-@import '../containers/style/footer';
+@import "../layouts/layout";
+@import "../containers/style/navigation";
+@import "../containers/style/home";
+@import "../containers/style/footer";

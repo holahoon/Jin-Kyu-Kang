@@ -1,7 +1,7 @@
 import React from "react";
 
-import Logo from "./Logo/Logo";
-import Navigation from "./navigation/Navigation";
+import Logo from "../components/navigations/Logo/Logo";
+import NavigationItem from "../components/navigations/navigationItem/NavigationItem";
 
 function Navigations() {
   const navTitles = ["works", "about", "resume"];
@@ -11,7 +11,7 @@ function Navigations() {
       <Logo className='nav__logo' />
       <ul className='nav__menu'>
         {navTitles.map((title) => (
-          <Navigation key={title} navTitle={title} />
+          <NavigationItem key={title} navTitle={title} />
         ))}
       </ul>
     </nav>
