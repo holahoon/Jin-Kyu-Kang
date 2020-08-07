@@ -114,9 +114,9 @@ function Form() {
     let isValid = validate();
     const USERID = process.env.REACT_APP_USER_ID;
     const gmail = "gmail";
-    const emailTemplate = "jinkyu_kang";
+    const template_id = "jinkyu_kang";
 
-    emailjs.sendForm(gmail, emailTemplate, e.target, USERID).then(
+    emailjs.sendForm(gmail, template_id, e.target, USERID).then(
       (response) => {
         if (response.status === 200 && isValid) {
           setFormSubmitSuccess(true);
