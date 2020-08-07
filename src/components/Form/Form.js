@@ -101,42 +101,31 @@ function Form() {
     email: "",
     message: "",
   });
-  // const [inputInfo, setInputInfo] = useState({});
   const [errors, setErrors] = useState({});
   const [formSubmitSuccess, setFormSubmitSuccess] = useState(false);
 
   useEffect(() => {
+    // Reset
     formSubmitSuccess && setInputInfo({ name: "", email: "", message: "" });
     formSubmitSuccess && setErrors({});
   }, [formSubmitSuccess]);
 
   function emailJsHandler(e) {
     let isValid = validate();
-    isValid ? setFormSubmitSuccess(true) : setFormSubmitSuccess(false);
-    // const userId = "user_DAlXSPk5S1DYdxPq8Mrsi";
-    // emailjs.sendForm("gmail", "jinkyu_kang", e.target, userId).then(
-    //   (response) => {
-    //     if (response.status === 200) {
-    //       // setInputInfo({
-    //       // name: "",
-    //       // email: "",
-    //       // message: "",
-    //       // });
-    //       setFormSubmitSuccess(true);
-    //     }
-    //   },
-    //   (error) => {
-    //     // setInputInfo({
-    //     // name: "",
-    //     // email: "",
-    //     // message: "",
-    //     // });
-    //     setFormSubmitSuccess(false);
-    //   }
-    // );
+    const userId = "user_DAlXSPk5S1DYdxPq8Mrsi";
+    emailjs.sendForm("gmail", "jinkyu_kang", e.target, userId).then(
+      (response) => {
+        if (response.status === 200 && isValid) {
+          setFormSubmitSuccess(true);
+        }
+      },
+      (error) => {
+        setFormSubmitSuccess(false);
+      }
+    );
   }
 
-  const validate = () => {
+  function validate() {
     let isValid = true;
     let copiedErrors = { ...errors };
 
@@ -144,15 +133,15 @@ function Form() {
       if (inputInfo[key] === "") {
         copiedErrors = { ...copiedErrors, [key]: true };
         setErrors(copiedErrors);
-        isValid = isValid && true;
+        isValid = isValid && false;
       } else {
         copiedErrors = { ...copiedErrors, [key]: false };
         setErrors(copiedErrors);
-        isValid = isValid && false;
+        isValid = isValid && true;
       }
     }
     return isValid;
-  };
+  }
 
   const onChangeHandler = (e) => {
     const { name, value } = e.target;
@@ -164,8 +153,6 @@ function Form() {
 
   const submitHandler = (e) => {
     e.preventDefault();
-
-    // validate();
     emailJsHandler(e);
   };
 
@@ -176,7 +163,6 @@ function Form() {
           width='124'
           height='36'
           viewBox='0 0 124 36'
-          // fill='none'
           xmlns='http://www.w3.org/2000/svg'
         >
           <path
@@ -229,7 +215,6 @@ function Form() {
     );
   }
 
-  console.log(errors);
   return (
     <motion.form
       variants={formVariants}
@@ -264,7 +249,7 @@ function Form() {
             errors.name ? "--active" : ""
           }`}
         >
-          can't leave this field empty
+          "I need your name"
         </span>
       </motion.label>
       <motion.label variants={inputVariants} className='footer__form__email'>
@@ -295,7 +280,7 @@ function Form() {
             errors.email ? "--active" : ""
           }`}
         >
-          can't leave this field empty
+          "I need your email"
         </span>
       </motion.label>
       <motion.label variants={inputVariants} className='footer__form__message'>
@@ -327,7 +312,7 @@ function Form() {
             errors.message ? "--active" : ""
           }`}
         >
-          can't leave this field empty
+          "I need your message"
         </span>
       </motion.label>
 

@@ -141,9 +141,9 @@
         position: absolute;
         left: 0;
         bottom: calcRem(-10px);
-        color: $brand-red;
+        color: $text-dark-white;
         font-size: calcRem(16px);
-        @include font-cormorant(600);
+        font-family: monospace;
       }
     }
 
