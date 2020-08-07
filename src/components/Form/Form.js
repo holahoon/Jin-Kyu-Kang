@@ -112,11 +112,12 @@ function Form() {
 
   function emailJsHandler(e) {
     let isValid = validate();
-    const USERID = process.env.REACT_APP_USER_ID;
-    const gmail = "gmail";
-    const template_id = "jinkyu_kang";
+    // Tried using environment variable to hide the key and added in gitignore file. This causes the github to ignore the value which returns undefine
+    const USER_ID = "user_DAlXSPk5S1DYdxPq8Mrsi";
+    const EMAIL_TYPE = "gmail";
+    const TEMPLATE_ID = "jinkyu_kang";
 
-    emailjs.sendForm(gmail, template_id, e.target, USERID).then(
+    emailjs.sendForm(EMAIL_TYPE, TEMPLATE_ID, e.target, USER_ID).then(
       (response) => {
         if (response.status === 200 && isValid) {
           setFormSubmitSuccess(true);
