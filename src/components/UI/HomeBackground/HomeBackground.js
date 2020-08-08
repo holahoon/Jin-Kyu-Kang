@@ -30,7 +30,7 @@ const trans2 = {
   animate: {
     y: 6,
     transition: {
-      duration: 3.5,
+      duration: 4.5,
       delay: 0.5,
       ease: "easeOut",
       yoyo: Infinity,
@@ -87,7 +87,7 @@ const trans6 = {
   animate: {
     y: 4,
     transition: {
-      duration: 2.7,
+      duration: 3.2,
       delay: 0.5,
       ease: "easeInOut",
       yoyo: Infinity,

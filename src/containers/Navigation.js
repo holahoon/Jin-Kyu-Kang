@@ -4,7 +4,7 @@ import Logo from "../components/navigations/Logo/Logo";
 import NavigationItem from "../components/navigations/navigationItem/NavigationItem";
 
 function Navigations() {
-  const navTitles = ["works", "about", "resume"];
+  const navTitles = ["works", "about"];
 
   return (
     <nav className='nav'>

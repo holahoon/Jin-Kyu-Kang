@@ -27,7 +27,7 @@
         display: inline-block;
         position: absolute;
         bottom: 32rem;
-        right: 17%;
+        right: 15%;
         padding: calcRem(5px);
         img {
           display: block;
@@ -72,13 +72,12 @@
   &__form {
     position: absolute;
     bottom: calcRem(60px);
-    right: 18%;
+    right: 16%;
     width: calcRem(600px);
     z-index: 1;
 
     &__name {
       @include flex(column, flex-start, flex-start);
-      position: relative;
       margin-bottom: calcRem(60px);
       &__inner {
         @include flex(row, flex-start, center);
@@ -92,7 +91,6 @@
     &__email {
       @include flex(column, flex-start, flex-start);
       margin-bottom: calcRem(60px);
-      position: relative;
       &__inner {
         @include flex(row, flex-start, center);
         svg {
@@ -105,7 +103,6 @@
     &__message {
       @include flex(column, flex-start, flex-start);
       margin-bottom: calcRem(60px);
-      position: relative;
       &__inner {
         @include flex(row, flex-start, flex-start);
         svg {
@@ -118,6 +115,7 @@
     &__send {
       @include flex(row, flex-end, center);
       width: 100%;
+      position: relative;
     }
 
     &__sent {
@@ -138,10 +136,9 @@
       display: none;
       &--active {
         display: block;
-        position: absolute;
-        left: 0;
-        bottom: calcRem(-10px);
-        color: $text-dark-white;
+        margin-top: calcRem(8px);
+        margin-right: calcRem(16px);
+        color: $text-light-gray;
         font-size: calcRem(16px);
         font-family: monospace;
       }
@@ -198,6 +195,7 @@
           position: absolute;
           right: calcRem(-18px);
           bottom: calcRem(2px);
+          padding-left: calcRem(10px);
         }
         &:last-of-type {
           position: absolute;
