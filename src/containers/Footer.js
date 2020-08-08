@@ -22,7 +22,7 @@ function Footer() {
           animate={isOpen ? "open" : "closed"}
           className='footer__contact'
         >
-          <Form />
+          <Form isOpen={isOpen} />
           <Contact isOpen={isOpen} toggleContactMenu={toggleContactMenu} />
         </motion.div>
 

@@ -11,7 +11,6 @@ import Navigation from "./containers/Navigation";
 import Home from "./containers/Home";
 // import Works from "./containers/Works";
 // import About from "./containers/About";
-// import Resume from "./containers/Resume";
 import SideText from "./components/UI/SideText/SideText";
 
 import "./styles/main.scss";
@@ -34,9 +33,6 @@ function App() {
             </Route>
             <Route path='/about'>
               <About />
-            </Route>
-            <Route path='/resume'>
-              <Resume />
             </Route> */}
             <Redirect to='/' />
           </Switch>

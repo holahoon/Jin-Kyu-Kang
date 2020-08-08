@@ -95,7 +95,7 @@ const exclamVariants = {
  * TODO: Refactor and split into components
  */
 
-function Form() {
+function Form({ isOpen }) {
   const [inputInfo, setInputInfo] = useState({
     name: "",
     email: "",
@@ -105,28 +105,31 @@ function Form() {
   const [formSubmitSuccess, setFormSubmitSuccess] = useState(false);
 
   useEffect(() => {
-    // Reset
-    formSubmitSuccess && setInputInfo({ name: "", email: "", message: "" });
-    formSubmitSuccess && setErrors({});
-  }, [formSubmitSuccess]);
+    // Reset the form when contact menu is closed or form is successfully submitted
+    (isOpen || formSubmitSuccess) &&
+      setInputInfo({ name: "", email: "", message: "" });
+    (isOpen || formSubmitSuccess) && setErrors({});
+  }, [formSubmitSuccess, isOpen]);
 
   function emailJsHandler(e) {
     let isValid = validate();
     // Tried using environment variable to hide the key and added in gitignore file. This causes the github to ignore the value which returns undefine
-    const USER_ID = "user_DAlXSPk5S1DYdxPq8Mrsi";
+    const USER_ID = process.env.REACT_APP_USER_ID;
     const EMAIL_TYPE = "gmail";
     const TEMPLATE_ID = "jinkyu_kang";
 
-    emailjs.sendForm(EMAIL_TYPE, TEMPLATE_ID, e.target, USER_ID).then(
-      (response) => {
-        if (response.status === 200 && isValid) {
-          setFormSubmitSuccess(true);
+    if (isValid) {
+      emailjs.sendForm(EMAIL_TYPE, TEMPLATE_ID, e.target, USER_ID).then(
+        (response) => {
+          if (response.status === 200) {
+            setFormSubmitSuccess(true);
+          }
+        },
+        (error) => {
+          setFormSubmitSuccess(false);
         }
-      },
-      (error) => {
-        setFormSubmitSuccess(false);
-      }
-    );
+      );
+    }
   }
 
   function validate() {
@@ -161,8 +164,15 @@ function Form() {
   };
 
   let sendButton = (
-    <div className='footer__form__send'>
-      <motion.button whileHover='hover' variants={inputVariants} type='submit'>
+    <motion.div className='footer__form__send' variants={inputVariants}>
+      <span
+        className={`footer__form__error-message${
+          errors.name || errors.email || errors.message ? "--active" : ""
+        }`}
+      >
+        "Please enter all the fields"
+      </span>
+      <motion.button whileHover='hover' type='submit'>
         <motion.svg
           width='124'
           height='36'
@@ -178,7 +188,7 @@ function Form() {
         <motion.img variants={submitHover1} src={arrow1} alt='send arrow 1' />
         <motion.img variants={submitHover2} src={arrow2} alt='send arrow 2' />
       </motion.button>
-    </div>
+    </motion.div>
   );
   if (formSubmitSuccess) {
     sendButton = (
@@ -223,6 +233,7 @@ function Form() {
     <motion.form
       variants={formVariants}
       className='footer__form'
+      autoComplete='off'
       onSubmit={submitHandler}
     >
       <motion.label variants={inputVariants} className='footer__form__name'>
@@ -248,13 +259,13 @@ function Form() {
             onChange={(e) => onChangeHandler(e)}
           />
         </span>
-        <span
+        {/* <span
           className={`footer__form__error-message${
             errors.name ? "--active" : ""
           }`}
         >
           "I need your name"
-        </span>
+        </span> */}
       </motion.label>
       <motion.label variants={inputVariants} className='footer__form__email'>
         <span className={"footer__form__email__inner"}>
@@ -279,13 +290,13 @@ function Form() {
             onChange={(e) => onChangeHandler(e)}
           />
         </span>
-        <span
+        {/* <span
           className={`footer__form__error-message${
             errors.email ? "--active" : ""
           }`}
         >
           "I need your email"
-        </span>
+        </span> */}
       </motion.label>
       <motion.label variants={inputVariants} className='footer__form__message'>
         <span className={"footer__form__message__inner"}>
@@ -311,13 +322,13 @@ function Form() {
             onChange={(e) => onChangeHandler(e)}
           />
         </span>
-        <span
+        {/* <span
           className={`footer__form__error-message${
             errors.message ? "--active" : ""
           }`}
         >
           "I need your message"
-        </span>
+        </span> */}
       </motion.label>
 
       {sendButton}

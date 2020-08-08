@@ -65,7 +65,7 @@ const contactSvgVariants = {
     },
   },
   animate: {
-    scale: 8.5,
+    scale: 7.5,
     y: 0,
     transition: {
       duration: 0.5,
