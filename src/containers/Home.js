@@ -8,9 +8,9 @@ function Home() {
     <motion.div initial='initial' animate='animate' className='home'>
       <HomeBackground />
 
-      <div className='coming-soon'>
+      {/* <div className='coming-soon'>
         <h1>coming soon</h1>
-      </div>
+      </div> */}
     </motion.div>
   );
 }

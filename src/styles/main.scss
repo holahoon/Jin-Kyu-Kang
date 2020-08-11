@@ -16,6 +16,6 @@
   Containers & Components
 ------------ */
 @import "../layouts/layout";
-@import "../containers/style/navigation";
-@import "../containers/style/home";
-@import "../containers/style/footer";
+@import "./containersStyles/navigation";
+@import "./containersStyles/home";
+@import "./containersStyles/footer";

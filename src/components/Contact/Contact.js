@@ -1,5 +1,5 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React from "./node_modules/react";
+import { motion } from "./node_modules/framer-motion";
 
 const contactOpenVariants = {
   open: {

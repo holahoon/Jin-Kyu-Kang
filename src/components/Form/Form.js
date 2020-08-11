@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import * as emailjs from "emailjs-com";
+import React, { useState, useEffect } from "./node_modules/react";
+import { motion } from "./node_modules/framer-motion";
+import * as emailjs from "./node_modules/emailjs-com";
 
 import arrow1 from "../../assets/images/send-arrow-1.svg";
 import arrow2 from "../../assets/images/send-arrow-2.svg";
