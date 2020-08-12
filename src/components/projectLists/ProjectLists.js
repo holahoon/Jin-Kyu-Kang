@@ -15,11 +15,19 @@ const list = [
 ];
 
 function ProjectLists() {
+  function selectProject(index) {
+    console.log(index);
+  }
+
   return (
-    <div>
+    <div className='project-lists'>
       <ul>
-        {list.map((project, index) => (
-          <ProjectList key={index} project={project} />
+        {list.map((eachProject, index) => (
+          <ProjectList
+            key={index}
+            project={eachProject}
+            selectProject={() => selectProject(index)}
+          />
         ))}
       </ul>
     </div>

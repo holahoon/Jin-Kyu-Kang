@@ -42,17 +42,13 @@
     }
   }
 
-  // .coming-soon {
-  //   position: absolute;
-  //   left: 50%;
-  //   bottom: 24%;
-  //   transform: translate(-50%, -50%);
-  //   h1 {
-  //     text-align: center;
-  //     color: $black;
-  //     font-size: calcRem(64px);
-  //     @include font-cormorant(600);
-  //     letter-spacing: calcRem(1px);
-  //   }
-  // }
+  .project-lists {
+    &__item {
+      @include font-cormorant(600);
+      font-size: calcRem(14px);
+    }
+    .item-selected {
+      font-size: calcRem(20px);
+    }
+  }
 }

@@ -1,12 +1,19 @@
 .nav {
-  @include flex(row, space-between);
-  padding-top: calcRem(50px);
+  @include flex(row, flex-end);
+  padding-top: calcRem(74px);
+  position: relative;
 
   // - nav__logo
   &__logo {
+    position: absolute;
+    left: 0;
     z-index: 1;
+    transition: all 0.5s ease-in-out;
     a {
       display: block;
+      svg {
+        transition: all 0.5s ease-in-out;
+      }
     }
   }
 
@@ -35,9 +42,8 @@
   }
 
   // - nav-active
-  // ** TODO: uncomment after coming soon launch **
-  // &-active {
-  //   text-decoration-line: line-through;
-  //   text-decoration-color: $brand-red;
-  // }
+  &-active {
+    text-decoration-line: line-through;
+    text-decoration-color: $brand-red;
+  }
 }

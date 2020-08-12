@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 function NavigationItem({ navTitle }) {
   return (
     <li className={`nav__menu__item nav__menu__item-${navTitle}`}>
-      <NavLink to={`/`} activeClassName='nav-active'>
+      <NavLink to={`/${navTitle}`} activeClassName='nav-active'>
         {navTitle}
       </NavLink>
     </li>
