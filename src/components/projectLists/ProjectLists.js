@@ -2,33 +2,26 @@ import React from "react";
 
 import ProjectList from "./projectList/ProjectList";
 
-const list = [
-  "IKEA",
-  "be strong",
-  "icantbreathe",
-  "Storyceller",
-  "FIVIE",
-  "dk",
-  "FRAME",
-  "ball.",
-  "greyed",
-];
-
-function ProjectLists() {
-  function selectProject(index) {
-    console.log(index);
-  }
-
+function ProjectLists({
+  projectList,
+  selectedProject,
+  projectSelectionHandler,
+}) {
   return (
     <div className='project-lists'>
-      <ul>
-        {list.map((eachProject, index) => (
-          <ProjectList
-            key={index}
-            project={eachProject}
-            selectProject={() => selectProject(index)}
-          />
-        ))}
+      <ul className='project-lists__wrapper'>
+        {projectList.map((eachProject, index) => {
+          return (
+            <ProjectList
+              key={index}
+              project={eachProject}
+              selectedProject={
+                selectedProject === index ? " project-selected" : ""
+              }
+              projectSelectionHandler={() => projectSelectionHandler(index)}
+            />
+          );
+        })}
       </ul>
     </div>
   );

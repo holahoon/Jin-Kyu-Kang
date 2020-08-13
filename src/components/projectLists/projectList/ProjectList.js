@@ -1,10 +1,26 @@
 import React from "react";
+import { motion } from "framer-motion";
 
-function ProjectList({ project, selectProject }) {
+const listHover = {
+  hover: {
+    fontSize: "20px",
+    transition: {
+      duration: 0.1,
+    },
+  },
+};
+
+function ProjectList({ selectedProject, project, projectSelectionHandler }) {
   return (
-    <li className='project-lists__item' onClick={selectProject}>
+    <motion.li
+      variants={listHover}
+      whileHover='hover'
+      className={`project-lists__wrapper__item${selectedProject}`}
+      // className={`project-lists__wrapper__item`}
+      onClick={projectSelectionHandler}
+    >
       {project}
-    </li>
+    </motion.li>
   );
 }
 

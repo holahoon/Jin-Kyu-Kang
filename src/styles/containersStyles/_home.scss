@@ -43,12 +43,38 @@
   }
 
   .project-lists {
-    &__item {
-      @include font-cormorant(600);
-      font-size: calcRem(14px);
-    }
-    .item-selected {
-      font-size: calcRem(20px);
+    display: inline-block;
+    position: absolute;
+    bottom: calcRem(145px);
+    left: calcRem(222px);
+
+    &__wrapper {
+      border-left: 1px solid $black;
+      padding-left: calcRem(20px);
+
+      &__item {
+        @include font-cormorant(600);
+        font-size: calcRem(14px);
+        height: calcRem(24px);
+        @include flex(row, flex-start, center);
+        cursor: pointer;
+      }
+      .project-selected {
+        font-size: calcRem(20px) !important;
+        position: relative;
+        cursor: pointer;
+        &::before {
+          content: "";
+          display: block;
+          width: calcRem(14px);
+          height: calcRem(14px);
+          position: absolute;
+          left: calcRem(-48px);
+          top: 52%;
+          transform: translateY(-50%);
+          background-color: $brand-red;
+        }
+      }
     }
   }
 }

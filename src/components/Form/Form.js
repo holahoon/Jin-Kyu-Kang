@@ -259,13 +259,6 @@ function Form({ isOpen }) {
             onChange={(e) => onChangeHandler(e)}
           />
         </span>
-        {/* <span
-          className={`footer__form__error-message${
-            errors.name ? "--active" : ""
-          }`}
-        >
-          "I need your name"
-        </span> */}
       </motion.label>
       <motion.label variants={inputVariants} className='footer__form__email'>
         <span className={"footer__form__email__inner"}>
@@ -290,13 +283,6 @@ function Form({ isOpen }) {
             onChange={(e) => onChangeHandler(e)}
           />
         </span>
-        {/* <span
-          className={`footer__form__error-message${
-            errors.email ? "--active" : ""
-          }`}
-        >
-          "I need your email"
-        </span> */}
       </motion.label>
       <motion.label variants={inputVariants} className='footer__form__message'>
         <span className={"footer__form__message__inner"}>
@@ -322,13 +308,6 @@ function Form({ isOpen }) {
             onChange={(e) => onChangeHandler(e)}
           />
         </span>
-        {/* <span
-          className={`footer__form__error-message${
-            errors.message ? "--active" : ""
-          }`}
-        >
-          "I need your message"
-        </span> */}
       </motion.label>
 
       {sendButton}
