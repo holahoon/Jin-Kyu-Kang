@@ -1,13 +1,16 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-function Logo({ className }) {
+function Logo({ className, decreaseLogoSize }) {
   return (
-    <div className={className}>
+    <div
+      className={className}
+      style={{ top: decreaseLogoSize ? "68px" : "40px" }}
+    >
       <NavLink to='/'>
         <svg
-          width='304'
-          height='84'
+          width={decreaseLogoSize ? "110px" : "300px"}
+          height={decreaseLogoSize ? "35px" : "85px"}
           viewBox='0 0 304 84'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'

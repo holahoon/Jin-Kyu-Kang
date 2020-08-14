@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
 const backdropVariant = {
   hidden: {
@@ -25,9 +25,10 @@ function Backdrop({ isOpen, toggleContactMenu }) {
     <motion.div
       variants={backdropVariant}
       initial={false}
-      animate={isOpen ? 'show' : 'hidden'}
+      animate={isOpen ? "show" : "hidden"}
       className='backdrop'
-      onClick={toggleContactMenu}></motion.div>
+      onClick={toggleContactMenu}
+    ></motion.div>
   );
 }
 

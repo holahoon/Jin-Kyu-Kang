@@ -1,0 +1,49 @@
+.nav {
+  @include flex(row, flex-end);
+  padding-top: calcRem(74px);
+  position: relative;
+
+  // - nav__logo
+  &__logo {
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    transition: all 0.3s ease-in-out;
+    a {
+      display: block;
+      svg {
+        transition: all 0.3s ease-in-out;
+      }
+    }
+  }
+
+  // - nav__menu
+  &__menu {
+    @include flex(row);
+
+    &__item {
+      @include fontSize(16px);
+      @include font-cormorant(600);
+      z-index: 1;
+
+      a {
+        color: $black;
+        transition: text-decoration 0.1s ease;
+        &:hover {
+          text-decoration-line: line-through;
+          text-decoration-color: $brand-red;
+        }
+      }
+
+      &-about {
+        margin-left: calcRem(30px);
+      }
+    }
+  }
+
+  // - nav-active
+  &-active {
+    text-decoration-line: line-through;
+    text-decoration-color: $brand-red;
+  }
+}
