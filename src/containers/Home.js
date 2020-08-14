@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 
 import HomeBackground from "../components/UI/homeBackground/HomeBackground";
 import ProjectLists from "../components/projectLists/ProjectLists";
+import ProjectPreview from "../components/projectPreview/ProjectPreview";
 
 const projectList = [
   "IKEA",
@@ -32,6 +33,8 @@ function Home() {
         selectedProject={selectedProject}
         projectSelectionHandler={projectSelectionHandler}
       />
+
+      <ProjectPreview selectedProject={selectedProject} />
     </motion.div>
   );
 }
