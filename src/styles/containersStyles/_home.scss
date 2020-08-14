@@ -60,7 +60,7 @@
         cursor: pointer;
       }
       .project-selected {
-        font-size: calcRem(20px) !important;
+        font-size: calcRem(20px);
         position: relative;
         cursor: pointer;
         &::before {

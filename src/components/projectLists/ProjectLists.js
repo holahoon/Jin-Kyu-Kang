@@ -16,7 +16,8 @@ function ProjectLists({
               key={index}
               project={eachProject}
               selectedProject={
-                selectedProject === index ? " project-selected" : ""
+                // selectedProject === index ? " project-selected" : ""
+                selectedProject === index ? true : false
               }
               projectSelectionHandler={() => projectSelectionHandler(index)}
             />
