@@ -1,11 +1,27 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import icantbreathe from "../../../assets/images/home-icantbreathe.png";
 import ikea from "../../../assets/images/home-ikea.png";
 import bestrong from "../../../assets/images/home-bestrong.png";
+import icantbreathe from "../../../assets/images/home-icantbreathe.png";
+import storyceller from "../../../assets/images/home-storyceller.png";
+import fivie from "../../../assets/images/home-fivie.png";
+import dk from "../../../assets/images/home-dk.png";
+import frame from "../../../assets/images/home-bestrong.png";
+import ball from "../../../assets/images/home-ball.png";
+import greyed from "../../../assets/images/home-greyed.png";
 
-const imageArray = [ikea, bestrong, icantbreathe];
+const imageArray = [
+  ikea,
+  bestrong,
+  icantbreathe,
+  storyceller,
+  fivie,
+  dk,
+  frame,
+  ball,
+  greyed,
+];
 
 function PreviewImages({ selectedProject }) {
   return (
