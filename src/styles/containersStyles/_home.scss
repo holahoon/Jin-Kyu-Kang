@@ -85,7 +85,6 @@
   }
 
   .project-lists {
-    // display: inline-block;
     display: flex;
     position: absolute;
     bottom: calcRem(145px);
@@ -104,7 +103,7 @@
         left: calcRem(-14px);
         margin-top: calc((24px - 14px) / 2);
         background-color: $brand-red;
-        transition: all 0.3s ease-out;
+        transition: all 0.5s cubic-bezier(0, 0.55, 0.45, 1);
         cursor: default;
       }
     }

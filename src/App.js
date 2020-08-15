@@ -25,15 +25,9 @@ function App() {
           <SideText />
 
           <Switch>
-            <Route path='/' exact>
-              <Home />
-            </Route>
-            <Route path='/works'>
-              <Works />
-            </Route>
-            <Route path='/about'>
-              <About />
-            </Route>
+            <Route path='/' exact component={Home} />
+            <Route path='/works' component={Works} />
+            <Route path='/about' component={About} />
 
             <Redirect to='/' />
           </Switch>
