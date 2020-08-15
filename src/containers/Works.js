@@ -8,7 +8,7 @@ import icantbreathe from "../assets/images/home-icantbreathe.png";
 import storyceller from "../assets/images/home-storyceller.png";
 import fivie from "../assets/images/home-fivie.png";
 import dk from "../assets/images/home-dk.png";
-import frame from "../assets/images/home-bestrong.png";
+import frame from "../assets/images/home-frame.png";
 import ball from "../assets/images/home-ball.png";
 import greyed from "../assets/images/home-greyed.png";
 
@@ -37,18 +37,18 @@ const imageArray = [
     urlName: "dk",
     image: dk,
   },
-  {
-    urlName: "frame",
-    image: frame,
-  },
-  {
-    urlName: "ball",
-    image: ball,
-  },
-  {
-    urlName: "greyed",
-    image: greyed,
-  },
+  // {
+  //   urlName: "frame",
+  //   image: frame,
+  // },
+  // {
+  //   urlName: "ball",
+  //   image: ball,
+  // },
+  // {
+  //   urlName: "greyed",
+  //   image: greyed,
+  // },
 ];
 
 function Works(props) {
@@ -63,6 +63,7 @@ function Works(props) {
               alt={`works-${each.urlName}`}
               draggable='false'
             />
+            <span>UI/UX</span>
           </Link>
         ))}
       </div>
