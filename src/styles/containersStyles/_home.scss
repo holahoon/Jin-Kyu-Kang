@@ -85,10 +85,29 @@
   }
 
   .project-lists {
-    display: inline-block;
+    // display: inline-block;
+    display: flex;
     position: absolute;
     bottom: calcRem(145px);
     left: calcRem(222px);
+
+    &__red-box-container {
+      margin-right: calcRem(10px);
+      position: relative;
+
+      .red-box {
+        display: block;
+        width: calcRem(14px);
+        height: calcRem(14px);
+        position: absolute;
+        top: 0;
+        left: calcRem(-14px);
+        margin-top: calc((24px - 14px) / 2);
+        background-color: $brand-red;
+        transition: all 0.3s ease-out;
+        cursor: default;
+      }
+    }
 
     &__wrapper {
       border-left: 1px solid $black;
@@ -109,18 +128,6 @@
         font-size: calcRem(20px);
         position: relative;
         cursor: pointer;
-        &::before {
-          content: "";
-          display: block;
-          width: calcRem(14px);
-          height: calcRem(14px);
-          position: absolute;
-          left: calcRem(-48px);
-          top: 52%;
-          transform: translateY(-50%);
-          background-color: $brand-red;
-          cursor: default;
-        }
       }
     }
   }
