@@ -2,25 +2,20 @@
   position: relative;
   height: 100%;
   margin-top: calcRem(80px);
-  display: flex;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   &__horizontal-box {
-    display: flex;
-    flex-flow: row;
-    justify-content: center;
-    align-items: center;
+    @include flex(row, center, center);
     flex-wrap: wrap;
     position: absolute;
     width: 100%;
-    // height: 100%;
     padding: 0 calcRem(150px);
-    overflow-y: auto;
-    overflow-x: hidden;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE and Edge */
-    &::-webkit-scrollbar {
-      display: none;
-    }
     a {
       display: block;
       margin: calcRem(30px);
