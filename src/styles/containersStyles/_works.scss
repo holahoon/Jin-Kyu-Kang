@@ -1,4 +1,36 @@
 .works {
   position: relative;
   height: 100%;
+  margin-top: calcRem(80px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__horizontal-box {
+    @include flex(row, center, center);
+    flex-wrap: wrap;
+    position: absolute;
+    width: 100%;
+    padding: 0 calcRem(150px);
+    a {
+      display: block;
+      margin: calcRem(30px);
+      width: calcRem(260px);
+      height: calcRem(260px);
+      span {
+        color: $text-dark-gray;
+        @include font-cormorant(600);
+        text-align: center;
+        display: block;
+      }
+    }
+
+    &__project-image {
+      width: 100%;
+    }
+  }
 }

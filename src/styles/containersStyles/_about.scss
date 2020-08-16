@@ -1,0 +1,54 @@
+.about {
+  position: relative;
+  height: 100%;
+
+  &__intro-section {
+    max-width: calcRem(723px);
+    margin: calcRem(100px) 0 calcRem(68px) calcRem(200px);
+    h2 {
+      @include font-cormorant(500);
+      font-size: calcRem(36px);
+    }
+  }
+
+  &__description-section {
+    @include flex(row, flex-end, flex-start);
+
+    &__image {
+      width: 100%;
+      max-width: calcRem(300px);
+    }
+    &__description {
+      max-width: calcRem(446px);
+      height: calcRem(400px);
+      padding: calcRem(10px) 0 calcRem(60px) calcRem(40px);
+
+      &__scroll {
+        height: 100%;
+        overflow-y: auto;
+        padding-right: calcRem(30px);
+        &::-webkit-scrollbar {
+          width: 2px;
+        }
+        &::-webkit-scrollbar-thumb {
+          background-color: $brand-red;
+        }
+
+        p {
+          @include font-cormorant(500);
+          font-size: calcRem(14px);
+          &:first-child {
+            margin-top: 0;
+          }
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      svg {
+        margin-top: calcRem(40px);
+      }
+    }
+  }
+}

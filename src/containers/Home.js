@@ -34,7 +34,10 @@ function Home() {
         projectSelectionHandler={projectSelectionHandler}
       />
 
-      <ProjectPreview selectedProject={selectedProject} />
+      <ProjectPreview
+        selectedProject={selectedProject}
+        projectList={projectList}
+      />
     </motion.div>
   );
 }
