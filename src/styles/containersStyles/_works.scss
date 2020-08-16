@@ -68,5 +68,23 @@
         font-size: calcRem(18px);
       }
     }
+
+    &__description {
+      margin-top: calcRem(30px);
+      @include font-cormorant(400);
+      font-size: calcRem(14px);
+      color: $text-dark-gray;
+      p {
+        &:first-child {
+          margin-top: 0;
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &__image {
+    }
   }
 }

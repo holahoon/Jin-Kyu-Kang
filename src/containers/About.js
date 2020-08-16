@@ -1,9 +1,29 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 import aboutImage from "../assets/images/about-me.png";
 import IntroSection from "../components/aboutPage/introSection/IntroSection";
 import DescriptionSection from "../components/aboutPage/descriptionSection/DescriptionSection";
 import CopyrightSection from "../components/aboutPage/copyrightSection/CopyrightSection";
+
+const homepageVariants = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+    transition: {
+      delay: 0.5,
+      duration: 1.5,
+    },
+  },
+  exitAnimate: {
+    y: "-100vh",
+    transition: {
+      ease: "easeInOut",
+    },
+  },
+};
 
 const introductionText =
   "“The power of emotion in digital products goes way beyond creating pleasurable experiences.”";
@@ -23,7 +43,13 @@ const aboutDescription = [
 
 function About() {
   return (
-    <div className='about'>
+    <motion.div
+      variants={homepageVariants}
+      initial='initial'
+      animate='animate'
+      exit='exitAnimate'
+      className='about'
+    >
       <IntroSection introductionText={introductionText} />
 
       <DescriptionSection
@@ -32,7 +58,7 @@ function About() {
       />
 
       <CopyrightSection />
-    </div>
+    </motion.div>
   );
 }
 

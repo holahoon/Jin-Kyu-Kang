@@ -87,58 +87,52 @@ const projectList = [
 ];
 
 function App() {
+  const location = useLocation();
+  console.log(location);
   return (
     <>
       <Layout>
-        <Router>
-          <Navigation />
-          <SideText />
+        <Navigation />
+        <SideText />
 
-          <AnimatePresence>
-            <Switch>
-              <Route path='/' exact>
-                <Home projectList={projectList} />
-              </Route>
+        <AnimatePresence exitBeforeEnter>
+          <Switch location={location} key={location.key}>
+            <Route path='/works/ikea' component={projectPages.IkeaProject} />
+            <Route
+              path='/works/bestrong'
+              component={projectPages.BestrongProject}
+            />
+            <Route
+              path='/works/icantbreathe'
+              component={projectPages.IcantbreatheProject}
+            />
+            <Route
+              path='/works/storyceller'
+              component={projectPages.StorycellerProject}
+            />
+            <Route path='/works/fivie' component={projectPages.FivieProject} />
+            <Route path='/works/dk' component={projectPages.DkProject} />
+            <Route path='/works/frame' component={projectPages.FrameProject} />
+            <Route path='/works/ball' component={projectPages.BallProject} />
+            <Route
+              path='/works/greyed'
+              component={projectPages.GreyedProject}
+            />
 
-              <Route path='/works/ikea' component={projectPages.IkeaProject} />
-              <Route
-                path='/works/bestrong'
-                component={projectPages.BestrongProject}
-              />
-              <Route
-                path='/works/icantbreathe'
-                component={projectPages.IcantbreatheProject}
-              />
-              <Route
-                path='/works/storyceller'
-                component={projectPages.StorycellerProject}
-              />
-              <Route
-                path='/works/fivie'
-                component={projectPages.FivieProject}
-              />
-              <Route path='/works/dk' component={projectPages.DkProject} />
-              <Route
-                path='/works/frame'
-                component={projectPages.FrameProject}
-              />
-              <Route path='/works/ball' component={projectPages.BallProject} />
-              <Route
-                path='/works/greyed'
-                component={projectPages.GreyedProject}
-              />
+            <Route path='/works'>
+              <Works projectList={projectList} />
+            </Route>
+            <Route path='/about' component={About} />
 
-              <Route path='/works'>
-                <Works projectList={projectList} />
-              </Route>
-              <Route path='/about' component={About} />
+            <Route path='/'>
+              <Home projectList={projectList} />
+            </Route>
 
-              <Redirect to='/' />
-            </Switch>
-          </AnimatePresence>
+            {/* <Redirect to='/' /> */}
+          </Switch>
+        </AnimatePresence>
 
-          <Footer />
-        </Router>
+        <Footer />
       </Layout>
     </>
   );

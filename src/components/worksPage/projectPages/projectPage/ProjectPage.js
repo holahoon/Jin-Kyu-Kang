@@ -14,13 +14,13 @@ function ProjectPage({
         <span className='year'>{worksSubtitle.year}</span>
       </h4>
 
-      <div className='works__project__image'>
+      <div className='works__project__description'>
         {worksDescription.map((each, index) => (
           <p key={`${each}-${index}`}>{each}</p>
         ))}
       </div>
 
-      <div>
+      <div className='works__project__image'>
         <img src={worksImage.image} alt={worksImage.alt} />
       </div>
     </div>
