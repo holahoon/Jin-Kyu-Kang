@@ -21,6 +21,7 @@
     &__description {
       max-width: calcRem(446px);
       height: calcRem(400px);
+      margin-right: calcRem(75px);
       padding: calcRem(10px) 0 calcRem(60px) calcRem(40px);
 
       &__scroll {
@@ -28,7 +29,7 @@
         overflow-y: auto;
         padding-right: calcRem(30px);
         &::-webkit-scrollbar {
-          width: 2px;
+          width: calcRem(2px);
         }
         &::-webkit-scrollbar-thumb {
           background-color: $brand-red;
@@ -48,6 +49,48 @@
 
       svg {
         margin-top: calcRem(40px);
+      }
+    }
+  }
+
+  &__copyright-section {
+    @include flex(row, flex-start, center);
+    position: absolute;
+    left: calcRem(300px);
+    bottom: 0;
+    svg {
+      max-width: calcRem(60px);
+      margin-right: calcRem(12px);
+    }
+    &__text {
+      .jinkyu {
+        margin: 0;
+        padding-bottom: calcRem(4px);
+        font-size: calcRem(8px);
+        @include font-heebo(700);
+        @include lineHeight(8px, 8px);
+        color: $text-copyright-gray;
+        border-bottom: 1px solid $text-copyright-gray;
+        span {
+          display: block;
+          &:first-child {
+            padding-left: calcRem(0.25px);
+          }
+          &:last-child {
+            padding-left: calcRem(0.25px);
+          }
+        }
+      }
+      .holahoon {
+        margin: calcRem(4px) 0 0 0;
+        font-size: calcRem(6px);
+        @include font-heebo(500);
+        @include lineHeight(6px, 6px);
+        color: $text-copyright-gray;
+        a {
+          color: $text-copyright-gray;
+          text-decoration: underline;
+        }
       }
     }
   }

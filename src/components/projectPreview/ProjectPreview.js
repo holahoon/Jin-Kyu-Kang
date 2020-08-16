@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -12,25 +12,6 @@ const buttonVariants = {
 };
 
 function ProjectPreview({ selectedProject, projectList }) {
-  //   useEffect(() => {
-  //     regexAlphabet(projectList);
-  //   }, []);
-
-  //   function regexAlphabet(projectList) {
-  //     projectList.forEach((project, index) => {
-  //       const alphaRegex = /^[a-zA-Z]+$/.test(project);
-  //       if (!alphaRegex) {
-  //         const newPathName = project
-  //           .replace(/[^a-z0-9\s-]/gi, "")
-  //           .trim()
-  //           .replace(/\s+/g, "-")
-  //           .toLowerCase();
-  //         projectList[index] = newPathName;
-  //       }
-  //     });
-  //     return projectList;
-  //   }
-
   return (
     <div className='project-preview'>
       <div className='project-preview__image-box'>
@@ -38,7 +19,7 @@ function ProjectPreview({ selectedProject, projectList }) {
       </div>
 
       <div className='project-preview__content-box'>
-        <Link to='/works'>
+        <Link to={`/works/${projectList[selectedProject].urlName}`}>
           <motion.div
             whileHover='hover'
             className='project-preview__content-box__button'

@@ -109,3 +109,9 @@ $max-width: 1440px;
   font-weight: $weight;
   font-style: $style;
 }
+
+@mixin font-heebo($weight: 500, $style: normal) {
+  font-family: $heebo;
+  font-weight: $weight;
+  font-style: $style;
+}

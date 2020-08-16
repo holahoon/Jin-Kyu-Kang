@@ -5,19 +5,7 @@ import HomeBackground from "../components/UI/homeBackground/HomeBackground";
 import ProjectLists from "../components/projectLists/ProjectLists";
 import ProjectPreview from "../components/projectPreview/ProjectPreview";
 
-const projectList = [
-  "IKEA",
-  "be strong",
-  "icantbreathe",
-  "Storyceller",
-  "FIVIE",
-  "dk",
-  "FRAME",
-  "ball.",
-  "greyed",
-];
-
-function Home() {
+function Home({ projectList }) {
   const [selectedProject, setSelectedProject] = useState(0);
 
   function projectSelectionHandler(index) {

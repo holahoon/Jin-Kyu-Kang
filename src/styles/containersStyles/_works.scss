@@ -15,12 +15,18 @@
     flex-wrap: wrap;
     position: absolute;
     width: 100%;
-    padding: 0 calcRem(150px);
+    padding: 0 calcRem(150px) calcRem(100px);
     a {
       display: block;
       margin: calcRem(30px);
       width: calcRem(260px);
       height: calcRem(260px);
+      img {
+        transition: all 0.2s ease;
+        &:hover {
+          transform: scale(1.05) translateY(-5px);
+        }
+      }
       span {
         color: $text-dark-gray;
         @include font-cormorant(600);
@@ -31,6 +37,36 @@
 
     &__project-image {
       width: 100%;
+    }
+  }
+
+  /* Project pages */
+  &__project {
+    max-width: calcRem(640px);
+    width: 100%;
+    height: 100%;
+    margin: calcRem(70px) auto 0;
+
+    &__title {
+      padding-bottom: calcRem(4px);
+      @include font-cormorant(400);
+      font-size: calcRem(30px);
+      color: $black;
+      border-bottom: 1px solid $text-light-gray;
+    }
+
+    &__subtitle {
+      @include flex(row, space-between, center);
+      padding-top: calcRem(4px);
+      @include font-cormorant(400);
+      font-size: calcRem(16px);
+      color: $text-subtitle-gray;
+      .text {
+        font-size: calcRem(16px);
+      }
+      .year {
+        font-size: calcRem(18px);
+      }
     }
   }
 }
