@@ -205,17 +205,4 @@
       }
     }
   }
-
-  &__language {
-    @include font-cormorant(600);
-    &-eng {
-      margin-right: calcRem(5px);
-      color: $black;
-    }
-
-    &-kr {
-      margin-left: calcRem(5px);
-      color: $text-gray;
-    }
-  }
 }

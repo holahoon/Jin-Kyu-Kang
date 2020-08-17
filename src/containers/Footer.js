@@ -25,11 +25,6 @@ function Footer() {
           <Form isOpen={isOpen} />
           <Contact isOpen={isOpen} toggleContactMenu={toggleContactMenu} />
         </motion.div>
-
-        <div className='footer__language'>
-          <span className='footer__language-eng'>eng</span>
-          <span className='footer__language-kr'>kr</span>
-        </div>
       </footer>
     </>
   );

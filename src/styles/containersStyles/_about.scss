@@ -57,39 +57,44 @@
     @include flex(row, flex-start, center);
     position: absolute;
     left: calcRem(300px);
-    bottom: 0;
+    bottom: calcRem(20px);
     svg {
       max-width: calcRem(60px);
       margin-right: calcRem(12px);
     }
     &__text {
       .jinkyu {
-        margin: 0;
-        padding-bottom: calcRem(4px);
+        margin: 0 0 calcRem(3px) 0;
         font-size: calcRem(8px);
-        @include font-heebo(700);
+        @include font-heebo(500);
         @include lineHeight(8px, 8px);
         color: $text-copyright-gray;
-        border-bottom: 1px solid $text-copyright-gray;
         span {
           display: block;
           &:first-child {
             padding-left: calcRem(0.25px);
+            margin-bottom: calcRem(1px);
           }
           &:last-child {
             padding-left: calcRem(0.25px);
+            margin-top: calcRem(1px);
           }
         }
       }
+      .line {
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: $text-copyright-gray;
+      }
       .holahoon {
         margin: calcRem(4px) 0 0 0;
-        font-size: calcRem(6px);
-        @include font-heebo(500);
+        font-size: 6px;
+        @include font-heebo(400);
         @include lineHeight(6px, 6px);
         color: $text-copyright-gray;
         a {
           color: $text-copyright-gray;
-          text-decoration: underline;
         }
       }
     }

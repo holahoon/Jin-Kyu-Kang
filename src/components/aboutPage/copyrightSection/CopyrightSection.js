@@ -22,6 +22,7 @@ function CopyrightSection() {
           <span>COPYRIGHT</span>
           <span>JINKYU KANG</span>
         </p>
+        <span className='line'></span>
         <p className='holahoon'>
           Developed by{" "}
           <a

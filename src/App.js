@@ -34,61 +34,61 @@ const projectList = [
     urlName: "ikea",
     projectName: "IKEA",
     image: image_ikea,
-    title: "UI/UX",
+    category: "UI/UX",
   },
   {
     urlName: "bestrong",
     projectName: "be strong",
     image: image_bestrong,
-    title: "UI/UX",
+    category: "Visual Design",
   },
   {
     urlName: "icantbreathe",
     projectName: "icantbreathe",
     image: image_icantbreathe,
-    title: "UI/UX",
+    category: "Visual Design",
   },
   {
     urlName: "storyceller",
     projectName: "Storyceller",
     image: image_storyceller,
-    title: "UI/UX",
+    category: "UI/UX",
   },
   {
     urlName: "fivie",
     projectName: "FIVIE",
     image: image_fivie,
-    title: "UI/UX",
+    category: "UI/UX",
   },
   {
     urlName: "dk",
     projectName: "dk",
     image: image_dk,
-    title: "UI/UX",
+    category: "Web Design",
   },
   {
     urlName: "frame",
     projectName: "FRAME",
     image: image_frame,
-    title: "UI/UX",
+    category: "Poster Design",
   },
   {
     urlName: "ball",
     projectName: "ball.",
     image: image_ball,
-    title: "UI/UX",
+    category: "Concept Design",
   },
   {
     urlName: "greyed",
     projectName: "greyed",
     image: image_greyed,
-    title: "UI/UX",
+    category: "Branding",
   },
 ];
 
 function App() {
   const location = useLocation();
-  console.log(location);
+
   return (
     <>
       <Layout>
@@ -128,7 +128,7 @@ function App() {
               <Home projectList={projectList} />
             </Route>
 
-            {/* <Redirect to='/' /> */}
+            <Redirect to='/' />
           </Switch>
         </AnimatePresence>
 

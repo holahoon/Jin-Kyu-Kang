@@ -13,13 +13,14 @@ const homepageVariants = {
   animate: {
     opacity: 1,
     transition: {
-      delay: 0.5,
+      delay: 0.2,
       duration: 1.5,
     },
   },
   exitAnimate: {
-    y: "-100vh",
+    opacity: 0,
     transition: {
+      duration: 1,
       ease: "easeInOut",
     },
   },
