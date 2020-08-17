@@ -110,7 +110,6 @@
     }
 
     &__description {
-      // margin-top: calcRem(30px);
       @include font-cormorant(400);
       font-size: calcRem(14px);
       color: $text-dark-gray;
@@ -125,10 +124,17 @@
     }
 
     &__image {
-      margin-top: calcRem(60px);
-      width: 100%;
       height: 100%;
-      background-color: #eeeeee;
+      > div {
+        margin-top: calcRem(60px);
+        // margin-bottom: 100px;
+        width: 100%;
+        // height: 100%;
+        background-color: #eeeeee;
+        img {
+          width: 100%;
+        }
+      }
     }
   }
 }

@@ -14,7 +14,7 @@ const worksDescription = [
   "Meanwhile, on Earth, a person who committed a crime but not resisted the arrest lost his life due to police brutality. His last words were ‘I can’t breathe’ and he deceased at the scene, out of breath. ",
   "Within a few days, the opposite things happened in the sky and earth, and I was torn between the wonder of the human technological achievements and the sympathy for a man’s perished life trampled against the ground. Lost somewhere in between, trying to comfort my perplexed mind and smothered heart, I created this poster.",
 ];
-const worksImage = projectImage;
+const worksImages = projectImage;
 
 function IcantbreatheProject() {
   return (
@@ -23,7 +23,7 @@ function IcantbreatheProject() {
         worksTitle={worksTitle}
         worksSubtitle={worksSubtitle}
         worksDescription={worksDescription}
-        worksImage={worksImage}
+        worksImages={worksImages}
       />
     </>
   );

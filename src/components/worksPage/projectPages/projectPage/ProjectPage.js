@@ -29,7 +29,7 @@ function ProjectPage({
   worksTitle,
   worksSubtitle,
   worksDescription,
-  worksImage,
+  worksImages,
 }) {
   return (
     <motion.div
@@ -72,7 +72,11 @@ function ProjectPage({
         </div>
 
         <div className='works__project__image'>
-          {/* <img src={worksImage.image} alt={worksImage.alt} /> */}
+          <div>
+            {worksImages.map((image, index) => (
+              <img src={image.image} alt={image.alt} />
+            ))}
+          </div>
         </div>
       </div>
     </motion.div>

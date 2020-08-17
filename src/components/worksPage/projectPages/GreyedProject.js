@@ -14,7 +14,7 @@ const worksDescription = [
   "That’s why I thought of the idea of a multi-brand store that offers white, black, and grey, all monochromatic products. It could be arguable why such a site is even necessary when the color-blind people are free to choose whatever color they want. But I considered some of them could be insecure about their choices since they can’t distinguish and worry about what other people might think, and decided to go forward with it. It wasn’t a real project to develop, just a conceptual one, so I wanted to try something new. The design was started from this initial idea.",
   "At that time, I was merely taking an interest in design. I hadn’t any skills and everything was new and unknown. The only tool I could use was Photoshop and even that at the beginner’s level. Focused on the one clear concept, I pursued designs that looked pretty to me so there was a lot to improve and the process was quite long. But as the first project, it turned out to be satisfactory. If I had the chance in the future, I would like to design a product website that’s more beneficial to color-blind customers and also visually more attractive.",
 ];
-const worksImage = projectImage;
+const worksImages = projectImage;
 
 function GreyedProject() {
   return (
@@ -23,7 +23,7 @@ function GreyedProject() {
         worksTitle={worksTitle}
         worksSubtitle={worksSubtitle}
         worksDescription={worksDescription}
-        worksImage={worksImage}
+        worksImages={worksImages}
       />
     </>
   );

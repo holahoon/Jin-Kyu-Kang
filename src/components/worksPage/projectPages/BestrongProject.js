@@ -14,7 +14,7 @@ const worksDescription = [
   "This whole situation raised questions for me. Why do we criticize each other so harshly? Why do we want to get stronger? Does being strong mean to speak up your opinions? Many thoughts crossed my mind. After pondering for a while, I concluded that being strong is not to show off one’s strength or to use it to repress someone, but to be able to maintain one’s stance under any circumstances and to have the inner strength to overcome the obstacles.",
   "We all need to look back on ourselves and grow stronger inside first. Be strong.",
 ];
-const worksImage = projectImage;
+const worksImages = projectImage;
 
 function bestrongProject() {
   return (
@@ -23,7 +23,7 @@ function bestrongProject() {
         worksTitle={worksTitle}
         worksSubtitle={worksSubtitle}
         worksDescription={worksDescription}
-        worksImage={worksImage}
+        worksImages={worksImages}
       />
     </>
   );
