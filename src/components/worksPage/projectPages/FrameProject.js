@@ -6,12 +6,11 @@ import projectImage from "../../../assets/images/home-dk.png";
 
 const worksTitle = "FRAME";
 const worksSubtitle = {
-  text: "Redesign project",
-  year: "2020",
+  text: "Poster Design",
+  year: "2019",
 };
 const worksDescription = [
-  "I’ve been moving a lot from New York to D.C., to Philadelphia, then to Austin, and I became a frequent customer of IKEA. Every time I purchased furniture and housewares, the high functionality and relatively accessible prices of IKEA satisfied my needs.",
-  "I visited many of their stores and bought and used so many products that I got to know the pros and cons of IKEA. Particularly using their app, I found out various aspects to be improved. So I redesigned it analyzing how IKEA can offer upgraded services based on my own experiences.",
+  "At the beginning of 2019, I decided to take on a new challenge in design. I wanted to represent my new life in a poster with the concept ‘frame’. I expressed the new world and the new environment in the sky blue background, the abstract graphic images represent my diverse life experiences, and the glassy font designed by myself symbolizes my willingness to see everything with transparency. This design was the starting point of creating my portfolio and, after 9 months of effort and dedication, I got into a design agency.",
 ];
 const worksImage = projectImage;
 

@@ -6,12 +6,13 @@ import projectImage from "../../../assets/images/home-dk.png";
 
 const worksTitle = "icantbreathe";
 const worksSubtitle = {
-  text: "Redesign project",
+  text: "Visual Design",
   year: "2020",
 };
 const worksDescription = [
-  "I’ve been moving a lot from New York to D.C., to Philadelphia, then to Austin, and I became a frequent customer of IKEA. Every time I purchased furniture and housewares, the high functionality and relatively accessible prices of IKEA satisfied my needs.",
-  "I visited many of their stores and bought and used so many products that I got to know the pros and cons of IKEA. Particularly using their app, I found out various aspects to be improved. So I redesigned it analyzing how IKEA can offer upgraded services based on my own experiences.",
+  "When the racial conflict was at the boiling point, SpaceX flew out into space. Witnessing that event, I was amazed by the human technological progress, and the word ‘breathtaking’ popped up in my head.",
+  "Meanwhile, on Earth, a person who committed a crime but not resisted the arrest lost his life due to police brutality. His last words were ‘I can’t breathe’ and he deceased at the scene, out of breath. ",
+  "Within a few days, the opposite things happened in the sky and earth, and I was torn between the wonder of the human technological achievements and the sympathy for a man’s perished life trampled against the ground. Lost somewhere in between, trying to comfort my perplexed mind and smothered heart, I created this poster.",
 ];
 const worksImage = projectImage;
 

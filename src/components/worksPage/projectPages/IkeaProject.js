@@ -6,7 +6,7 @@ import projectImage from "../../../assets/images/home-dk.png";
 
 const worksTitle = "IKEA";
 const worksSubtitle = {
-  text: "Redesign project",
+  text: "UI/UX",
   year: "2020",
 };
 const worksDescription = [

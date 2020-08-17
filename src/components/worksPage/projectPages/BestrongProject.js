@@ -6,12 +6,13 @@ import projectImage from "../../../assets/images/home-dk.png";
 
 const worksTitle = "be strong";
 const worksSubtitle = {
-  text: "Redesign project",
+  text: "Visual Design",
   year: "2020",
 };
 const worksDescription = [
-  "I’ve been moving a lot from New York to D.C., to Philadelphia, then to Austin, and I became a frequent customer of IKEA. Every time I purchased furniture and housewares, the high functionality and relatively accessible prices of IKEA satisfied my needs.",
-  "I visited many of their stores and bought and used so many products that I got to know the pros and cons of IKEA. Particularly using their app, I found out various aspects to be improved. So I redesigned it analyzing how IKEA can offer upgraded services based on my own experiences.",
+  "It’s impossible not to think about racial discrimination being an immigrant myself. Since it’s a deep-rooted issue in this society, I thought time would fade it out, but the tension between ethnic groups escalated day by day. Once more people came out to the streets and raised their voices. The protests remained peaceful but sometimes they were repressed by the police force excessively. Some outraged protesters responded with violence and taking advantage of this chaos, the looters broke into the stores, steal, and destroyed other innocent citizens’ properties.",
+  "This whole situation raised questions for me. Why do we criticize each other so harshly? Why do we want to get stronger? Does being strong mean to speak up your opinions? Many thoughts crossed my mind. After pondering for a while, I concluded that being strong is not to show off one’s strength or to use it to repress someone, but to be able to maintain one’s stance under any circumstances and to have the inner strength to overcome the obstacles.",
+  "We all need to look back on ourselves and grow stronger inside first. Be strong.",
 ];
 const worksImage = projectImage;
 

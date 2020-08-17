@@ -6,12 +6,11 @@ import projectImage from "../../../assets/images/home-dk.png";
 
 const worksTitle = "dk";
 const worksSubtitle = {
-  text: "Redesign project",
-  year: "2020",
+  text: "Web Design",
+  year: "2019",
 };
 const worksDescription = [
-  "I’ve been moving a lot from New York to D.C., to Philadelphia, then to Austin, and I became a frequent customer of IKEA. Every time I purchased furniture and housewares, the high functionality and relatively accessible prices of IKEA satisfied my needs.",
-  "I visited many of their stores and bought and used so many products that I got to know the pros and cons of IKEA. Particularly using their app, I found out various aspects to be improved. So I redesigned it analyzing how IKEA can offer upgraded services based on my own experiences.",
+  "My friend and I were pursuing our dreams in Austin and met each other. He wanted to be a front-end developer and I aspired to be a designer. Without any background or experience, we moved around the mouse and pounded the keyboard. We had no skills and no clue what the other wanted. We just had this vague idea of making a responsive and sleek portfolio site and we got started with my friend DK’s site. In this process, we learned the importance of communication and realized that unrealistic designs can be a huge obstacle in development. It took us a month to reach a satisfying result and we were able to submit job applications with this portfolio.",
 ];
 const worksImage = projectImage;
 

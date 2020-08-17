@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import aboutImage from "../assets/images/about-me.png";
 import IntroSection from "../components/aboutPage/introSection/IntroSection";
 import DescriptionSection from "../components/aboutPage/descriptionSection/DescriptionSection";
 import CopyrightSection from "../components/aboutPage/copyrightSection/CopyrightSection";
@@ -55,7 +54,7 @@ function About() {
 
       <DescriptionSection
         descriptionText={aboutDescription}
-        aboutImage={aboutImage}
+        // aboutImage={aboutImage}
       />
 
       <CopyrightSection />

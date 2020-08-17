@@ -1,13 +1,14 @@
 import React from "react";
 
-function DescriptionSection({ descriptionText, aboutImage }) {
+function DescriptionSection({ descriptionText }) {
   return (
     <section className='about__description-section'>
-      <img
+      <div className='temporary-image-box'></div>
+      {/* <img
         src={aboutImage}
         alt='Jinkyu Kang'
         className='about__description-section__image'
-      />
+      /> */}
 
       <div className='about__description-section__description'>
         <div className='about__description-section__description__scroll'>
@@ -15,7 +16,11 @@ function DescriptionSection({ descriptionText, aboutImage }) {
             <p key={`${each}-${index}`}>{each}</p>
           ))}
         </div>
-        <a href='www.erugogada.com' target='_blank' rel='noopener noreferrer'>
+        <a
+          href='https://www.dropbox.com/sh/yc82hs2f9b54z21/AAB8qTepucEG8kItrGOGHpj-a?dl=0'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
           <svg
             width='80'
             height='24'
