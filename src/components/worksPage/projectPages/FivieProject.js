@@ -1,0 +1,88 @@
+import React from "react";
+
+import ProjectPage from "./projectPage/ProjectPage";
+
+import projectImage1 from "../../../assets/images/projects/FIVIE/fivie_main.png";
+import projectImage2 from "../../../assets/images/projects/FIVIE/fivie_group.png";
+import projectImage3 from "../../../assets/images/projects/FIVIE/fivie_app/1_flipping_app.gif";
+import projectImage4 from "../../../assets/images/projects/FIVIE/fivie_app/2_view_more_app.gif";
+import projectImage5 from "../../../assets/images/projects/FIVIE/fivie_app/3_side_bar_app.gif";
+import projectImage6 from "../../../assets/images/projects/FIVIE/fivie_app/4_video_app.gif";
+import projectImage7 from "../../../assets/images/projects/FIVIE/fivie_app_mockup.png";
+
+const worksTitle = "FIVIE";
+const worksSubtitle = {
+  text: "UI/UX",
+  year: "2019",
+};
+const worksDescription = [
+  "“We believe in the simple, not the complex.” It’s a quote from Apple’s design philosophy. Apple’s company vision to create products that customers need with innovative designs was a great inspiration to me.",
+  "Before their steaming service ‘Apple TV+’ was launched, I imagined what kind of site they would offer if they entered the streaming market. And I attempted to create a simple movie streaming site following Apple’s design philosophy and using Apple’s design resources to make it familiar and blend into their design system. I studied currently available media sites to learn their problems and missing elements, and then I started the project from the wireframing with a developer friend to make it feasible.",
+  "Most of the movie search engines have a complicated structure due to the extensive database. And the users can become indecisive about what to watch. So I arranged the users to type in keywords about their preferences such as genre and actor or director’s name, already cataloged as tags, and it would show them just the top five search results facilitating the choice. I named it ‘Fivie’, combining the words ‘five’ and ‘movie’. If a user wishes to have more options, could select more additional tags. I completed this conceptual site with an algorithm that can collect data about users’ interests and preferences.",
+];
+const worksImages = [
+  {
+    image: projectImage1,
+    alt: "fivie-desktop",
+    config: {
+      gif: false,
+    },
+  },
+  {
+    image: projectImage2,
+    alt: "fivie-group",
+    config: {
+      gif: false,
+    },
+  },
+  {
+    image: projectImage7,
+    alt: "fivie-mockup",
+    config: {
+      gif: false,
+    },
+  },
+  {
+    image: projectImage3,
+    alt: "fivie-gif-1",
+    config: {
+      gif: true,
+    },
+  },
+  {
+    image: projectImage4,
+    alt: "fivie-gif-2",
+    config: {
+      gif: true,
+    },
+  },
+  {
+    image: projectImage5,
+    alt: "fivie-gif-3",
+    config: {
+      gif: true,
+    },
+  },
+  {
+    image: projectImage6,
+    alt: "fivie-gif-4",
+    config: {
+      gif: true,
+    },
+  },
+];
+
+function FivieProject() {
+  return (
+    <>
+      <ProjectPage
+        worksTitle={worksTitle}
+        worksSubtitle={worksSubtitle}
+        worksDescription={worksDescription}
+        worksImages={worksImages}
+      />
+    </>
+  );
+}
+
+export default FivieProject;
