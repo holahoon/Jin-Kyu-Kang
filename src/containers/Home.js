@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
-import HomeBackground from "../components/UI/homeBackground/HomeBackground";
+import HomeBackground from "../components/UI/HomeBackground/HomeBackground";
 import ProjectLists from "../components/projectLists/ProjectLists";
 import ProjectPreview from "../components/projectPreview/ProjectPreview";
 

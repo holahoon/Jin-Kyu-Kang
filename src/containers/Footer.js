@@ -1,9 +1,9 @@
 import React, { useState, useCallback } from "react";
 import { motion } from "framer-motion";
 
-import Contact from "../components/contact/Contact";
-import Backdrop from "../components/UI/backdrop/Backdrop";
-import Form from "../components/form/Form";
+import Contact from "../components/Contact/Contact";
+import Backdrop from "../components/UI/Backdrop/Backdrop";
+import Form from "../components/Form/Form";
 
 function Footer() {
   const [isOpen, setIsOpen] = useState(false);
