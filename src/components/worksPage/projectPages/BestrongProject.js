@@ -2,7 +2,7 @@ import React from "react";
 
 import ProjectPage from "./projectPage/ProjectPage";
 
-import projectImage from "../../../assets/images/home-dk.png";
+import projectImage1 from "../../../assets/images/projects/be-strong/be_strong.png";
 
 const worksTitle = "be strong";
 const worksSubtitle = {
@@ -14,7 +14,15 @@ const worksDescription = [
   "This whole situation raised questions for me. Why do we criticize each other so harshly? Why do we want to get stronger? Does being strong mean to speak up your opinions? Many thoughts crossed my mind. After pondering for a while, I concluded that being strong is not to show off one’s strength or to use it to repress someone, but to be able to maintain one’s stance under any circumstances and to have the inner strength to overcome the obstacles.",
   "We all need to look back on ourselves and grow stronger inside first. Be strong.",
 ];
-const worksImages = projectImage;
+const worksImages = [
+  {
+    image: projectImage1,
+    alt: "be-strong-desktop",
+    config: {
+      gif: false,
+    },
+  },
+];
 
 function bestrongProject() {
   return (

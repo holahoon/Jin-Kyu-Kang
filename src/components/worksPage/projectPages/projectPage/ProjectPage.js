@@ -71,10 +71,14 @@ function ProjectPage({
           ))}
         </div>
 
-        <div className='works__project__image'>
-          <div>
-            {worksImages.map((image, index) => (
-              <img src={image.image} alt={image.alt} />
+        <div className='works__project__scroll'>
+          <div className='works__project__scroll__image-box'>
+            {worksImages.map((image) => (
+              <span
+                className={`image-wrapper${image.config.gif ? "-shrink" : ""}`}
+              >
+                <img src={image.image} alt={image.alt} />
+              </span>
             ))}
           </div>
         </div>

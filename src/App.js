@@ -97,7 +97,7 @@ function App() {
 
         <AnimatePresence exitBeforeEnter>
           <Switch location={location} key={location.key}>
-            {/* <Route path='/works/ikea' component={projectPages.IkeaProject} />
+            <Route path='/works/ikea' component={projectPages.IkeaProject} />
             <Route
               path='/works/bestrong'
               component={projectPages.BestrongProject}
@@ -110,14 +110,14 @@ function App() {
               path='/works/storyceller'
               component={projectPages.StorycellerProject}
             />
-            <Route path='/works/fivie' component={projectPages.FivieProject} /> */}
+            <Route path='/works/fivie' component={projectPages.FivieProject} />
             <Route path='/works/dk' component={projectPages.DkProject} />
-            {/* <Route path='/works/frame' component={projectPages.FrameProject} />
+            <Route path='/works/frame' component={projectPages.FrameProject} />
             <Route path='/works/ball' component={projectPages.BallProject} />
             <Route
               path='/works/greyed'
               component={projectPages.GreyedProject}
-            /> */}
+            />
 
             <Route path='/works'>
               <Works projectList={projectList} />

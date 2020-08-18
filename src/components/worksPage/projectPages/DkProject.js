@@ -4,6 +4,7 @@ import ProjectPage from "./projectPage/ProjectPage";
 
 import projectImage1 from "../../../assets/images/projects/dk/dk.png";
 import projectImage2 from "../../../assets/images/projects/dk/dk_ipad_pro_portrait.png";
+import projectImage3 from "../../../assets/images/projects/dk/dk_iphone.png";
 
 const worksTitle = "dk";
 const worksSubtitle = {
@@ -16,11 +17,24 @@ const worksDescription = [
 const worksImages = [
   {
     image: projectImage1,
-    alt: "dk-1",
+    alt: "dk-desktop",
+    config: {
+      gif: false,
+    },
   },
   {
     image: projectImage2,
-    alt: "dk-2",
+    alt: "dk-ipad",
+    config: {
+      gif: false,
+    },
+  },
+  {
+    image: projectImage3,
+    alt: "dk-mobile",
+    config: {
+      gif: false,
+    },
   },
 ];
 
