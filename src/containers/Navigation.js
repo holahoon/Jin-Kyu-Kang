@@ -4,10 +4,11 @@ import { withRouter } from "react-router-dom";
 import Logo from "../components/navigations/Logo/Logo";
 import NavigationItem from "../components/navigations/navigationItem/NavigationItem";
 
-const navTitles = ["works", "about"];
+const navTitles = ["works", "about", "contact"];
 
 function Navigations(props) {
   const [decreaseLogoSize, setdecreaseLogoSize] = useState(false);
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
   useEffect(() => {
     props.location.pathname !== "/"
@@ -15,10 +16,20 @@ function Navigations(props) {
       : setdecreaseLogoSize(false);
   }, [props.location.pathname]);
 
+  const openMobileNavHandler = () => {
+    setMobileNavOpen(!mobileNavOpen);
+  };
+
   return (
     <nav className='nav'>
-      <Logo className='nav__logo' decreaseLogoSize={decreaseLogoSize} />
+      <Logo decreaseLogoSize={decreaseLogoSize} />
 
+      <div
+        className={`nav__menu__mobile${
+          mobileNavOpen ? " mobile-nav--open" : ""
+        }`}
+        onClick={openMobileNavHandler}
+      ></div>
       <ul className='nav__menu'>
         {navTitles.map((title) => (
           <NavigationItem key={title} navTitle={title} />

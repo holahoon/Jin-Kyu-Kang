@@ -18,23 +18,14 @@ const worksImages = [
   {
     image: projectImage1,
     alt: "dk-desktop",
-    config: {
-      gif: false,
-    },
   },
   {
     image: projectImage2,
     alt: "dk-ipad",
-    config: {
-      gif: false,
-    },
   },
   {
     image: projectImage3,
     alt: "dk-mobile",
-    config: {
-      gif: false,
-    },
   },
 ];
 

@@ -17,19 +17,25 @@ import SideText from "./components/UI/SideText/SideText";
 import Footer from "./containers/Footer";
 import * as projectPages from "./components/worksPage/projectPages";
 
+import image_blob from "./assets/images/home-blob.png";
 import image_ikea from "./assets/images/home-ikea.png";
 import image_bestrong from "./assets/images/home-bestrong.png";
 import image_icantbreathe from "./assets/images/home-icantbreathe.png";
 import image_storyceller from "./assets/images/home-storyceller.png";
 import image_fivie from "./assets/images/home-fivie.png";
 import image_dk from "./assets/images/home-dk.png";
-import image_frame from "./assets/images/home-frame.png";
 import image_ball from "./assets/images/home-ball.png";
 import image_greyed from "./assets/images/home-greyed.png";
 
 import "./styles/main.scss";
 
 const projectList = [
+  {
+    urlName: "blob",
+    projectName: "blob",
+    image: image_blob,
+    category: "Web Design",
+  },
   {
     urlName: "ikea",
     projectName: "IKEA",
@@ -65,12 +71,6 @@ const projectList = [
     projectName: "dk",
     image: image_dk,
     category: "Web Design",
-  },
-  {
-    urlName: "frame",
-    projectName: "FRAME",
-    image: image_frame,
-    category: "Poster Design",
   },
   {
     urlName: "ball",
@@ -112,7 +112,7 @@ function App() {
             />
             <Route path='/works/fivie' component={projectPages.FivieProject} />
             <Route path='/works/dk' component={projectPages.DkProject} />
-            <Route path='/works/frame' component={projectPages.FrameProject} />
+            <Route path='/works/blob' component={projectPages.BlobProject} />
             <Route path='/works/ball' component={projectPages.BallProject} />
             <Route
               path='/works/greyed'

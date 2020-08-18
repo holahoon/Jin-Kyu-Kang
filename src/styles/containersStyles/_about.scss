@@ -14,15 +14,10 @@
   &__description-section {
     @include flex(row, flex-end, flex-start);
 
-    .temporary-image-box {
-      width: calcRem(300px);
-      height: calcRem(400px);
-      background-color: #1d1d1d;
+    &__image {
+      width: 100%;
+      max-width: calcRem(300px);
     }
-    // &__image {
-    //   width: 100%;
-    //   max-width: calcRem(300px);
-    // }
     &__description {
       max-width: calcRem(446px);
       height: calcRem(400px);

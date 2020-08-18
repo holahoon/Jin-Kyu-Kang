@@ -17,9 +17,6 @@ const worksImages = [
   {
     image: projectImage1,
     alt: "ball-desktop",
-    config: {
-      gif: false,
-    },
   },
 ];
 

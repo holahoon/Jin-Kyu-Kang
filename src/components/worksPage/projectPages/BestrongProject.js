@@ -18,9 +18,6 @@ const worksImages = [
   {
     image: projectImage1,
     alt: "be-strong-desktop",
-    config: {
-      gif: false,
-    },
   },
 ];
 

@@ -18,9 +18,6 @@ const worksImages = [
   {
     image: projectImage1,
     alt: "icantbreathe-desktop",
-    config: {
-      gif: false,
-    },
   },
 ];
 

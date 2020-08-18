@@ -7,7 +7,7 @@ function ProjectLists({
   selectedProject,
   projectSelectionHandler,
 }) {
-  const listItemRef = useRef(0);
+  const listItemRef = useRef(3);
 
   return (
     <div className='project-lists'>

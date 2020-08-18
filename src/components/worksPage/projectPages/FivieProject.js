@@ -4,10 +4,6 @@ import ProjectPage from "./projectPage/ProjectPage";
 
 import projectImage1 from "../../../assets/images/projects/FIVIE/fivie_main.png";
 import projectImage2 from "../../../assets/images/projects/FIVIE/fivie_group.png";
-import projectImage3 from "../../../assets/images/projects/FIVIE/fivie_app/1_flipping_app.gif";
-import projectImage4 from "../../../assets/images/projects/FIVIE/fivie_app/2_view_more_app.gif";
-import projectImage5 from "../../../assets/images/projects/FIVIE/fivie_app/3_side_bar_app.gif";
-import projectImage6 from "../../../assets/images/projects/FIVIE/fivie_app/4_video_app.gif";
 import projectImage7 from "../../../assets/images/projects/FIVIE/fivie_app_mockup.png";
 
 const worksTitle = "FIVIE";
@@ -24,51 +20,14 @@ const worksImages = [
   {
     image: projectImage1,
     alt: "fivie-desktop",
-    config: {
-      gif: false,
-    },
   },
   {
     image: projectImage2,
     alt: "fivie-group",
-    config: {
-      gif: false,
-    },
   },
   {
     image: projectImage7,
     alt: "fivie-mockup",
-    config: {
-      gif: false,
-    },
-  },
-  {
-    image: projectImage3,
-    alt: "fivie-gif-1",
-    config: {
-      gif: true,
-    },
-  },
-  {
-    image: projectImage4,
-    alt: "fivie-gif-2",
-    config: {
-      gif: true,
-    },
-  },
-  {
-    image: projectImage5,
-    alt: "fivie-gif-3",
-    config: {
-      gif: true,
-    },
-  },
-  {
-    image: projectImage6,
-    alt: "fivie-gif-4",
-    config: {
-      gif: true,
-    },
   },
 ];
 
