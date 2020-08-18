@@ -6,6 +6,9 @@
     @for $i from 1 through 8 {
       &-#{$i} {
         position: absolute;
+        @include break-point(tablet-sm-down) {
+          display: none;
+        }
       }
     }
     &-1 {
@@ -99,7 +102,7 @@
         width: calcRem(14px);
         height: calcRem(14px);
         position: absolute;
-        top: 0;
+        top: 72px;
         left: calcRem(-14px);
         margin-top: calc((24px - 14px) / 2);
         background-color: $brand-red;

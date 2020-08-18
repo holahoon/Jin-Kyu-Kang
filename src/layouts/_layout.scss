@@ -1,11 +1,14 @@
 .layout-container {
   @include max-width;
   margin: 0 auto;
-  padding: 0 calcRem(45px) 0 calcRem(45px);
+  padding: 0 calcRem(20px);
   position: relative;
   height: 100%;
   width: 100%;
   @include flex(column, stretch, stretch);
+  @include break-point(tablet-sm-up) {
+    padding: 0 calcRem(45px);
+  }
 
   /* -- Side text -- */
   .side-text {
@@ -16,6 +19,9 @@
     transform: translateY(-50%);
     transform: rotate(270deg);
     transform-origin: left top;
+    @include break-point(tablet-sm-down) {
+      display: none;
+    }
 
     a {
       @include flex(row);

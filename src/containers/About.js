@@ -5,6 +5,8 @@ import IntroSection from "../components/aboutPage/introSection/IntroSection";
 import DescriptionSection from "../components/aboutPage/descriptionSection/DescriptionSection";
 import CopyrightSection from "../components/aboutPage/copyrightSection/CopyrightSection";
 
+import aboutImage from "../assets/images/about-me.jpg";
+
 const homepageVariants = {
   initial: {
     opacity: 0,
@@ -54,7 +56,7 @@ function About() {
 
       <DescriptionSection
         descriptionText={aboutDescription}
-        // aboutImage={aboutImage}
+        aboutImage={aboutImage}
       />
 
       <CopyrightSection />

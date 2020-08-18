@@ -70,12 +70,22 @@
       }
       a {
         @include flex(row, center, center);
+        position: relative;
+        margin-left: calcRem(12px);
+        &:hover > svg {
+          left: 8px;
+        }
         svg {
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
           width: calcRem(26px);
           height: calcRem(9px);
-          margin: 0 calcRem(12px);
+          transition: all 0.2s ease-in;
         }
         .button-text {
+          margin-left: calcRem(38px);
           @include font-heebo(500);
           font-size: calcRem(12px);
           line-height: 1;
@@ -134,11 +144,6 @@
         .image-wrapper {
           @include flex(column, center, center);
           margin-bottom: calcRem(40px);
-        }
-        .image-wrapper-shrink {
-          img {
-            width: 25%;
-          }
         }
         img {
           width: 100%;

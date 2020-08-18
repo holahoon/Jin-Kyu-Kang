@@ -18,9 +18,6 @@ const worksImages = [
   {
     image: projectImage1,
     alt: "greyed-desktop",
-    config: {
-      gif: false,
-    },
   },
 ];
 

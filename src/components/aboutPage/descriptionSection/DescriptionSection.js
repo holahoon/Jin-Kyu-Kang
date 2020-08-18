@@ -1,14 +1,14 @@
 import React from "react";
 
-function DescriptionSection({ descriptionText }) {
+function DescriptionSection({ descriptionText, aboutImage }) {
   return (
     <section className='about__description-section'>
       <div className='temporary-image-box'></div>
-      {/* <img
+      <img
         src={aboutImage}
         alt='Jinkyu Kang'
         className='about__description-section__image'
-      /> */}
+      />
 
       <div className='about__description-section__description'>
         <div className='about__description-section__description__scroll'>

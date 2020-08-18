@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import PreviewImages from "./previewImages/PreviewImages";
 import PreviewDescription from "./previewDescription/PreviewDescription";
 
-const buttonVariants = {
+const buttonHoverVariants = {
   hover: {
     x: -5,
   },
@@ -15,7 +15,10 @@ function ProjectPreview({ selectedProject, projectList }) {
   return (
     <div className='project-preview'>
       <div className='project-preview__image-box'>
-        <PreviewImages selectedProject={selectedProject} />
+        <PreviewImages
+          projectList={projectList}
+          selectedProject={selectedProject}
+        />
       </div>
 
       <div className='project-preview__content-box'>
@@ -25,7 +28,7 @@ function ProjectPreview({ selectedProject, projectList }) {
             className='project-preview__content-box__button'
           >
             <motion.svg
-              variants={buttonVariants}
+              variants={buttonHoverVariants}
               className='button-arrow'
               width='42'
               height='7'

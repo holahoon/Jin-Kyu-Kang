@@ -17,9 +17,6 @@ const worksImages = [
   {
     image: projectImage1,
     alt: "ikea-desktop",
-    config: {
-      gif: false,
-    },
   },
 ];
 

@@ -1,10 +1,10 @@
+import BlobProject from "./BlobProject";
 import IkeaProject from "./IkeaProject";
 import BestrongProject from "./BestrongProject";
 import IcantbreatheProject from "./IcantbreatheProject";
 import StorycellerProject from "./StorycellerProject";
 import FivieProject from "./FivieProject";
 import DkProject from "./DkProject";
-import FrameProject from "./FrameProject";
 import BallProject from "./BallProject";
 import GreyedProject from "./GreyedProject";
 
@@ -15,7 +15,7 @@ export {
   StorycellerProject,
   FivieProject,
   DkProject,
-  FrameProject,
+  BlobProject,
   BallProject,
   GreyedProject,
 };

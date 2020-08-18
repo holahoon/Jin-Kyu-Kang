@@ -4,10 +4,6 @@ import ProjectPage from "./projectPage/ProjectPage";
 
 import projectImage1 from "../../../assets/images/projects/Storyceller/storyceller_main.png";
 import projectImage2 from "../../../assets/images/projects/Storyceller/storyceller_wireframe.png";
-import projectImage3 from "../../../assets/images/projects/Storyceller/storyceller_app/1_login_app.gif";
-import projectImage4 from "../../../assets/images/projects/Storyceller/storyceller_app/2_detailed_view_app.gif";
-import projectImage5 from "../../../assets/images/projects/Storyceller/storyceller_app/3_compose_app.gif";
-import projectImage6 from "../../../assets/images/projects/Storyceller/storyceller_app/5_dark_mode_app.gif";
 
 const worksTitle = "storyceller";
 const worksSubtitle = {
@@ -31,34 +27,6 @@ const worksImages = [
     alt: "storyceller-wireframe",
     config: {
       gif: false,
-    },
-  },
-  {
-    image: projectImage3,
-    alt: "storyceller-gif",
-    config: {
-      gif: true,
-    },
-  },
-  {
-    image: projectImage4,
-    alt: "storyceller-gif",
-    config: {
-      gif: true,
-    },
-  },
-  {
-    image: projectImage5,
-    alt: "storyceller-gif",
-    config: {
-      gif: true,
-    },
-  },
-  {
-    image: projectImage6,
-    alt: "storyceller-gif",
-    config: {
-      gif: true,
     },
   },
 ];
