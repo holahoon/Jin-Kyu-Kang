@@ -43,10 +43,8 @@
   }
 
   .project-preview {
-    // @include flex(row, center, flex-start);
     @include flex(row, flex-end, flex-start);
-    margin-top: 14px;
-    // margin-left: 42%;
+    margin-top: calcRem(14px);
 
     &__image-box {
       min-width: calcRem(540px);
