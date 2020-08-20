@@ -109,9 +109,9 @@ function Form({ isOpen, closeContactMenuAfterSubmit }) {
       clearFields();
     }, 3000);
     return () => clearTimeout(timer);
-  }, [formSubmitSuccess, isOpen]);
+  }, [formSubmitSuccess, isOpen, closeContactMenuAfterSubmit]);
 
-  function clearFields() {
+  const clearFields = () => {
     // Reset the form when contact menu is closed or form is successfully submitted
     if (isOpen && formSubmitSuccess) {
       setInputInfo({ name: "", email: "", message: "" });
@@ -119,7 +119,7 @@ function Form({ isOpen, closeContactMenuAfterSubmit }) {
       setFormSubmitSuccess(false);
       closeContactMenuAfterSubmit(formSubmitSuccess);
     }
-  }
+  };
 
   function emailJsHandler(e) {
     let isValid = validate();
