@@ -46,18 +46,34 @@
   }
 
   .project-preview {
-    @include flex(row, flex-end, flex-start);
-    margin-top: calcRem(14px);
+    // @include flex(column, flex-end, flex-start);
+    @include flex(column, flex-end, flex-start);
+    margin-top: calcRem(80px);
+    @include break-point(tablet-sm-up) {
+      margin-top: calcRem(14px);
+      @include flex(row, flex-end, flex-start);
+    }
 
     &__image-box {
-      min-width: calcRem(540px);
-      height: calcRem(540px);
+      width: 100%;
+      position: relative;
+      @include break-point(tablet-sm-up) {
+        min-width: calcRem(540px);
+        height: calcRem(540px);
+      }
       &__image {
-        max-width: calcRem(540px);
+        // max-width: calcRem(540px);
         width: 100%;
         position: absolute;
+        top: 0;
+        left: 0;
         opacity: 0;
         transition: opacity 0.5s ease;
+        @include break-point(tablet-sm-up) {
+          max-width: calcRem(540px);
+          left: unset;
+          right: 0;
+        }
       }
       .project-selected {
         opacity: 1;
@@ -66,9 +82,13 @@
     }
 
     &__content-box {
-      max-width: calcRem(196px);
-      margin-left: calcRem(50px);
-      margin-top: calcRem(180px);
+      width: calcRem(196px);
+      // margin-left: calcRem(10px);
+      // margin-top: calcRem(18);
+      @include break-point(tablet-sm-up) {
+        margin-left: calcRem(50px);
+        margin-top: calcRem(180px);
+      }
 
       &__button {
         @include flex(row, flex-start, center);
@@ -90,8 +110,14 @@
   .project-lists {
     display: flex;
     position: absolute;
-    bottom: calcRem(145px);
-    left: calcRem(222px);
+    bottom: calcRem(50px);
+    left: 0;
+    // bottom: calcRem(190px);
+    // left: calcRem(222px);
+    @include break-point(tablet-sm-up) {
+      bottom: calcRem(190px);
+      left: calcRem(222px);
+    }
 
     &__red-box-container {
       margin-right: calcRem(10px);
@@ -112,7 +138,7 @@
     }
 
     &__wrapper {
-      border-left: 1px solid $black;
+      border-left: 1px solid $bg-black;
       padding-left: calcRem(20px);
 
       &__item {
@@ -120,6 +146,7 @@
         font-size: calcRem(14px);
         height: calcRem(24px);
         @include flex(row, flex-start, center);
+        color: $bg-black;
         cursor: pointer;
         transition: all 0.1s ease-in-out;
         &:hover {

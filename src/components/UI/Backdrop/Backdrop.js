@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 
 const backdropVariant = {
   hidden: {
+    visibility: "hidden",
     opacity: 0,
     zIndex: -1,
     transition: {
@@ -11,6 +12,7 @@ const backdropVariant = {
     },
   },
   show: {
+    visibility: "visible",
     opacity: 1,
     zIndex: 0,
     transition: {

@@ -12,6 +12,11 @@ function Footer() {
     setIsOpen(!isOpen);
   }, [isOpen, setIsOpen]);
 
+  // Function to close contact form after submission
+  const closeContactMenuAfterSubmit = (submitState) => {
+    submitState && setIsOpen(false);
+  };
+
   return (
     <>
       <Backdrop isOpen={isOpen} toggleContactMenu={toggleContactMenu} />
@@ -22,7 +27,10 @@ function Footer() {
           animate={isOpen ? "open" : "closed"}
           className='footer__contact'
         >
-          <Form isOpen={isOpen} />
+          <Form
+            isOpen={isOpen}
+            closeContactMenuAfterSubmit={closeContactMenuAfterSubmit}
+          />
           <Contact isOpen={isOpen} toggleContactMenu={toggleContactMenu} />
         </motion.div>
       </footer>

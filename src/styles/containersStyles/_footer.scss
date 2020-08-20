@@ -2,6 +2,9 @@
   @include flex(row, flex-end);
   position: relative;
   padding-bottom: calcRem(20px);
+  @include break-point(tablet-sm-down) {
+    display: none;
+  }
 
   // - footer__contact
   &__contact {
@@ -11,7 +14,6 @@
     width: 200%;
     transform: translateX(-40%);
 
-    // -- footer__contact-background
     &-background {
       position: absolute;
       right: 0;
@@ -22,7 +24,6 @@
     &-button {
       cursor: pointer;
 
-      // --- footer__contact-button--close
       &--close {
         display: inline-block;
         position: absolute;
@@ -34,7 +35,6 @@
           width: 100%;
         }
       }
-      // --- footer__contact-button--open
       &--open {
         position: absolute;
         bottom: 0;
@@ -63,7 +63,7 @@
       transform: translate(50%, 62%);
       path {
         animation: blob 28s cubic-bezier(0.59, 0.23, 0.53, 0.93) infinite;
-        fill: rgba(0, 0, 0, 1);
+        fill: #101010;
       }
     }
   }

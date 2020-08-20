@@ -7,18 +7,18 @@ import ImageSection from "../components/worksPage/imageSection/ImageSection";
 const homepageVariants = {
   initial: {
     opacity: 0,
-    y: "-40vh",
+    y: "-20vh",
   },
   animate: {
     opacity: 1,
     y: 0,
     transition: {
       delay: 0.2,
-      duration: 1.2,
+      duration: 1,
     },
   },
   exitAnimate: {
-    y: "-50vh",
+    y: "-20vh",
     opacity: 0,
     transition: {
       duration: 1,

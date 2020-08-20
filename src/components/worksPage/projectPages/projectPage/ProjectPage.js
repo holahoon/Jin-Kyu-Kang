@@ -16,7 +16,7 @@ const projectVariants = {
     },
   },
   exitAnimate: {
-    y: "50vh",
+    y: "20vh",
     opacity: 0,
     transition: {
       duration: 1,
@@ -39,30 +39,32 @@ function ProjectPage({
       exit='exitAnimate'
       className='works__project'
     >
-      <h2 className='works__project__title'>{worksTitle}</h2>
-      <div className='works__project__back-button'>
-        <span className='line'></span>
-        <Link to='/works'>
-          <svg
-            viewBox='0 0 26 9'
-            fill='none'
-            xmlns='http://www.w3.org/2000/svg'
-          >
-            <path d='M2 4H7.7C3.86 4 5.1 2.2 6.2 1L2 4Z' fill='black' />
-            <path
-              d='M26 4H2M2 4L6.2 1C5.1 2.2 3.86 4 7.7 4H2Z'
-              stroke='black'
-            />
-          </svg>
+      <div className='works__project__no-scroll-box'>
+        <h2 className='works__project__title'>{worksTitle}</h2>
+        <div className='works__project__back-button'>
+          <span className='line'></span>
+          <Link to='/works'>
+            <svg
+              viewBox='0 0 26 9'
+              fill='none'
+              xmlns='http://www.w3.org/2000/svg'
+            >
+              <path d='M2 4H7.7C3.86 4 5.1 2.2 6.2 1L2 4Z' fill='#101010' />
+              <path
+                d='M26 4H2M2 4L6.2 1C5.1 2.2 3.86 4 7.7 4H2Z'
+                stroke='#101010'
+              />
+            </svg>
 
-          <span className='button-text'>BACK</span>
-        </Link>
+            <span className='button-text'>BACK</span>
+          </Link>
+        </div>
+        <h4 className='works__project__subtitle'>
+          <span className='text'>
+            {worksSubtitle.text} : {worksSubtitle.year}
+          </span>
+        </h4>
       </div>
-      <h4 className='works__project__subtitle'>
-        <span className='text'>
-          {worksSubtitle.text} : {worksSubtitle.year}
-        </span>
-      </h4>
 
       <div className='works__project__scroll-box'>
         <div className='works__project__description'>
@@ -73,8 +75,8 @@ function ProjectPage({
 
         <div className='works__project__scroll'>
           <div className='works__project__scroll__image-box'>
-            {worksImages.map((image) => (
-              <span className='image-wrapper'>
+            {worksImages.map((image, index) => (
+              <span className='image-wrapper' key={`${image}-${index}`}>
                 <img src={image.image} alt={image.alt} />
               </span>
             ))}

@@ -15,20 +15,17 @@ import image_blob from "./assets/images/home-blob.png";
 import image_ikea from "./assets/images/home-ikea.png";
 import image_bestrong from "./assets/images/home-bestrong.png";
 import image_icantbreathe from "./assets/images/home-icantbreathe.png";
-import image_storyceller from "./assets/images/home-storyceller.png";
 import image_fivie from "./assets/images/home-fivie.png";
-import image_dk from "./assets/images/home-dk.png";
-import image_ball from "./assets/images/home-ball.png";
 import image_greyed from "./assets/images/home-greyed.png";
 
 import "./styles/main.scss";
 
 const projectList = [
   {
-    urlName: "blob",
-    projectName: "blob",
-    image: image_blob,
-    category: "Web Design",
+    urlName: "fivie",
+    projectName: "Fivie",
+    image: image_fivie,
+    category: "UI/UX",
   },
   {
     urlName: "ikea",
@@ -49,28 +46,10 @@ const projectList = [
     category: "Visual Design",
   },
   {
-    urlName: "storyceller",
-    projectName: "Storyceller",
-    image: image_storyceller,
-    category: "UI/UX",
-  },
-  {
-    urlName: "fivie",
-    projectName: "FIVIE",
-    image: image_fivie,
-    category: "UI/UX",
-  },
-  {
-    urlName: "dk",
-    projectName: "dk",
-    image: image_dk,
+    urlName: "blob",
+    projectName: "blob",
+    image: image_blob,
     category: "Web Design",
-  },
-  {
-    urlName: "ball",
-    projectName: "ball.",
-    image: image_ball,
-    category: "Concept Design",
   },
   {
     urlName: "greyed",
@@ -100,14 +79,8 @@ function App() {
               path='/works/icantbreathe'
               component={projectPages.IcantbreatheProject}
             />
-            <Route
-              path='/works/storyceller'
-              component={projectPages.StorycellerProject}
-            />
             <Route path='/works/fivie' component={projectPages.FivieProject} />
-            <Route path='/works/dk' component={projectPages.DkProject} />
             <Route path='/works/blob' component={projectPages.BlobProject} />
-            <Route path='/works/ball' component={projectPages.BallProject} />
             <Route
               path='/works/greyed'
               component={projectPages.GreyedProject}

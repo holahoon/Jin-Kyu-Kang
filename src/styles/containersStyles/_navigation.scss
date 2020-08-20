@@ -3,11 +3,13 @@
   position: fixed;
   right: 0;
   height: 100%;
+  z-index: 1;
   @include break-point(tablet-sm-up) {
     @include flex(row, flex-end, center);
     position: relative;
     height: auto;
     padding-top: calcRem(74px);
+    z-index: 0;
   }
 
   // - nav__logo
@@ -15,7 +17,7 @@
     position: absolute;
     left: 0;
     z-index: 1;
-    transition: all 0.7s ease-in-out 0.5s;
+    transition: all 0.3s ease-in-out 0.3s;
 
     &__desktop {
       display: block;
@@ -26,8 +28,10 @@
     &__mobile {
       display: block;
       position: fixed;
-      left: 50%;
-      transform: translateX(-50%);
+      left: 0;
+      top: 0;
+      margin: calcRem(20px) 0 0 calcRem(20px);
+      padding: calcRem(5px);
       @include break-point(tablet-sm-up) {
         display: none;
       }
@@ -46,46 +50,64 @@
 
   // - nav__menu
   &__menu {
-    @include flex(column, center, flex-end);
-    top: 80px;
+    @include flex(column, flex-start, flex-end);
+    height: 100%;
+    background-color: $bg-black;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    transform: translateX(150px);
+    padding: calcRem(90px) calcRem(28px) 0 calcRem(40px);
     @include break-point(tablet-sm-up) {
       @include flex(row);
+      height: auto;
+      padding: 0;
+      background-color: transparent;
+      transform: initial;
+    }
+
+    &.mobile-nav--open {
+      transform: translateX(0);
+      z-index: 1;
     }
 
     &__mobile {
       @include flex(column, center, center);
+      margin: calcRem(20px) calcRem(20px) 0 0;
       padding: calcRem(5px);
       width: calcRem(34px);
       height: calcRem(34px);
+      position: fixed;
       &::before {
         content: "";
         display: block;
         width: 100%;
         height: calcRem(5px);
-        background-color: $black;
+        background-color: $bg-black;
         transform: translateY(10px);
-        transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+        transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1) 0.2s;
       }
       &::after {
         content: "";
         display: block;
         width: 100%;
         height: calcRem(5px);
-        background-color: $black;
+        background-color: $bg-black;
         transform: translateY(-10px);
-        transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+        transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1) 0.2s;
       }
       @include break-point(tablet-sm-up) {
         display: none;
       }
     }
-    &__mobile.mobile-nav--open {
+    &__mobile.mobile-button--open {
+      z-index: 2;
       &::before {
         content: "";
+        background-color: $white;
         transform: rotate(45deg) translate(0, 3.5px);
       }
       &::after {
         content: "";
+        background-color: $white;
         transform: rotate(-45deg) translate(0, -3.5px);
       }
     }
@@ -93,14 +115,20 @@
     &__item {
       @include fontSize(24px);
       @include font-cormorant(600);
+      // color: $white;
+      margin-bottom: calcRem(16px);
       z-index: 1;
       @include break-point(tablet-sm-up) {
         @include fontSize(16px);
+        margin-bottom: 0;
       }
 
       a {
-        color: $black;
+        color: $white;
         transition: text-decoration 0.1s ease;
+        @include break-point(tablet-sm-up) {
+          color: $bg-black;
+        }
         &:hover {
           text-decoration-line: line-through;
           text-decoration-color: $brand-red;
