@@ -36,10 +36,10 @@ function ProjectPreview({ selectedProject, projectList }) {
               fill='none'
               xmlns='http://www.w3.org/2000/svg'
             >
-              <path d='M40 6H30.5C36.9 6 34.8333 3 33 1L40 6Z' fill='black' />
+              <path d='M40 6H30.5C36.9 6 34.8333 3 33 1L40 6Z' fill='#101010' />
               <path
                 d='M0 6H40M40 6L33 1C34.8333 3 36.9 6 30.5 6H40Z'
-                stroke='black'
+                stroke='#101010'
               />
             </motion.svg>
             <svg
@@ -54,7 +54,7 @@ function ProjectPreview({ selectedProject, projectList }) {
                 cx='15'
                 cy='15'
                 r='14.75'
-                stroke='black'
+                stroke='#101010'
                 strokeWidth='0.5'
               />
             </svg>

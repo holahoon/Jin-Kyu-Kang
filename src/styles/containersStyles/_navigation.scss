@@ -79,7 +79,7 @@
         display: block;
         width: 100%;
         height: calcRem(5px);
-        background-color: $black;
+        background-color: $bg-black;
         transform: translateY(10px);
         transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1) 0.2s;
       }
@@ -88,7 +88,7 @@
         display: block;
         width: 100%;
         height: calcRem(5px);
-        background-color: $black;
+        background-color: $bg-black;
         transform: translateY(-10px);
         transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1) 0.2s;
       }
@@ -123,7 +123,7 @@
         color: $white;
         transition: text-decoration 0.1s ease;
         @include break-point(tablet-sm-up) {
-          color: $black;
+          color: $bg-black;
         }
         &:hover {
           text-decoration-line: line-through;

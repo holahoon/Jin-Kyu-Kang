@@ -25,7 +25,7 @@
 
     a {
       @include flex(row);
-      color: $black;
+      color: $bg-black;
     }
 
     &__icon {

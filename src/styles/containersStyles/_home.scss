@@ -90,7 +90,7 @@
   .project-lists {
     display: flex;
     position: absolute;
-    bottom: calcRem(145px);
+    bottom: calcRem(190px);
     left: calcRem(222px);
 
     &__red-box-container {
@@ -112,7 +112,7 @@
     }
 
     &__wrapper {
-      border-left: 1px solid $black;
+      border-left: 1px solid $bg-black;
       padding-left: calcRem(20px);
 
       &__item {
@@ -120,6 +120,7 @@
         font-size: calcRem(14px);
         height: calcRem(24px);
         @include flex(row, flex-start, center);
+        color: $bg-black;
         cursor: pointer;
         transition: all 0.1s ease-in-out;
         &:hover {

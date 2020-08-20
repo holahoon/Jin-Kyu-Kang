@@ -57,7 +57,7 @@
     &__title {
       @include font-cormorant(400);
       font-size: calcRem(30px);
-      color: $black;
+      color: $bg-black;
     }
 
     &__back-button {

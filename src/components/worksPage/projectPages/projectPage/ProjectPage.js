@@ -48,10 +48,10 @@ function ProjectPage({
             fill='none'
             xmlns='http://www.w3.org/2000/svg'
           >
-            <path d='M2 4H7.7C3.86 4 5.1 2.2 6.2 1L2 4Z' fill='black' />
+            <path d='M2 4H7.7C3.86 4 5.1 2.2 6.2 1L2 4Z' fill='#101010' />
             <path
               d='M26 4H2M2 4L6.2 1C5.1 2.2 3.86 4 7.7 4H2Z'
-              stroke='black'
+              stroke='#101010'
             />
           </svg>
 

@@ -26,6 +26,7 @@ function ProjectLists({
             listItemRef={listItemRef}
             key={index}
             project={eachProject.projectName}
+            category={eachProject.category}
             selectedProject={selectedProject === index ? true : false}
             projectSelectionHandler={() => projectSelectionHandler(index)}
           />
