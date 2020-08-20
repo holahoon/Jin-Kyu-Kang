@@ -46,7 +46,6 @@
   }
 
   .project-preview {
-    // @include flex(column, flex-end, flex-start);
     @include flex(column, flex-end, flex-start);
     margin-top: calcRem(80px);
     @include break-point(tablet-sm-up) {
