@@ -46,7 +46,6 @@
   }
 
   .project-preview {
-    // @include flex(column, flex-end, flex-start);
     @include flex(column, flex-end, flex-start);
     margin-top: calcRem(80px);
     @include break-point(tablet-sm-up) {
@@ -62,7 +61,6 @@
         height: calcRem(540px);
       }
       &__image {
-        // max-width: calcRem(540px);
         width: 100%;
         position: absolute;
         top: 0;
