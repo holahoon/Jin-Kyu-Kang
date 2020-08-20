@@ -3,13 +3,13 @@ import { withRouter } from "react-router-dom";
 
 import Logo from "../components/navigations/Logo/Logo";
 import NavigationItem from "../components/navigations/navigationItem/NavigationItem";
+import Backdrop from "../components/UI/Backdrop/Backdrop";
 
-const navTitles = ["works", "about", "contact"];
+const navTitles = ["works", "about"];
 
 function Navigations(props) {
   const [decreaseLogoSize, setdecreaseLogoSize] = useState(false);
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
-  // const [mobilenavUlPosition, setMobileNavUlPosition] = useState(80);
   const navMenuRef = useRef(0);
 
   useEffect(() => {
@@ -18,13 +18,11 @@ function Navigations(props) {
       : setdecreaseLogoSize(false);
   }, [props.location.pathname]);
 
-  // useEffect(() => {
-  //   // window.innerWidth < 768 &&
-  //   setMobileNavUlPosition(navMenuRef.current.offsetWidth + 5);
-  // }, []);
-
   const openMobileNavHandler = () => {
-    setMobileNavOpen(!mobileNavOpen);
+    setMobileNavOpen(true);
+  };
+  const closeMobileNavHandler = () => {
+    setMobileNavOpen(false);
   };
 
   return (
@@ -35,22 +33,30 @@ function Navigations(props) {
         className={`nav__menu__mobile${
           mobileNavOpen ? " mobile-button--open" : ""
         }`}
-        onClick={openMobileNavHandler}
+        onClick={mobileNavOpen ? closeMobileNavHandler : openMobileNavHandler}
       ></div>
       <ul
         ref={navMenuRef}
-        // style={{
-        //   transform: `translateX(${
-        //     !mobileNavOpen ? mobilenavUlPosition : 0
-        //   }px)`,
-        // }}
-        // className='nav__menu'
         className={`nav__menu${mobileNavOpen ? " mobile-nav--open" : ""}`}
       >
         {navTitles.map((title) => (
-          <NavigationItem key={title} navTitle={title} />
+          <NavigationItem
+            key={title}
+            navTitle={title}
+            openMobileNavHandler={closeMobileNavHandler}
+          />
         ))}
+        <span
+          className='nav__menu__item nav__menu__item-contact'
+          onClick={closeMobileNavHandler}
+        >
+          <a href='mailto:erugo.gada@gmail.com'>contact</a>
+        </span>
       </ul>
+      <Backdrop
+        isOpen={mobileNavOpen}
+        toggleContactMenu={closeMobileNavHandler}
+      />
     </nav>
   );
 }

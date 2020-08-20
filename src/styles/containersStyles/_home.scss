@@ -46,18 +46,33 @@
   }
 
   .project-preview {
+    // @include flex(column, flex-end, flex-start);
     @include flex(row, flex-end, flex-start);
     margin-top: calcRem(14px);
+    @include break-point(tablet-sm-up) {
+      // @include flex(row, flex-end, flex-start);
+    }
 
     &__image-box {
-      min-width: calcRem(540px);
-      height: calcRem(540px);
+      width: 100%;
+      position: relative;
+      @include break-point(tablet-sm-up) {
+        min-width: calcRem(540px);
+        height: calcRem(540px);
+      }
       &__image {
-        max-width: calcRem(540px);
+        // max-width: calcRem(540px);
         width: 100%;
         position: absolute;
+        top: 0;
+        left: 0;
         opacity: 0;
         transition: opacity 0.5s ease;
+        @include break-point(tablet-sm-up) {
+          max-width: calcRem(540px);
+          // right: 0;
+          left: 100%;
+        }
       }
       .project-selected {
         opacity: 1;

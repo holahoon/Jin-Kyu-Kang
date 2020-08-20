@@ -3,10 +3,7 @@ import { NavLink } from "react-router-dom";
 
 function Logo({ decreaseLogoSize }) {
   return (
-    <div
-      className='nav__logo'
-      // style={{ top: decreaseLogoSize ? "68px" : "40px" }}
-    >
+    <div className='nav__logo'>
       <NavLink
         to='/'
         className='nav__logo__desktop'
@@ -27,14 +24,10 @@ function Logo({ decreaseLogoSize }) {
         </svg>
       </NavLink>
 
-      <NavLink
-        to='/'
-        className={`nav__logo__mobile${decreaseLogoSize ? " off-center" : ""}`}
-        style={{ top: decreaseLogoSize ? "16px" : "40px" }}
-      >
+      <NavLink to='/' className='nav__logo__mobile'>
         <svg
-          width={decreaseLogoSize ? "70px" : "150px"}
-          height={decreaseLogoSize ? "30px" : "40px"}
+          width='80px'
+          height='30px'
           viewBox='0 0 304 84'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'

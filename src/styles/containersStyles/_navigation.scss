@@ -28,8 +28,10 @@
     &__mobile {
       display: block;
       position: fixed;
-      left: 50%;
-      transform: translateX(-50%);
+      left: 0;
+      top: 0;
+      margin: calcRem(20px) 0 0 calcRem(20px);
+      padding: calcRem(5px);
       @include break-point(tablet-sm-up) {
         display: none;
       }
@@ -64,6 +66,7 @@
 
     &.mobile-nav--open {
       transform: translateX(0);
+      z-index: 1;
     }
 
     &__mobile {
@@ -73,7 +76,6 @@
       width: calcRem(34px);
       height: calcRem(34px);
       position: fixed;
-      z-index: 1;
       &::before {
         content: "";
         display: block;
@@ -97,6 +99,7 @@
       }
     }
     &__mobile.mobile-button--open {
+      z-index: 2;
       &::before {
         content: "";
         background-color: $white;
@@ -112,8 +115,9 @@
     &__item {
       @include fontSize(24px);
       @include font-cormorant(600);
-      z-index: 1;
+      // color: $white;
       margin-bottom: calcRem(16px);
+      z-index: 1;
       @include break-point(tablet-sm-up) {
         @include fontSize(16px);
         margin-bottom: 0;
