@@ -6,7 +6,6 @@ function ProjectList({
   listItemRef,
   projectSelectionHandler,
 }) {
-  console.log(project);
   return (
     <li
       ref={listItemRef}

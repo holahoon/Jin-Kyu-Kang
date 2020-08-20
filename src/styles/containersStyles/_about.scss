@@ -9,7 +9,7 @@
     @media only screen and (min-width: 1024px) and (max-height: 800px) {
       margin: 0;
       position: absolute;
-      right: calcRem(100px);
+      right: calcRem(200px);
       bottom: calcRem(410px);
     }
     h2 {
@@ -37,6 +37,9 @@
       height: calcRem(400px);
       margin-right: calcRem(75px);
       padding: calcRem(10px) 0 calcRem(60px) calcRem(40px);
+      @media only screen and (min-width: 1024px) and (max-height: 800px) {
+        margin-right: 0;
+      }
 
       &__scroll {
         height: 100%;
@@ -51,7 +54,7 @@
 
         p {
           @include font-cormorant(500);
-          font-size: calcRem(14px);
+          font-size: calcRem(16px);
           &:first-child {
             margin-top: 0;
           }
@@ -70,8 +73,11 @@
   &__copyright-section {
     @include flex(row, flex-start, center);
     position: absolute;
-    left: calcRem(300px);
+    left: calcRem(200px);
     bottom: calcRem(20px);
+    @media only screen and (min-width: 1024px) and (max-height: 800px) {
+      left: 0;
+    }
     svg {
       max-width: calcRem(60px);
       margin-right: calcRem(12px);
@@ -79,7 +85,7 @@
     &__text {
       .jinkyu {
         margin: 0 0 calcRem(3px) 0;
-        font-size: calcRem(8px);
+        font-size: calcRem(10px);
         @include font-heebo(500);
         @include lineHeight(8px, 8px);
         color: $text-copyright-gray;
@@ -103,7 +109,7 @@
       }
       .holahoon {
         margin: calcRem(4px) 0 0 0;
-        font-size: 6px;
+        font-size: calcRem(8px);
         @include font-heebo(400);
         @include lineHeight(6px, 6px);
         color: $text-copyright-gray;

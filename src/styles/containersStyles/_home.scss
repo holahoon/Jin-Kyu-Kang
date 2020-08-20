@@ -47,10 +47,11 @@
 
   .project-preview {
     // @include flex(column, flex-end, flex-start);
-    @include flex(row, flex-end, flex-start);
-    margin-top: calcRem(14px);
+    @include flex(column, flex-end, flex-start);
+    margin-top: calcRem(80px);
     @include break-point(tablet-sm-up) {
-      // @include flex(row, flex-end, flex-start);
+      margin-top: calcRem(14px);
+      @include flex(row, flex-end, flex-start);
     }
 
     &__image-box {
@@ -70,8 +71,8 @@
         transition: opacity 0.5s ease;
         @include break-point(tablet-sm-up) {
           max-width: calcRem(540px);
-          // right: 0;
-          left: 100%;
+          left: unset;
+          right: 0;
         }
       }
       .project-selected {
@@ -82,8 +83,12 @@
 
     &__content-box {
       width: calcRem(196px);
-      margin-left: calcRem(50px);
-      margin-top: calcRem(180px);
+      // margin-left: calcRem(10px);
+      // margin-top: calcRem(18);
+      @include break-point(tablet-sm-up) {
+        margin-left: calcRem(50px);
+        margin-top: calcRem(180px);
+      }
 
       &__button {
         @include flex(row, flex-start, center);
@@ -105,8 +110,14 @@
   .project-lists {
     display: flex;
     position: absolute;
-    bottom: calcRem(190px);
-    left: calcRem(222px);
+    bottom: calcRem(50px);
+    left: 0;
+    // bottom: calcRem(190px);
+    // left: calcRem(222px);
+    @include break-point(tablet-sm-up) {
+      bottom: calcRem(190px);
+      left: calcRem(222px);
+    }
 
     &__red-box-container {
       margin-right: calcRem(10px);

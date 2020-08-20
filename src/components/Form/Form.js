@@ -95,7 +95,7 @@ const exclamVariants = {
  * TODO: Refactor and split into components
  */
 
-function Form({ isOpen }) {
+function Form({ isOpen, closeContactMenuAfterSubmit }) {
   const [inputInfo, setInputInfo] = useState({
     name: "",
     email: "",
@@ -105,11 +105,21 @@ function Form({ isOpen }) {
   const [formSubmitSuccess, setFormSubmitSuccess] = useState(false);
 
   useEffect(() => {
-    // Reset the form when contact menu is closed or form is successfully submitted
-    (isOpen || formSubmitSuccess) &&
-      setInputInfo({ name: "", email: "", message: "" });
-    (isOpen || formSubmitSuccess) && setErrors({});
+    const timer = setTimeout(() => {
+      clearFields();
+    }, 3000);
+    return () => clearTimeout(timer);
   }, [formSubmitSuccess, isOpen]);
+
+  function clearFields() {
+    // Reset the form when contact menu is closed or form is successfully submitted
+    if (isOpen && formSubmitSuccess) {
+      setInputInfo({ name: "", email: "", message: "" });
+      setErrors({});
+      setFormSubmitSuccess(false);
+      closeContactMenuAfterSubmit(formSubmitSuccess);
+    }
+  }
 
   function emailJsHandler(e) {
     let isValid = validate();
@@ -119,6 +129,7 @@ function Form({ isOpen }) {
     const TEMPLATE_ID = "jinkyu_kang";
 
     if (isValid) {
+      setFormSubmitSuccess(true);
       emailjs.sendForm(EMAIL_TYPE, TEMPLATE_ID, e.target, USER_ID).then(
         (response) => {
           if (response.status === 200) {

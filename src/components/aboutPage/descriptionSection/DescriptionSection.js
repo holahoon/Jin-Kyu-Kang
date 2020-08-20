@@ -3,7 +3,6 @@ import React from "react";
 function DescriptionSection({ descriptionText, aboutImage }) {
   return (
     <section className='about__description-section'>
-      <div className='temporary-image-box'></div>
       <img
         src={aboutImage}
         alt='Jinkyu Kang'
