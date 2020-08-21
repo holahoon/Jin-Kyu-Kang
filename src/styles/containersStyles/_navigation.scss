@@ -1,12 +1,13 @@
 .nav {
   @include flex(column, flex-start, flex-end);
   position: fixed;
-  right: 0;
+  right: calcRem(-150px);
   height: 100%;
   z-index: 1;
   @include break-point(tablet-sm-up) {
     @include flex(row, flex-end, center);
     position: relative;
+    right: 0;
     height: auto;
     padding-top: calcRem(74px);
     z-index: 0;
@@ -35,11 +36,11 @@
       @include break-point(tablet-sm-up) {
         display: none;
       }
-      &.off-center {
-        left: calcRem(30px);
-        transform: translateX(0);
-        transition: all 0.7s ease-in-out 0.5s;
-      }
+      // &.off-center {
+      //   left: calcRem(30px);
+      //   transform: translateX(0);
+      //   transition: all 0.7s ease-in-out 0.5s;
+      // }
     }
     a {
       svg {
@@ -54,7 +55,7 @@
     height: 100%;
     background-color: $bg-black;
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-    transform: translateX(150px);
+    transform: translateX(300px);
     padding: calcRem(90px) calcRem(28px) 0 calcRem(40px);
     @include break-point(tablet-sm-up) {
       @include flex(row);
@@ -65,7 +66,7 @@
     }
 
     &.mobile-nav--open {
-      transform: translateX(0);
+      transform: translateX(-150px);
       z-index: 1;
     }
 
@@ -76,6 +77,7 @@
       width: calcRem(34px);
       height: calcRem(34px);
       position: fixed;
+      right: 0;
       &::before {
         content: "";
         display: block;

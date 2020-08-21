@@ -5,12 +5,16 @@
   &__intro-section {
     max-width: calcRem(723px);
     margin: calcRem(100px) 0 calcRem(68px) calcRem(200px);
+    display: none;
     // This is specifically for a small height viewport
     @media only screen and (min-width: 1024px) and (max-height: 750px) {
       position: absolute;
       top: calcRem(20px);
       left: calcRem(200px);
       margin: 0;
+    }
+    @include break-point(tablet-sm-up) {
+      display: block;
     }
     h2 {
       @include font-cormorant(500);
@@ -19,25 +23,37 @@
   }
 
   &__description-section {
-    @include flex(row, flex-end, flex-start);
+    @include flex(column, flex-end, flex-start);
+    margin-top: calcRem(80px);
+    padding: 0 calcRem(20px) calcRem(60px);
     // This is specifically for a small height viewport
     @media only screen and (min-width: 1024px) and (max-height: 750px) {
       position: absolute;
       top: calcRem(150px);
       right: 0;
     }
+    @include break-point(tablet-sm-up) {
+      @include flex(row, flex-end, flex-start);
+    }
 
     &__image {
       width: 100%;
-      max-width: calcRem(300px);
+      @include break-point(tablet-sm-up) {
+        max-width: calcRem(300px);
+      }
     }
     &__description {
-      max-width: calcRem(446px);
-      height: calcRem(400px);
-      margin-right: calcRem(75px);
-      padding: calcRem(10px) 0 calcRem(60px) calcRem(40px);
+      padding-top: calcRem(32px);
       @media only screen and (min-width: 1024px) and (max-height: 750px) {
         margin-right: 0;
+      }
+      @include break-point(tablet-sm-up) {
+        height: calcRem(400px);
+        max-width: calcRem(446px);
+        padding: calcRem(10px) 0 calcRem(60px) calcRem(40px);
+      }
+      @include break-point(tablet-lg-up) {
+        margin-right: calcRem(75px);
       }
 
       &__scroll {
@@ -72,7 +88,7 @@
   &__copyright-section {
     @include flex(row, flex-start, center);
     position: absolute;
-    left: calcRem(200px);
+    right: calcRem(900px);
     bottom: calcRem(20px);
     @media only screen and (min-width: 1024px) and (max-height: 750px) {
       left: 0;
