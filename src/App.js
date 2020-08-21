@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Switch, Route, Redirect, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
+import ReactGA from "react-ga";
 
 import Layout from "./layouts/Layout";
 import Navigation from "./containers/Navigation";
@@ -61,6 +62,15 @@ const projectList = [
 
 function App() {
   const location = useLocation();
+
+  useEffect(() => {
+    initGA();
+  }, []);
+
+  function initGA() {
+    const trackingId = "UA-146149191-2";
+    ReactGA.initialize(trackingId);
+  }
 
   return (
     <>

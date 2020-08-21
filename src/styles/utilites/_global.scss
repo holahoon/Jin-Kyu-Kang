@@ -33,7 +33,9 @@ h6 {
 
 a {
   text-decoration: none;
-  outline: none;
+  &:focus {
+    outline: 0;
+  }
 }
 
 /* -- main Index.js id -- */

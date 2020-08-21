@@ -6,7 +6,7 @@
     @for $i from 1 through 8 {
       &-#{$i} {
         position: absolute;
-        @include break-point(tablet-sm-down) {
+        @include break-point(tablet-lg-down) {
           display: none;
         }
       }
@@ -49,15 +49,23 @@
     @include flex(column, flex-end, flex-start);
     margin-top: calcRem(80px);
     @include break-point(tablet-sm-up) {
-      margin-top: calcRem(14px);
+      margin-top: calcRem(100px);
       @include flex(row, flex-end, flex-start);
+    }
+    @include break-point(tablet-lg-up) {
+      margin-top: calcRem(14px);
     }
 
     &__image-box {
       width: 100%;
       position: relative;
+      padding: 0 calcRem(16px);
       @include flex(row, flex-end, flex-end);
       @include break-point(tablet-sm-up) {
+        padding: 0;
+      }
+      @include break-point(tablet-lg-up) {
+        padding: 0;
         min-width: calcRem(540px);
         height: calcRem(540px);
       }
@@ -70,6 +78,11 @@
         visibility: hidden;
         transition: all 0.5s ease;
         @include break-point(tablet-sm-up) {
+          max-width: calcRem(450px);
+          left: unset;
+          right: 0;
+        }
+        @include break-point(tablet-lg-up) {
           max-width: calcRem(540px);
           left: unset;
           right: 0;
@@ -83,17 +96,19 @@
     }
 
     &__content-box {
-      // position: absolute;
+      margin-top: calcRem(16px);
+      padding: 0 calcRem(16px);
       bottom: calcRem(170px);
+      height: calcRem(90px);
       @include flex(row, flex-start, flex-start);
-      // margin-left: calcRem(10px);
-      // margin-top: calcRem(18);
       @include break-point(tablet-sm-up) {
         @include flex(column, flex-start, flex-start);
         width: calcRem(196px);
+        height: auto;
         position: static;
         margin-left: calcRem(50px);
         margin-top: calcRem(180px);
+        padding: 0;
       }
 
       &__button {
@@ -123,14 +138,14 @@
   }
 
   .project-lists {
-    display: flex;
-    // position: absolute;
-    bottom: calcRem(20px);
-    left: 50%;
-    // bottom: calcRem(190px);
-    // left: calcRem(222px);
+    @include flex(row, flex-start, flex-start);
+    padding: 0 calcRem(20px) 0 calcRem(30px);
     @include break-point(tablet-sm-up) {
       position: absolute;
+      bottom: calcRem(100px);
+      left: calcRem(50px);
+    }
+    @include break-point(tablet-lg-up) {
       bottom: calcRem(190px);
       left: calcRem(222px);
     }
