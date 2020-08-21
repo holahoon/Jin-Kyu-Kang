@@ -36,11 +36,6 @@
       @include break-point(tablet-sm-up) {
         display: none;
       }
-      // &.off-center {
-      //   left: calcRem(30px);
-      //   transform: translateX(0);
-      //   transition: all 0.7s ease-in-out 0.5s;
-      // }
     }
     a {
       svg {
@@ -117,7 +112,6 @@
     &__item {
       @include fontSize(24px);
       @include font-cormorant(600);
-      // color: $white;
       margin-bottom: calcRem(16px);
       z-index: 1;
       @include break-point(tablet-sm-up) {
@@ -135,8 +129,6 @@
           text-decoration-line: line-through;
           text-decoration-color: $brand-red;
         }
-      }
-      &-works {
       }
       &-about {
         @include break-point(tablet-sm-up) {
