@@ -22,11 +22,11 @@ function ProjectPreview({ selectedProject, projectList }) {
       </div>
 
       <div className='project-preview__content-box'>
-        <Link to={`/works/${projectList[selectedProject].urlName}`}>
-          <motion.div
-            whileHover='hover'
-            className='project-preview__content-box__button'
-          >
+        <motion.div
+          whileHover='hover'
+          className='project-preview__content-box__button'
+        >
+          <Link to={`/works/${projectList[selectedProject].urlName}`}>
             <motion.svg
               variants={buttonHoverVariants}
               className='button-arrow'
@@ -58,8 +58,8 @@ function ProjectPreview({ selectedProject, projectList }) {
                 strokeWidth='0.5'
               />
             </svg>
-          </motion.div>
-        </Link>
+          </Link>
+        </motion.div>
         <PreviewDescription selectedProject={selectedProject} />
       </div>
     </div>

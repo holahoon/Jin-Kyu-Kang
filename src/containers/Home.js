@@ -42,15 +42,20 @@ function Home({ projectList }) {
     >
       <HomeBackground />
 
-      <ProjectLists
+      {/* <ProjectLists
         projectList={projectList}
         selectedProject={selectedProject}
         projectSelectionHandler={projectSelectionHandler}
-      />
+      /> */}
 
       <ProjectPreview
         selectedProject={selectedProject}
         projectList={projectList}
+      />
+      <ProjectLists
+        projectList={projectList}
+        selectedProject={selectedProject}
+        projectSelectionHandler={projectSelectionHandler}
       />
     </motion.div>
   );

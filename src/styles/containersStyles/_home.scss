@@ -56,6 +56,7 @@
     &__image-box {
       width: 100%;
       position: relative;
+      @include flex(row, flex-end, flex-end);
       @include break-point(tablet-sm-up) {
         min-width: calcRem(540px);
         height: calcRem(540px);
@@ -66,7 +67,8 @@
         top: 0;
         left: 0;
         opacity: 0;
-        transition: opacity 0.5s ease;
+        visibility: hidden;
+        transition: all 0.5s ease;
         @include break-point(tablet-sm-up) {
           max-width: calcRem(540px);
           left: unset;
@@ -75,23 +77,34 @@
       }
       .project-selected {
         opacity: 1;
-        transition: opacity 0.5s ease;
+        position: relative;
+        visibility: visible;
       }
     }
 
     &__content-box {
-      width: calcRem(196px);
+      // position: absolute;
+      bottom: calcRem(170px);
+      @include flex(row, flex-start, flex-start);
       // margin-left: calcRem(10px);
       // margin-top: calcRem(18);
       @include break-point(tablet-sm-up) {
+        @include flex(column, flex-start, flex-start);
+        width: calcRem(196px);
+        position: static;
         margin-left: calcRem(50px);
         margin-top: calcRem(180px);
       }
 
       &__button {
-        @include flex(row, flex-start, center);
-        margin-bottom: calcRem(30px);
+        margin: 0;
+        @include break-point(tablet-sm-up) {
+          margin-bottom: calcRem(30px);
+        }
         cursor: pointer;
+        > a {
+          @include flex(row, flex-start, center);
+        }
 
         .button-circle {
           transform: translate(calcRem(-20px), calcRem(1px));
@@ -101,18 +114,23 @@
         @include font-cormorant(600);
         font-size: calcRem(14px);
         color: $text-dark-gray;
+        margin: 0;
+        @include break-point(tablet-sm-up) {
+          margin: calcRem(14px) 0;
+        }
       }
     }
   }
 
   .project-lists {
     display: flex;
-    position: absolute;
-    bottom: calcRem(50px);
-    left: 0;
+    // position: absolute;
+    bottom: calcRem(20px);
+    left: 50%;
     // bottom: calcRem(190px);
     // left: calcRem(222px);
     @include break-point(tablet-sm-up) {
+      position: absolute;
       bottom: calcRem(190px);
       left: calcRem(222px);
     }
