@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 
-function ImageSection({ imageList, props }) {
+import { ProjectContext } from "../../../hooks/ProjectContext";
+
+function ImageSection({ props }) {
+  const projectList = useContext(ProjectContext);
+
   return (
     <section className='works__horizontal-box'>
-      {imageList.map((each) => (
+      {projectList.map((each) => (
         <Link to={`${props.match.path}/${each.urlName}`} key={each.urlName}>
           <img
             src={each.image}

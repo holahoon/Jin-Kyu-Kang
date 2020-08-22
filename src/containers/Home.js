@@ -42,18 +42,8 @@ function Home({ projectList }) {
     >
       <HomeBackground />
 
-      {/* <ProjectLists
-        projectList={projectList}
-        selectedProject={selectedProject}
-        projectSelectionHandler={projectSelectionHandler}
-      /> */}
-
-      <ProjectPreview
-        selectedProject={selectedProject}
-        projectList={projectList}
-      />
+      <ProjectPreview selectedProject={selectedProject} />
       <ProjectLists
-        projectList={projectList}
         selectedProject={selectedProject}
         projectSelectionHandler={projectSelectionHandler}
       />

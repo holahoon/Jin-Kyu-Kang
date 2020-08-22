@@ -1,12 +1,10 @@
-import React, { useRef } from "react";
+import React, { useContext, useRef } from "react";
 
 import ProjectList from "./projectList/ProjectList";
+import { ProjectContext } from "../../hooks/ProjectContext";
 
-function ProjectLists({
-  projectList,
-  selectedProject,
-  projectSelectionHandler,
-}) {
+function ProjectLists({ selectedProject, projectSelectionHandler }) {
+  const projectList = useContext(ProjectContext);
   const listItemRef = useRef(3);
 
   return (

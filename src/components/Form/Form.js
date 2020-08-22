@@ -91,10 +91,6 @@ const exclamVariants = {
   },
 };
 
-/*
- * TODO: Refactor and split into components
- */
-
 function Form({ isOpen, closeContactMenuAfterSubmit }) {
   const [inputInfo, setInputInfo] = useState({
     name: "",
@@ -111,7 +107,7 @@ function Form({ isOpen, closeContactMenuAfterSubmit }) {
     return () => clearTimeout(timer);
   }, [formSubmitSuccess, isOpen, closeContactMenuAfterSubmit]);
 
-  const clearFields = () => {
+  function clearFields() {
     // Reset the form when contact menu is closed or form is successfully submitted
     if (isOpen && formSubmitSuccess) {
       setInputInfo({ name: "", email: "", message: "" });
@@ -119,7 +115,7 @@ function Form({ isOpen, closeContactMenuAfterSubmit }) {
       setFormSubmitSuccess(false);
       closeContactMenuAfterSubmit(formSubmitSuccess);
     }
-  };
+  }
 
   function emailJsHandler(e) {
     let isValid = validate();
