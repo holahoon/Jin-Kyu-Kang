@@ -19,6 +19,7 @@
     h2 {
       @include font-cormorant(500);
       font-size: calcRem(36px);
+      color: $bg-black;
     }
   }
 
@@ -70,6 +71,7 @@
         p {
           @include font-cormorant(500);
           font-size: calcRem(16px);
+          color: $bg-black;
           &:first-child {
             margin-top: 0;
           }

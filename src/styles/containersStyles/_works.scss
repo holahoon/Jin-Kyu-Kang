@@ -116,7 +116,7 @@
           @include font-heebo(500);
           font-size: calcRem(12px);
           line-height: 1;
-          color: $text-copyright-gray;
+          color: $text-dark-gray;
         }
       }
     }
@@ -140,7 +140,7 @@
 
     &__subtitle {
       @include font-cormorant(400);
-      color: $text-subtitle-gray;
+      color: $text-dark-gray;
       margin-bottom: calcRem(30px);
       .text {
         font-size: calcRem(14px);
@@ -160,7 +160,7 @@
       margin: 0 auto;
       @include font-cormorant(400);
       font-size: calcRem(14px);
-      color: $text-dark-gray;
+      color: $bg-black;
       @include break-point(tablet-sm-up) {
         font-size: calcRem(16px);
       }

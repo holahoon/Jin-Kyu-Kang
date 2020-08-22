@@ -70,7 +70,6 @@
         height: calcRem(540px);
       }
       &__image {
-        width: 100%;
         position: absolute;
         top: 0;
         left: 0;
@@ -87,11 +86,17 @@
           left: unset;
           right: 0;
         }
+        img {
+          width: 100%;
+        }
       }
       .project-selected {
         opacity: 1;
         position: relative;
         visibility: visible;
+        @include break-point(tablet-lg-up) {
+          position: absolute;
+        }
       }
     }
 

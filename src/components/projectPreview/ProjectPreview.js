@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 import PreviewImages from "./previewImages/PreviewImages";
 import PreviewDescription from "./previewDescription/PreviewDescription";
+import { ProjectContext } from "../../hooks/ProjectContext";
 
 const buttonHoverVariants = {
   hover: {
@@ -11,7 +12,9 @@ const buttonHoverVariants = {
   },
 };
 
-function ProjectPreview({ selectedProject, projectList }) {
+function ProjectPreview({ selectedProject }) {
+  const projectList = useContext(ProjectContext);
+
   return (
     <div className='project-preview'>
       <div className='project-preview__image-box'>
@@ -60,7 +63,10 @@ function ProjectPreview({ selectedProject, projectList }) {
             </svg>
           </Link>
         </motion.div>
-        <PreviewDescription selectedProject={selectedProject} />
+        <PreviewDescription
+          selectedProject={selectedProject}
+          projectList={projectList}
+        />
       </div>
     </div>
   );

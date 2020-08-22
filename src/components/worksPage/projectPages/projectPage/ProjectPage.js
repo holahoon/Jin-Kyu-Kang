@@ -56,7 +56,7 @@ function ProjectPage({
               />
             </svg>
 
-            <span className='button-text'>BACK</span>
+            <span className='button-text'>back to works</span>
           </Link>
         </div>
         <h4 className='works__project__subtitle'>
