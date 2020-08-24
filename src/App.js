@@ -80,8 +80,9 @@ function App() {
   }, []);
 
   function initGA() {
-    const trackingId = "UA-146149191-2";
-    ReactGA.initialize(trackingId);
+    ReactGA.initialize("UA-146149191-2");
+    // pageview
+    ReactGA.pageview(window.location.pathname + window.location.search);
   }
 
   return (
