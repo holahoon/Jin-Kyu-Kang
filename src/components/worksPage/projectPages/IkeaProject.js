@@ -4,7 +4,7 @@ import ProjectPage from "./projectPage/ProjectPage";
 
 import projectImage1 from "../../../assets/images/projects/IKEA/ikea.png";
 
-const worksTitle = "IKEA";
+const worksTitle = "IKEA (in progress)";
 const worksSubtitle = {
   text: "UI/UX",
   year: "2020",

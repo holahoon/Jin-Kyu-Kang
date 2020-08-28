@@ -25,7 +25,7 @@ const homepageVariants = {
   },
 };
 
-function Home({ projectList }) {
+function Home() {
   const [selectedProject, setSelectedProject] = useState(3);
 
   function projectSelectionHandler(index) {
