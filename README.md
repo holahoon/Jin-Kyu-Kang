@@ -1,6 +1,5 @@
 <h1 align="center">Jinkyu Kang</h1>
-<p align="center">A product designer</p>
----
+<h3 align="center">A product designer</h3>
 
 ## Installation
 
@@ -11,8 +10,6 @@ After cloning the repo, cd into the directory and
 ```
 npm install
 ```
-
-## Start & watch
 
 ### To run the app
 
@@ -36,6 +33,8 @@ npm start
 
 [Sass](https://github.com/sass/node-sass) is used for styling
 
-### Deployment
+---
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+## Deployment
+
+### Deployed using [Netlify](https://www.netlify.com/)
