@@ -76,14 +76,10 @@ function App() {
   const location = useLocation();
 
   useEffect(() => {
-    initGA();
-  }, []);
-
-  function initGA() {
+    // Google Analytics
     ReactGA.initialize("UA-146149191-2");
-    // pageview
     ReactGA.pageview(window.location.pathname + window.location.search);
-  }
+  }, []);
 
   return (
     <>

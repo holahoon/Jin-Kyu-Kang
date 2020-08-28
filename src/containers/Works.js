@@ -36,7 +36,7 @@ function Works(props) {
       exit='exitAnimate'
       className='works'
     >
-      <ImageSection imageList={props.projectList} props={props} />
+      <ImageSection props={props} />
     </motion.div>
   );
 }

@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import { withRouter } from "react-router-dom";
+import ReactGA from "react-ga";
 
 import Logo from "../components/navigations/Logo/Logo";
 import NavigationItem from "../components/navigations/navigationItem/NavigationItem";
@@ -18,11 +19,18 @@ function Navigations(props) {
       : setdecreaseLogoSize(false);
   }, [props.location.pathname]);
 
-  const openMobileNavHandler = () => {
+  const openMobileNavHandler = useCallback(() => {
     setMobileNavOpen(true);
-  };
-  const closeMobileNavHandler = () => {
+  }, []);
+  const closeMobileNavHandler = useCallback(() => {
     setMobileNavOpen(false);
+  }, []);
+
+  const reactGAHandler = (navTitle) => {
+    ReactGA.event({
+      category: "Nav button",
+      action: `Clicked on ${navTitle} page`,
+    });
   };
 
   return (
@@ -43,7 +51,8 @@ function Navigations(props) {
           <NavigationItem
             key={title}
             navTitle={title}
-            openMobileNavHandler={closeMobileNavHandler}
+            closeMobileNavHandler={closeMobileNavHandler}
+            reactGAHandler={reactGAHandler}
           />
         ))}
         <span
