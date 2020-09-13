@@ -19,6 +19,7 @@ import image_bestrong from "./assets/images/home-bestrong.png";
 import image_icantbreathe from "./assets/images/home-icantbreathe.png";
 import image_fivie from "./assets/images/home-fivie.png";
 import image_greyed from "./assets/images/home-greyed.png";
+import image_angio from "./assets/images/home-angio.png";
 
 import "./styles/main.scss";
 
@@ -70,6 +71,13 @@ const projectList = [
     image: image_greyed,
     category: "Branding",
   },
+  {
+    urlName: "angio",
+    projectName: "angio",
+    projectDescription: "",
+    image: image_angio,
+    category: "Branding",
+  },
 ];
 
 function App() {
@@ -107,6 +115,10 @@ function App() {
               <Route
                 path='/works/greyed'
                 component={projectPages.GreyedProject}
+              />
+              <Route
+                path='/works/angio'
+                component={projectPages.AngioProject}
               />
 
               <Route path='/works'>

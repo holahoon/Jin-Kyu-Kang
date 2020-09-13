@@ -4,6 +4,7 @@ import BestrongProject from "./BestrongProject";
 import IcantbreatheProject from "./IcantbreatheProject";
 import FivieProject from "./FivieProject";
 import GreyedProject from "./GreyedProject";
+import AngioProject from "./AngioProject";
 
 export {
   IkeaProject,
@@ -12,4 +13,5 @@ export {
   FivieProject,
   BlobProject,
   GreyedProject,
+  AngioProject,
 };
