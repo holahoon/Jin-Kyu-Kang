@@ -1,6 +1,8 @@
 <h1 align="center">Jinkyu Kang</h1>
 <h3 align="center">A product designer</h3>
-<h3 align="center">[erugogada.com](https://www.erugogada.com/)</h3>
+
+## Link
+[erugogada.com](https://www.erugogada.com/)
 
 ## Installation
 
@@ -41,4 +43,5 @@ npm start
 ### Deployed using [Netlify](https://www.netlify.com/)
 
 ## Improvement needed
-### Image rendering should be improved so that the user doesn't need to wait for the images to load which is a bad UX.
+
+Image rendering should be improved so that the user doesn't need to wait for the images to load which is a bad UX.
