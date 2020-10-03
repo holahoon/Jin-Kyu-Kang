@@ -1,5 +1,6 @@
 <h1 align="center">Jinkyu Kang</h1>
 <h3 align="center">A product designer</h3>
+<h3 align="center">[erugogada.com](https://www.erugogada.com/)</h3>
 
 ## Installation
 
@@ -25,9 +26,9 @@ npm start
 
 ### JavaScript
 
-[React](http://facebook.github.io/react) is used for UI.
-[React-router-dom](https://github.com/ReactTraining/react-router) is used for routing between components.
-[Framer-motion](https://github.com/framer/motion) is used for animation.
+- [React](http://facebook.github.io/react) is used for UI.
+- [React-router-dom](https://github.com/ReactTraining/react-router) is used for routing between components.
+- [Framer-motion](https://github.com/framer/motion) is used for animation.
 
 ### CSS
 
@@ -38,3 +39,6 @@ npm start
 ## Deployment
 
 ### Deployed using [Netlify](https://www.netlify.com/)
+
+## Improvement needed
+### Image rendering should be improved so that the user doesn't need to wait for the images to load which is a bad UX.
