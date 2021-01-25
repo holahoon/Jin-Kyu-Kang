@@ -7,7 +7,6 @@ import Layout from "./layouts/Layout";
 import Navigation from "./containers/Navigation";
 import Home from "./containers/Home";
 import Works from "./containers/Works";
-import About from "./containers/About";
 import SideText from "./components/UI/SideText/SideText";
 import Footer from "./containers/Footer";
 import * as projectPages from "./components/worksPage/projectPages";
@@ -124,7 +123,6 @@ function App() {
               <Route path='/works'>
                 <Works />
               </Route>
-              <Route path='/about' component={About} />
 
               <Route path='/'>
                 <Home />

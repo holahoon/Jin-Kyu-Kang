@@ -6,7 +6,7 @@ import Logo from "../components/navigations/Logo/Logo";
 import NavigationItem from "../components/navigations/navigationItem/NavigationItem";
 import Backdrop from "../components/UI/Backdrop/Backdrop";
 
-const navTitles = ["works", "about"];
+const navTitles = ["works"];
 
 function Navigations(props) {
   const [decreaseLogoSize, setdecreaseLogoSize] = useState(false);
