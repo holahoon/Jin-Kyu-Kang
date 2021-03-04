@@ -2,7 +2,10 @@
 <h3 align="center">A product designer</h3>
 
 ## Link
+> This site no longer exists.
 [erugogada.com](https://www.erugogada.com/)
+now redirects to
+[enzovvv.xyz](https://www.enzovvv.xyz/)
 
 ---
 
